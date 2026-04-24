@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Smart Mannheim climate network",
+        "description": "Search stations by name or address. Leave empty to list all stations.",
+        "data": { "query": "Search (name / address)" }
+      },
+      "pick": {
+        "title": "Select stations",
+        "description": "{count} matches for \"{query}\". Pick one or more stations.",
+        "data": { "stations": "Stations" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the Mannheim climate network backend.",
+      "no_matches": "No stations matched your search."
+    },
+    "abort": {
+      "already_configured": "The integration is already set up. Edit the station list via \"Configure\"."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Search stations",
+        "description": "Leave empty to list all stations. Already-selected stations stay visible regardless of the search term.",
+        "data": { "query": "Search (name / address)" }
+      },
+      "pick": {
+        "title": "Update stations",
+        "description": "{count} matches for \"{query}\".",
+        "data": { "stations": "Stations" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the Mannheim climate network backend.",
+      "no_matches": "No stations matched your search."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": { "name": "Temperature" },
+      "humidity": { "name": "Humidity" },
+      "wind_speed": { "name": "Wind speed" }
+    }
+  }
+}

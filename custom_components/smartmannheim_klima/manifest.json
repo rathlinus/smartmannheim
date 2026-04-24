@@ -1,0 +1,13 @@
+{
+  "domain": "smartmannheim_klima",
+  "name": "Smart Mannheim Klimamessnetz",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/your-user/hacs-smartmannheim-klima",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/your-user/hacs-smartmannheim-klima/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
