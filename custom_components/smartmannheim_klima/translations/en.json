@@ -3,13 +3,21 @@
     "step": {
       "user": {
         "title": "Smart Mannheim climate network",
-        "description": "Search stations by name or address. Leave empty to list all stations.",
+        "description": "Search stations by name or address. Leave empty to list all stations.\n\nAlready selected: {selected_count}",
         "data": { "query": "Search (name / address)" }
       },
       "pick": {
         "title": "Select stations",
-        "description": "{count} matches for \"{query}\". Pick one or more stations.",
+        "description": "{match_count} matches for \"{query}\". Total already selected: {selected_count}.",
         "data": { "stations": "Stations" }
+      },
+      "menu": {
+        "title": "Add more stations?",
+        "description": "{selected_count} stations selected in total.",
+        "menu_options": {
+          "search_more": "Search more",
+          "finish": "Done"
+        }
       }
     },
     "error": {
@@ -24,13 +32,21 @@
     "step": {
       "init": {
         "title": "Search stations",
-        "description": "Leave empty to list all stations. Already-selected stations stay visible regardless of the search term.",
+        "description": "Leave empty to list all stations.\n\nAlready selected: {selected_count}",
         "data": { "query": "Search (name / address)" }
       },
       "pick": {
         "title": "Update stations",
-        "description": "{count} matches for \"{query}\".",
+        "description": "{match_count} matches for \"{query}\". Total already selected: {selected_count}.",
         "data": { "stations": "Stations" }
+      },
+      "menu": {
+        "title": "Add more stations?",
+        "description": "{selected_count} stations selected in total.",
+        "menu_options": {
+          "search_more": "Search more",
+          "finish": "Done"
+        }
       }
     },
     "error": {

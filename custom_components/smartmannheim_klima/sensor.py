@@ -105,6 +105,13 @@ class KlimaSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
         self.entity_description = description
         self._location_id: str = station["locationId"]
         self._station_name: str = station.get("name") or station["locationId"]
+        coords = station.get("coordinates") or []
+        if len(coords) == 2:
+            # Backend stores GeoJSON order [lon, lat].
+            self._longitude: float | None = float(coords[0])
+            self._latitude: float | None = float(coords[1])
+        else:
+            self._longitude = self._latitude = None
         self._attr_unique_id = f"{DOMAIN}_{self._location_id}_{description.key}"
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, self._location_id)},
@@ -137,6 +144,10 @@ class KlimaSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
         attrs: dict[str, Any] = {"location_id": self._location_id}
+        if self._latitude is not None and self._longitude is not None:
+            # Exposing these makes the sensor usable as a pin on a Map card.
+            attrs["latitude"] = self._latitude
+            attrs["longitude"] = self._longitude
         reading = self._reading()
         if not reading:
             return attrs

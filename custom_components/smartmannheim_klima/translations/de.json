@@ -3,13 +3,21 @@
     "step": {
       "user": {
         "title": "Smart Mannheim Klimamessnetz",
-        "description": "Suchen Sie Stationen nach Name oder Adresse. Leer lassen, um alle Stationen anzuzeigen.",
+        "description": "Suchen Sie Stationen nach Name oder Adresse. Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
         "data": { "query": "Suche (Name / Adresse)" }
       },
       "pick": {
         "title": "Stationen auswählen",
-        "description": "{count} Treffer für „{query}“. Wählen Sie eine oder mehrere Stationen.",
+        "description": "{match_count} Treffer für „{query}“. Bereits ausgewählt insgesamt: {selected_count}.",
         "data": { "stations": "Stationen" }
+      },
+      "menu": {
+        "title": "Weitere Stationen hinzufügen?",
+        "description": "{selected_count} Stationen insgesamt ausgewählt.",
+        "menu_options": {
+          "search_more": "Weitere suchen",
+          "finish": "Fertig"
+        }
       }
     },
     "error": {
@@ -24,13 +32,21 @@
     "step": {
       "init": {
         "title": "Stationen suchen",
-        "description": "Leer lassen, um alle Stationen anzuzeigen. Bereits ausgewählte Stationen bleiben unabhängig vom Suchbegriff sichtbar.",
+        "description": "Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
         "data": { "query": "Suche (Name / Adresse)" }
       },
       "pick": {
         "title": "Stationen aktualisieren",
-        "description": "{count} Treffer für „{query}“.",
+        "description": "{match_count} Treffer für „{query}“. Bereits ausgewählt insgesamt: {selected_count}.",
         "data": { "stations": "Stationen" }
+      },
+      "menu": {
+        "title": "Weitere Stationen hinzufügen?",
+        "description": "{selected_count} Stationen insgesamt ausgewählt.",
+        "menu_options": {
+          "search_more": "Weitere suchen",
+          "finish": "Fertig"
+        }
       }
     },
     "error": {
