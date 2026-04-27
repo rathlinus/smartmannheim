@@ -4,10 +4,10 @@
   "codeowners": [],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/your-user/hacs-smartmannheim-klima",
+  "documentation": "https://github.com/rathlinus/smartmannheim",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/your-user/hacs-smartmannheim-klima/issues",
+  "issue_tracker": "https://github.com/rathlinus/smartmannheim/issues",
   "requirements": [],
   "version": "0.1.1"
 }
