@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Smart Mannheim climate network",
+        "title": "Smart City Mannheim",
         "description": "Search stations by name or address. Leave empty to list all stations.\n\nAlready selected: {selected_count}",
         "data": { "query": "Search (name / address)" }
       },
@@ -21,7 +21,7 @@
       }
     },
     "error": {
-      "cannot_connect": "Could not connect to the Mannheim climate network backend.",
+      "cannot_connect": "Could not connect to the Smart City Mannheim backend.",
       "no_matches": "No stations matched your search."
     },
     "abort": {

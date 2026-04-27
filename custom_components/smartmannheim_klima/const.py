@@ -1,4 +1,4 @@
-"""Constants for the Smart Mannheim Klimamessnetz integration."""
+"""Constants for the Smart City Mannheim integration."""
 from __future__ import annotations
 
 from datetime import timedelta

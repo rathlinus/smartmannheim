@@ -2,13 +2,13 @@
   "config": {
     "step": {
       "user": {
-        "title": "Smart Mannheim Klimamessnetz",
-        "description": "Suchen Sie Stationen nach Name oder Adresse. Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
+        "title": "Smart City Mannheim",
+        "description": "Suche Stationen nach Name oder Adresse. Lass das Feld leer, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
         "data": { "query": "Suche (Name / Adresse)" }
       },
       "pick": {
         "title": "Stationen auswählen",
-        "description": "{match_count} Treffer für „{query}“. Bereits ausgewählt insgesamt: {selected_count}.",
+        "description": "{match_count} Treffer für „{query}“. Insgesamt schon ausgewählt: {selected_count}.",
         "data": { "stations": "Stationen" }
       },
       "menu": {
@@ -21,23 +21,23 @@
       }
     },
     "error": {
-      "cannot_connect": "Verbindung zum Klimamessnetz fehlgeschlagen.",
+      "cannot_connect": "Verbindung zu Smart City Mannheim fehlgeschlagen.",
       "no_matches": "Keine passenden Stationen gefunden."
     },
     "abort": {
-      "already_configured": "Die Integration ist bereits eingerichtet. Bearbeiten Sie die Stationsauswahl über „Konfigurieren“."
+      "already_configured": "Die Integration ist schon eingerichtet. Du kannst die Stationsauswahl über 'Konfigurieren' ändern."
     }
   },
   "options": {
     "step": {
       "init": {
         "title": "Stationen suchen",
-        "description": "Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
+        "description": "Lass das Feld leer, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
         "data": { "query": "Suche (Name / Adresse)" }
       },
       "pick": {
         "title": "Stationen aktualisieren",
-        "description": "{match_count} Treffer für „{query}“. Bereits ausgewählt insgesamt: {selected_count}.",
+        "description": "{match_count} Treffer für „{query}“. Insgesamt schon ausgewählt: {selected_count}.",
         "data": { "stations": "Stationen" }
       },
       "menu": {
