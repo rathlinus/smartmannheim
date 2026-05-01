@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Smart Mannheim Klimamessnetz",
-        "description": "Suchen Sie Stationen nach Name oder Adresse. Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
+        "title": "Smart City Mannheim",
+        "description": "Suche Stationen nach Name oder Adresse. Lass das Feld leer, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
         "data": {
           "query": "Suche (Name / Adresse)"
         }
@@ -25,7 +25,7 @@
       }
     },
     "error": {
-      "cannot_connect": "Verbindung zum Klimamessnetz fehlgeschlagen.",
+      "cannot_connect": "Verbindung zu Smart City Mannheim fehlgeschlagen.",
       "no_matches": "Keine passenden Stationen gefunden."
     },
     "abort": {

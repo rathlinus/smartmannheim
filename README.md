@@ -1,77 +1,97 @@
-# Smart Mannheim Klimamessnetz
+# Smart City Mannheim
 
-Eine Home Assistant Integration für das [Stadtklimamessnetz Mannheim](https://smartmannheim.de/datenartikel/klimamessnetz-mannheim/) – über 100 Messstationen in der ganzen Stadt, direkt in dein Smart Home.
+A Home Assistant integration for the [Mannheim City Climate Network](https://smartmannheim.de/datenartikel/klimamessnetz-mannheim/) – over 100 measurement stations across the city, directly in your smart home.
 
 ---
 
 ## Features
 
-- **3 Sensoren pro Station** – Temperatur (°C), Luftfeuchtigkeit (%), Windgeschwindigkeit (m/s)
-- **GPS-Pin auf der Karte** – jede Station erscheint als Device Tracker mit ihren echten Koordinaten
-- **Mehrere Stationen gleichzeitig** – such und wähle beliebig viele Stationen per UI
-- **Standard HA Device Classes** – funktioniert sofort mit Energie-Dashboard, Automationen, und History
+- **3 sensors per station** – Temperature (°C), Humidity (%), Wind speed (m/s)
+- **GPS pin on the map** – each station appears as a Device Tracker with its real coordinates
+- **Multiple stations at once** – search and select as many stations as you like via the UI
+- **Standard HA Device Classes** – works out of the box with Energy Dashboard, Automations, and History
 
 ---
 
 ## Installation
 
-### Via HACS (empfohlen)
+### Via HACS (recommended)
 
-1. HACS öffnen → **Integrationen** → Menü oben rechts → **Custom repositories**
-2. URL `https://github.com/rathlinus/smartmannheim.git` eintragen, Kategorie: **Integration**
-3. Integration suchen und installieren
-4. Home Assistant neu starten
+1. Open HACS → **Integrations** → Menu top right → **Custom repositories**
+2. Enter URL `https://github.com/rathlinus/smartmannheim.git`, Category: **Integration**
+3. Search for and install the integration
+4. Restart Home Assistant
 
-### Manuell
+### Manually
 
-1. Dieses Repository als ZIP herunterladen
-2. Ordner `custom_components/smartmannheim_klima` in dein HA-Verzeichnis `config/custom_components/` kopieren
-3. Home Assistant neu starten
-
----
-
-## Einrichtung
-
-1. **Einstellungen → Integrationen → Integration hinzufügen → Smart Mannheim Klimamessnetz**
-2. Straßenname oder Stadtteil eingeben (z. B. `Feudenheim`, `Innenstadt`, `Käfertal`)
-3. Passende Station(en) aus der Liste auswählen
-4. Weitere Stationen hinzufügen oder direkt abschließen
-
-Stationen lassen sich jederzeit unter **Einstellungen → Integrationen → Smart Mannheim Klimamessnetz → Konfigurieren** anpassen.
+1. Download this repository as a ZIP
+2. Copy folder `custom_components/smartmannheim_klima` to your HA directory `config/custom_components/`
+3. Restart Home Assistant
 
 ---
 
-## Entitäten
+## Setup
 
-Pro ausgewählter Station entstehen folgende Entitäten:
+1. **Settings → Integrations → Add Integration → Smart City Mannheim**
+2. Enter a street name or district (e.g., `Feudenheim`, `Innenstadt`, `Käfertal`)
+3. Select matching station(s) from the list
+4. Add more stations or finish
 
-| Entität | Typ | Einheit | Aktualisierung |
+You can always adjust stations under **Settings → Integrations → Smart City Mannheim → Configure**.
+
+---
+
+## Entities
+
+For each selected station, the following entities are created:
+
+| Entity | Type | Unit | Update |
 |---|---|---|---|
-| Temperatur | `sensor` | °C | 1 min |
-| Luftfeuchtigkeit | `sensor` | % | 1 min |
-| Windgeschwindigkeit | `sensor` | m/s | 10 min |
-| Stationsstandort | `device_tracker` | GPS | statisch |
+| Temperature | `sensor` | °C | 10 min |
+| Humidity | `sensor` | % | 10 min |
+| Wind speed | `sensor` | m/s | 10 min |
+| Station location | `device_tracker` | GPS | static |
 
-Alle Sensoren haben `measured_at` als Zusatzattribut (Zeitstempel der letzten Messung). Der Device Tracker platziert einen Pin auf der Karte mit den echten Stationskoordinaten – direkt nutzbar in der Lovelace Map Card.
+All sensors have `measured_at` as an additional attribute (timestamp of the last measurement). The Device Tracker places a pin on the map with the actual station coordinates – ready to use with the Lovelace Map Card.
 
 ---
 
-## Voraussetzungen
+## Requirements
 
 - Home Assistant ≥ 2024.4.0
-- Internetverbindung (die API läuft unter `apps.mvvsmartcities.com`)
-- Keine Zugangsdaten erforderlich – die API ist öffentlich lesbar
+- Internet connection (the API runs at `apps.mvvsmartcities.com`)
+- No credentials required – the API is publicly readable
 
 ---
 
-## Technischer Hintergrund
+## Update Interval (Polling)
 
-Die Integration nutzt die interne Dashboard-API der MVV Smart Cities Plattform, die auch das öffentliche Mannheimer Klimadashboard antreibt. Die API wurde durch Browser-Analyse des öffentlichen Dashboards identifiziert.
+The integration polls the API every **10 minutes** by default (polling interval). This ensures new measurements are regularly fetched for all selected stations. The sensors in Home Assistant show the last available value.
 
-**Wichtiger Hinweis:** Dies ist eine inoffizielle Integration auf Basis einer nicht dokumentierten API.
+- The interval is set in the source code as `DEFAULT_SCAN_INTERVAL` (10 minutes).
+- Individual sensors (e.g., temperature, humidity) may update more frequently depending on the data source, but the backend delivers new values at most every 10 minutes.
 
 ---
 
-## Lizenz
+## API Usage & Authentication
 
-MIT – Daten © Stadt Mannheim / Smart City Mannheim GmbH, bereitgestellt unter offener Lizenz gemäß [opendata.smartmannheim.de](https://opendata.smartmannheim.de/dataset/klimadaten-mannheim).
+The integration fetches data from the MVV Smart Cities platform's internal Dashboard API:
+
+- **Base URL:** `https://apps.mvvsmartcities.com/api/dashboarddata`
+- **Authentication:** No personal login is required. Instead, a fixed, public "Dashboard Token" is passed as the query parameter `id`. This token is hardcoded in the source and serves as a shared read access.
+- **Additional parameters:** `accountId` and `appId` are also set automatically.
+- **Example request:**
+
+	```http
+	POST https://apps.mvvsmartcities.com/api/dashboarddata?accountId=<ACCOUNT_ID>&id=<DASHBOARD_TOKEN>
+	Content-Type: application/json
+	{ ...Request-Body... }
+	```
+
+**Note:** The API is publicly readable but not officially documented. Changes by the provider are possible at any time.
+
+---
+
+## License
+
+MIT – Data © Stadt Mannheim / Smart City Mannheim GmbH, provided under the [Data License Germany – Attribution – Version 2.0](https://www.govdata.de/dl-de/by-2-0).
