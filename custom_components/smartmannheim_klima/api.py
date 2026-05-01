@@ -29,9 +29,8 @@ class SmartMannheimClient:
     """Thin async wrapper around the public dashboard backend.
 
     The public "dashboard token" acts as a shared read key: it is put into
-    the `id` query parameter on every call, and combined with the entity id
-    (station id) via `id=<token>?activeEntityId=<station>` for per-station
-    reads. That literal `?` must be percent-encoded inside the query value.
+    the `id` query parameter on every call. Per-station reads put the
+    station id into the request body as `entityId`.
     """
 
     def __init__(self, session: aiohttp.ClientSession) -> None:
@@ -56,25 +55,21 @@ class SmartMannheimClient:
         frm = (now - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
         to = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
-        # The backend actually keys off the body `entityId` field; the
-        # `id=<token>?activeEntityId=<entity>` dance is what the SPA sends
-        # and we mirror it for parity. yarl encodes the `=` (not the `?`),
-        # both variants have been verified to work.
-        id_value = f"{DASHBOARD_TOKEN}?activeEntityId={entity_id}"
         url = URL(f"{API_BASE}/dashboarddata").with_query(
-            {"accountId": ACCOUNT_ID, "id": id_value}
+            {"accountId": ACCOUNT_ID, "id": DASHBOARD_TOKEN}
         )
+        # Per-measurement digits field name mirrors what the SPA sends:
+        # wind uses `displayDigits`, the others use `numDigits`.
+        timeseries_entry = {
+            "timeSeriesId": measurement["timeseries_id"],
+            "aggregationFunction": "",
+            "gapFill": "None",
+            "displayName": measurement["display_name"],
+            measurement["digits_field"]: measurement["digits"],
+            "definitionType": "timeseries",
+        }
         body = {
-            "timeseries": [
-                {
-                    "timeSeriesId": measurement["timeseries_id"],
-                    "aggregationFunction": "",
-                    "gapFill": "None",
-                    "displayName": measurement["display_name"],
-                    "numDigits": measurement["num_digits"],
-                    "definitionType": "timeseries",
-                }
-            ],
+            "timeseries": [timeseries_entry],
             "from": frm,
             "to": to,
             "accountId": ACCOUNT_ID,
