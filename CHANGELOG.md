@@ -5,6 +5,27 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-05-28
+### Added
+- Three new toggleable data sources, enabled by default for fresh installs:
+  Pollenflug (DWD), Luftqualitätsindex Mannheim Friedrichsring (UBA) and
+  Klimadaten DWD-Station Mannheim.
+- Bundled 211-station metadata catalog snapshot
+  (`station_metadata.json`).
+- Station catalog is used to skip Temperature/Humidity/Wind sensors at
+  stations that physically don't have them.
+- Device cards and entity attributes now expose altitude, Local Climate
+  Zone, commissioning date and per-sensor measurement heights when
+  metadata is available.
+- Options flow now has a top-level menu: "Stationen verwalten" vs
+  "Zusätzliche Datenquellen" for toggling the new extras.
+- `.gitignore` for Python build artefacts and macOS detritus.
+
+### Changed
+- `SmartMannheimCoordinator` data shape: top-level keys now are
+  `stations`, `pollen`, `aqi`, `dwd` (was a bare locationId → readings
+  map). Existing options/data on disk are unchanged.
+
 ## [0.1.2] - 2026-04-27
 ### Added
 - Added documentation and issue tracker to manifest.
