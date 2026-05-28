@@ -17,7 +17,7 @@
       },
       "menu": {
         "title": "Weitere Stationen hinzufügen?",
-        "description": "{selected_count} Stationen insgesamt ausgewählt.",
+        "description": "{selected_count} Stationen insgesamt ausgewählt.\n\nPollenflug, Luftqualität und DWD-Wetterstation sind standardmäßig aktiviert und können später unter „Konfigurieren“ angepasst werden.",
         "menu_options": {
           "search_more": "Weitere suchen",
           "finish": "Fertig"
@@ -35,6 +35,13 @@
   "options": {
     "step": {
       "init": {
+        "title": "Was möchten Sie ändern?",
+        "menu_options": {
+          "stations": "Stationen verwalten",
+          "extras": "Zusätzliche Datenquellen"
+        }
+      },
+      "stations": {
         "title": "Stationen suchen",
         "description": "Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
         "data": {
@@ -55,6 +62,15 @@
           "search_more": "Weitere suchen",
           "finish": "Fertig"
         }
+      },
+      "extras": {
+        "title": "Zusätzliche Datenquellen",
+        "description": "Aktivieren Sie zusätzliche Datenquellen aus dem Smart-Mannheim-Portal. Alle sind standardmäßig aktiviert.",
+        "data": {
+          "include_pollen": "Pollenflug (DWD)",
+          "include_aqi": "Luftqualitätsindex (UBA)",
+          "include_dwd": "Klimadaten DWD-Station Mannheim"
+        }
       }
     },
     "error": {
@@ -66,7 +82,23 @@
     "sensor": {
       "temperature": { "name": "Temperatur" },
       "humidity": { "name": "Luftfeuchtigkeit" },
-      "wind_speed": { "name": "Windgeschwindigkeit" }
+      "wind_speed": { "name": "Windgeschwindigkeit" },
+      "pollen_alder":   { "name": "Erle" },
+      "pollen_birch":   { "name": "Birke" },
+      "pollen_hazel":   { "name": "Hasel" },
+      "pollen_ash":     { "name": "Esche" },
+      "pollen_grasses": { "name": "Gräser" },
+      "pollen_rye":     { "name": "Roggen" },
+      "pollen_mugwort": { "name": "Beifuß" },
+      "pollen_ragweed": { "name": "Ambrosia" },
+      "aqi_lqi":  { "name": "Luftqualitätsindex" },
+      "aqi_pm10": { "name": "Feinstaub PM₁₀" },
+      "aqi_pm25": { "name": "Feinstaub PM₂,₅" },
+      "aqi_no2":  { "name": "Stickstoffdioxid NO₂" },
+      "dwd_temperature":   { "name": "Temperatur" },
+      "dwd_humidity":      { "name": "Luftfeuchtigkeit" },
+      "dwd_wind_speed":    { "name": "Windgeschwindigkeit" },
+      "dwd_precipitation": { "name": "Niederschlag" }
     }
   }
 }

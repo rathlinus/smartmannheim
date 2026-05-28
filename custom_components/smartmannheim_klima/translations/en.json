@@ -13,7 +13,7 @@
       },
       "menu": {
         "title": "Add more stations?",
-        "description": "{selected_count} stations selected in total.",
+        "description": "{selected_count} stations selected in total.\n\nPollen forecast, air quality and the DWD weather station are enabled by default and can be toggled later under \"Configure\".",
         "menu_options": {
           "search_more": "Search more",
           "finish": "Done"
@@ -31,6 +31,13 @@
   "options": {
     "step": {
       "init": {
+        "title": "What do you want to change?",
+        "menu_options": {
+          "stations": "Manage stations",
+          "extras": "Extra data sources"
+        }
+      },
+      "stations": {
         "title": "Search stations",
         "description": "Leave empty to list all stations.\n\nAlready selected: {selected_count}",
         "data": { "query": "Search (name / address)" }
@@ -47,6 +54,15 @@
           "search_more": "Search more",
           "finish": "Done"
         }
+      },
+      "extras": {
+        "title": "Extra data sources",
+        "description": "Enable additional data sources from the Smart Mannheim portal. All are enabled by default.",
+        "data": {
+          "include_pollen": "Pollen forecast (DWD)",
+          "include_aqi": "Air quality index (UBA)",
+          "include_dwd": "DWD weather station Mannheim"
+        }
       }
     },
     "error": {
@@ -58,7 +74,23 @@
     "sensor": {
       "temperature": { "name": "Temperature" },
       "humidity": { "name": "Humidity" },
-      "wind_speed": { "name": "Wind speed" }
+      "wind_speed": { "name": "Wind speed" },
+      "pollen_alder":   { "name": "Alder" },
+      "pollen_birch":   { "name": "Birch" },
+      "pollen_hazel":   { "name": "Hazel" },
+      "pollen_ash":     { "name": "Ash" },
+      "pollen_grasses": { "name": "Grasses" },
+      "pollen_rye":     { "name": "Rye" },
+      "pollen_mugwort": { "name": "Mugwort" },
+      "pollen_ragweed": { "name": "Ragweed" },
+      "aqi_lqi":  { "name": "Air quality index" },
+      "aqi_pm10": { "name": "Particulate matter PM₁₀" },
+      "aqi_pm25": { "name": "Particulate matter PM₂,₅" },
+      "aqi_no2":  { "name": "Nitrogen dioxide NO₂" },
+      "dwd_temperature":   { "name": "Temperature" },
+      "dwd_humidity":      { "name": "Humidity" },
+      "dwd_wind_speed":    { "name": "Wind speed" },
+      "dwd_precipitation": { "name": "Precipitation" }
     }
   }
 }

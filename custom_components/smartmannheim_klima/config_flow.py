@@ -15,6 +15,7 @@ from homeassistant.config_entries import (
 from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.selector import (
+    BooleanSelector,
     SelectOptionDict,
     SelectSelector,
     SelectSelectorConfig,
@@ -22,9 +23,23 @@ from homeassistant.helpers.selector import (
 )
 
 from .api import SmartMannheimClient, SmartMannheimError
-from .const import CONF_QUERY, CONF_STATIONS, DOMAIN
+from .const import (
+    CONF_INCLUDE_AQI,
+    CONF_INCLUDE_DWD,
+    CONF_INCLUDE_POLLEN,
+    CONF_QUERY,
+    CONF_STATIONS,
+    DOMAIN,
+)
 
 _LOGGER = logging.getLogger(__name__)
+
+# All three extra data sources default to ON for a fresh install.
+_EXTRAS_DEFAULTS: dict[str, bool] = {
+    CONF_INCLUDE_POLLEN: True,
+    CONF_INCLUDE_AQI: True,
+    CONF_INCLUDE_DWD: True,
+}
 
 
 def _station_label(station: dict[str, Any]) -> str:
@@ -58,6 +73,27 @@ async def _load_stations(hass) -> list[dict[str, Any]]:
     session = async_get_clientsession(hass)
     client = SmartMannheimClient(session)
     return await client.list_stations()
+
+
+def _extras_schema(current: dict[str, Any]) -> vol.Schema:
+    """Build the schema for the extras toggle step, seeding from `current`."""
+    def _default(key: str) -> bool:
+        val = current.get(key)
+        return _EXTRAS_DEFAULTS[key] if val is None else bool(val)
+
+    return vol.Schema(
+        {
+            vol.Required(
+                CONF_INCLUDE_POLLEN, default=_default(CONF_INCLUDE_POLLEN)
+            ): BooleanSelector(),
+            vol.Required(
+                CONF_INCLUDE_AQI, default=_default(CONF_INCLUDE_AQI)
+            ): BooleanSelector(),
+            vol.Required(
+                CONF_INCLUDE_DWD, default=_default(CONF_INCLUDE_DWD)
+            ): BooleanSelector(),
+        }
+    )
 
 
 class _AccumulatingFlow:
@@ -217,7 +253,12 @@ class SmartMannheimConfigFlow(ConfigFlow, _AccumulatingFlow, domain=DOMAIN):
             return await self._do_search("user", None, self.async_step_pick)
         return self.async_create_entry(
             title="Smart Mannheim Klimamessnetz",
-            data={CONF_STATIONS: list(self._accumulated.values())},
+            data={
+                CONF_STATIONS: list(self._accumulated.values()),
+                # Enable all three "extra" data sources by default for new
+                # installs. Users can flip them off in Configure → Extras.
+                **_EXTRAS_DEFAULTS,
+            },
         )
 
     @staticmethod
@@ -227,7 +268,7 @@ class SmartMannheimConfigFlow(ConfigFlow, _AccumulatingFlow, domain=DOMAIN):
 
 
 class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
-    """Same search → pick → menu pattern, seeded with existing selection."""
+    """Stations search → pick → menu, plus an extras toggle step."""
 
     def __init__(self, entry: ConfigEntry) -> None:
         self._entry = entry
@@ -235,6 +276,12 @@ class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
             CONF_STATIONS, []
         )
         self._init_state(initial=existing)
+        # Seed extras from existing options/data so the toggle step can
+        # show the user's current choices on re-entry.
+        self._extras: dict[str, bool] = {
+            k: bool(entry.options.get(k, entry.data.get(k, default)))
+            for k, default in _EXTRAS_DEFAULTS.items()
+        }
 
     def _show_form(self, **kwargs):
         return self.async_show_form(**kwargs)
@@ -242,7 +289,17 @@ class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        return await self._do_search("init", user_input, self.async_step_pick)
+        # Show the top-level menu first so the user can choose to manage
+        # stations or toggle extra data sources.
+        return self.async_show_menu(
+            step_id="init",
+            menu_options=["stations", "extras"],
+        )
+
+    async def async_step_stations(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        return await self._do_search("stations", user_input, self.async_step_pick)
 
     async def async_step_pick(
         self, user_input: dict[str, Any] | None = None
@@ -263,12 +320,33 @@ class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
     async def async_step_search_more(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        return await self._do_search("init", None, self.async_step_pick)
+        return await self._do_search("stations", None, self.async_step_pick)
+
+    async def async_step_extras(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        if user_input is not None:
+            self._extras = {k: bool(user_input.get(k, _EXTRAS_DEFAULTS[k]))
+                            for k in _EXTRAS_DEFAULTS}
+            return self.async_create_entry(
+                title="",
+                data={
+                    CONF_STATIONS: list(self._accumulated.values()),
+                    **self._extras,
+                },
+            )
+        return self.async_show_form(
+            step_id="extras",
+            data_schema=_extras_schema(self._extras),
+        )
 
     async def async_step_finish(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         return self.async_create_entry(
             title="",
-            data={CONF_STATIONS: list(self._accumulated.values())},
+            data={
+                CONF_STATIONS: list(self._accumulated.values()),
+                **self._extras,
+            },
         )

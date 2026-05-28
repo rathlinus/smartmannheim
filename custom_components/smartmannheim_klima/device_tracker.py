@@ -11,6 +11,7 @@ from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
+from . import metadata
 from .const import CONF_STATIONS, DOMAIN
 from .coordinator import SmartMannheimCoordinator
 
@@ -27,7 +28,8 @@ async def async_setup_entry(
     for station in stations:
         coords = station.get("coordinates") or []
         if len(coords) == 2:
-            trackers.append(KlimaStationTracker(coordinator, station))
+            meta = metadata.lookup(station.get("name"))
+            trackers.append(KlimaStationTracker(coordinator, station, meta))
     async_add_entities(trackers)
 
 
@@ -44,22 +46,32 @@ class KlimaStationTracker(
         self,
         coordinator: SmartMannheimCoordinator,
         station: dict[str, Any],
+        meta: dict[str, Any] | None = None,
     ) -> None:
         super().__init__(coordinator)
         self._location_id: str = station["locationId"]
+        self._meta = meta
         station_name = station.get("name") or self._location_id
         # Backend stores GeoJSON order [lon, lat].
         lon, lat = station["coordinates"]
         self._lat: float = float(lat)
         self._lon: float = float(lon)
         self._attr_unique_id = f"{DOMAIN}_{self._location_id}_location"
-        self._attr_device_info = DeviceInfo(
+        device_info = DeviceInfo(
             identifiers={(DOMAIN, self._location_id)},
             name=station_name,
             manufacturer="Stadt Mannheim",
             model="Klimamessstation",
             configuration_url="https://smartmannheim.de/datenartikel/klimamessnetz-mannheim/",
         )
+        if meta:
+            if meta.get("commissioned_at"):
+                device_info["hw_version"] = meta["commissioned_at"]
+            if meta.get("altitude_m") is not None:
+                device_info["model"] = (
+                    f"Klimamessstation (Höhe {meta['altitude_m']} m NN)"
+                )
+        self._attr_device_info = device_info
 
     @property
     def source_type(self) -> SourceType:
@@ -85,4 +97,6 @@ class KlimaStationTracker(
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
-        return {"location_id": self._location_id}
+        attrs: dict[str, Any] = {"location_id": self._location_id}
+        attrs.update(metadata.device_attrs(self._meta))
+        return attrs
