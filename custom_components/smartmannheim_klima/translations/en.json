@@ -3,7 +3,15 @@
     "step": {
       "user": {
         "title": "Smart City Mannheim",
-        "description": "Search stations by name or address. Leave empty to list all stations.\n\nAlready selected: {selected_count}",
+        "description": "How would you like to pick stations?\n\nAlready selected: {selected_count}",
+        "menu_options": {
+          "search": "Search by name or address",
+          "all_stations": "Show all stations"
+        }
+      },
+      "search": {
+        "title": "Search stations",
+        "description": "Search stations by name or address.\n\nAlready selected: {selected_count}",
         "data": { "query": "Search (name / address)" }
       },
       "pick": {
@@ -16,6 +24,7 @@
         "description": "{selected_count} stations selected in total.\n\nPollen forecast, air quality and the DWD weather station are enabled by default and can be toggled later under \"Configure\".",
         "menu_options": {
           "search_more": "Search more",
+          "show_all_more": "Show all stations",
           "finish": "Done"
         }
       }
@@ -33,13 +42,14 @@
       "init": {
         "title": "What do you want to change?",
         "menu_options": {
-          "stations": "Manage stations",
+          "search": "Search stations",
+          "all_stations": "Show all stations",
           "extras": "Extra data sources"
         }
       },
-      "stations": {
+      "search": {
         "title": "Search stations",
-        "description": "Leave empty to list all stations.\n\nAlready selected: {selected_count}",
+        "description": "Search stations by name or address.\n\nAlready selected: {selected_count}",
         "data": { "query": "Search (name / address)" }
       },
       "pick": {
@@ -52,6 +62,7 @@
         "description": "{selected_count} stations selected in total.",
         "menu_options": {
           "search_more": "Search more",
+          "show_all_more": "Show all stations",
           "finish": "Done"
         }
       },

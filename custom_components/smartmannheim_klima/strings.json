@@ -3,7 +3,15 @@
     "step": {
       "user": {
         "title": "Smart City Mannheim",
-        "description": "Suche Stationen nach Name oder Adresse. Lass das Feld leer, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
+        "description": "Wie möchten Sie Stationen auswählen?\n\nBisher ausgewählt: {selected_count}",
+        "menu_options": {
+          "search": "Nach Name oder Adresse suchen",
+          "all_stations": "Alle Stationen anzeigen"
+        }
+      },
+      "search": {
+        "title": "Stationen suchen",
+        "description": "Suche Stationen nach Name oder Adresse.\n\nBisher ausgewählt: {selected_count}",
         "data": {
           "query": "Suche (Name / Adresse)"
         }
@@ -20,6 +28,7 @@
         "description": "{selected_count} Stationen insgesamt ausgewählt.\n\nPollenflug, Luftqualität und DWD-Wetterstation sind standardmäßig aktiviert und können später unter „Konfigurieren“ angepasst werden.",
         "menu_options": {
           "search_more": "Weitere suchen",
+          "show_all_more": "Alle Stationen anzeigen",
           "finish": "Fertig"
         }
       }
@@ -37,13 +46,14 @@
       "init": {
         "title": "Was möchten Sie ändern?",
         "menu_options": {
-          "stations": "Stationen verwalten",
+          "search": "Stationen suchen",
+          "all_stations": "Alle Stationen anzeigen",
           "extras": "Zusätzliche Datenquellen"
         }
       },
-      "stations": {
+      "search": {
         "title": "Stationen suchen",
-        "description": "Leer lassen, um alle Stationen anzuzeigen.\n\nBisher ausgewählt: {selected_count}",
+        "description": "Suche Stationen nach Name oder Adresse.\n\nBisher ausgewählt: {selected_count}",
         "data": {
           "query": "Suche (Name / Adresse)"
         }
@@ -60,6 +70,7 @@
         "description": "{selected_count} Stationen insgesamt ausgewählt.",
         "menu_options": {
           "search_more": "Weitere suchen",
+          "show_all_more": "Alle Stationen anzeigen",
           "finish": "Fertig"
         }
       },

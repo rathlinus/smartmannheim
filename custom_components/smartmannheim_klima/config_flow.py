@@ -153,6 +153,36 @@ class _AccumulatingFlow:
             errors=errors,
         )
 
+    async def _do_show_all(
+        self,
+        search_step_id: str,
+        on_matches: Callable[[], Awaitable[ConfigFlowResult]],
+    ) -> ConfigFlowResult:
+        """Skip the search input — load every station and jump to pick.
+
+        On a backend error fall back to the regular search form so the
+        user sees a meaningful "cannot_connect" message instead of a
+        silent menu re-render.
+        """
+        try:
+            if not self._all_stations:
+                self._all_stations = await _load_stations(self.hass)
+        except SmartMannheimError as err:
+            _LOGGER.error("Could not load station list: %s", err)
+            return self._show_form(
+                step_id=search_step_id,
+                data_schema=vol.Schema(
+                    {vol.Optional(CONF_QUERY, default=""): str}
+                ),
+                description_placeholders={
+                    "selected_count": str(len(self._accumulated)),
+                },
+                errors={"base": "cannot_connect"},
+            )
+        self._query = ""
+        self._candidates = list(self._all_stations)
+        return await on_matches()
+
     async def _do_pick(
         self,
         step_id: str,
@@ -205,7 +235,7 @@ class _AccumulatingFlow:
 
 
 class SmartMannheimConfigFlow(ConfigFlow, _AccumulatingFlow, domain=DOMAIN):
-    """Search → pick → menu → [search more | finish]."""
+    """Top-level menu → [search | all stations] → pick → [search more | finish]."""
 
     VERSION = 1
 
@@ -221,7 +251,23 @@ class SmartMannheimConfigFlow(ConfigFlow, _AccumulatingFlow, domain=DOMAIN):
         if self.unique_id is None:
             await self.async_set_unique_id(DOMAIN)
             self._abort_if_unique_id_configured()
-        return await self._do_search("user", user_input, self.async_step_pick)
+        return self.async_show_menu(
+            step_id="user",
+            menu_options=["search", "all_stations"],
+            description_placeholders={
+                "selected_count": str(len(self._accumulated)),
+            },
+        )
+
+    async def async_step_search(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        return await self._do_search("search", user_input, self.async_step_pick)
+
+    async def async_step_all_stations(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        return await self._do_show_all("search", self.async_step_pick)
 
     async def async_step_pick(
         self, user_input: dict[str, Any] | None = None
@@ -233,7 +279,7 @@ class SmartMannheimConfigFlow(ConfigFlow, _AccumulatingFlow, domain=DOMAIN):
     ) -> ConfigFlowResult:
         return self.async_show_menu(
             step_id="menu",
-            menu_options=["search_more", "finish"],
+            menu_options=["search_more", "show_all_more", "finish"],
             description_placeholders={
                 "selected_count": str(len(self._accumulated)),
             },
@@ -242,8 +288,12 @@ class SmartMannheimConfigFlow(ConfigFlow, _AccumulatingFlow, domain=DOMAIN):
     async def async_step_search_more(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        # Land back on the same search form as step `user`.
-        return await self._do_search("user", None, self.async_step_pick)
+        return await self._do_search("search", None, self.async_step_pick)
+
+    async def async_step_show_all_more(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        return await self._do_show_all("search", self.async_step_pick)
 
     async def async_step_finish(
         self, user_input: dict[str, Any] | None = None
@@ -289,17 +339,22 @@ class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        # Show the top-level menu first so the user can choose to manage
-        # stations or toggle extra data sources.
+        # Top-level menu: manage stations (search or list-all) or toggle
+        # the extra data sources.
         return self.async_show_menu(
             step_id="init",
-            menu_options=["stations", "extras"],
+            menu_options=["search", "all_stations", "extras"],
         )
 
-    async def async_step_stations(
+    async def async_step_search(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        return await self._do_search("stations", user_input, self.async_step_pick)
+        return await self._do_search("search", user_input, self.async_step_pick)
+
+    async def async_step_all_stations(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        return await self._do_show_all("search", self.async_step_pick)
 
     async def async_step_pick(
         self, user_input: dict[str, Any] | None = None
@@ -311,7 +366,7 @@ class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
     ) -> ConfigFlowResult:
         return self.async_show_menu(
             step_id="menu",
-            menu_options=["search_more", "finish"],
+            menu_options=["search_more", "show_all_more", "finish"],
             description_placeholders={
                 "selected_count": str(len(self._accumulated)),
             },
@@ -320,7 +375,12 @@ class SmartMannheimOptionsFlow(OptionsFlow, _AccumulatingFlow):
     async def async_step_search_more(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        return await self._do_search("stations", None, self.async_step_pick)
+        return await self._do_search("search", None, self.async_step_pick)
+
+    async def async_step_show_all_more(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        return await self._do_show_all("search", self.async_step_pick)
 
     async def async_step_extras(
         self, user_input: dict[str, Any] | None = None

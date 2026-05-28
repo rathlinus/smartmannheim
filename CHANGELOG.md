@@ -5,6 +5,18 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-05-28
+### Added
+- "Alle Stationen anzeigen" / "Show all stations" button on the first
+  setup screen and on the follow-up "Weitere Stationen hinzufügen?"
+  menu, so the search step can be skipped entirely.
+- Same option exposed at the top of the options flow.
+
+### Changed
+- First config-flow step is now a menu (Suchen / Alle anzeigen) instead
+  of a search form, and the search-form copy no longer mentions
+  "leave empty to list all stations".
+
 ## [0.2.0] - 2026-05-28
 ### Added
 - Three new toggleable data sources, enabled by default for fresh installs:
