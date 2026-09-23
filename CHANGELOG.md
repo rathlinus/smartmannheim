@@ -5,6 +5,27 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Fixed
+- DWD-Station wind speed was always unavailable: the series is now
+  requested as `computeddata` instead of `timeseries`.
+- Deselecting every station in the options flow no longer brings the
+  original stations back.
+- Choosing "Fertig" without any selected station no longer drops the
+  user back into a broken menu; the option is hidden until something is
+  picked.
+
+### Changed
+- Deselected stations and disabled data sources are removed together
+  with their devices and entities.
+- Shared config/options flow steps, device info and option helpers are
+  no longer duplicated.
+- README: updated setup steps and metadata-catalog notes.
+
+### Added
+- Test suite (pytest-homeassistant-custom-component) and a GitHub
+  Actions workflow running pytest, ruff, hassfest and HACS validation.
+
 ## [0.2.1] - 2026-05-28
 ### Added
 - "Alle Stationen anzeigen" / "Show all stations" button on the first

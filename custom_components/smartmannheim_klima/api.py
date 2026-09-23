@@ -183,7 +183,7 @@ class SmartMannheimClient:
                     "gapFill": "None",
                     "displayName": series["display_name"],
                     "displayDigits": 1,
-                    "definitionType": "timeseries",
+                    "definitionType": series.get("definition_type", "timeseries"),
                 }
             ],
             "from": frm,

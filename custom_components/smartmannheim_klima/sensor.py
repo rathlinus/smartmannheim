@@ -29,10 +29,8 @@ from .const import (
     CONF_INCLUDE_AQI,
     CONF_INCLUDE_DWD,
     CONF_INCLUDE_POLLEN,
-    CONF_STATIONS,
     DOMAIN,
     DWD_DEVICE_ID,
-    DWD_SERIES,
     MEAS_HUMIDITY,
     MEAS_TEMPERATURE,
     MEAS_WIND,
@@ -40,6 +38,7 @@ from .const import (
     POLLEN_SERIES,
 )
 from .coordinator import SmartMannheimCoordinator
+from .helpers import get_stations, option_flag, station_device_info
 
 # µg/m³ has no first-class HA constant; use the literal the AQI cards expect.
 UG_PER_M3 = "µg/m³"
@@ -71,8 +70,9 @@ STATION_SENSOR_TYPES: tuple[KlimaSensorDescription, ...] = (
         native_unit_of_measurement=PERCENTAGE,
         suggested_display_precision=0,
     ),
-    # The backend doesn't declare a unit; m/s is the common IoT default for
-    # wind speed. If your values look off by ~3.6x, it's actually km/h.
+    # The backend doesn't declare a unit. m/s was checked on 2026-09-23:
+    # typical readings of ~1 m/s (gusts ~2) next to the DWD station's
+    # 3.2 m/s at the same time; km/h would mean near-total calm.
     KlimaSensorDescription(
         key=MEAS_WIND,
         measurement_key=MEAS_WIND,
@@ -198,6 +198,13 @@ LQI_LEVEL_LABELS = {
 }
 
 
+def _lqi_label(value: float | None) -> str | None:
+    """German label for an LQI value; bands clamp to 1..5."""
+    if value is None:
+        return None
+    return LQI_LEVEL_LABELS.get(max(1, min(5, int(value))))
+
+
 # --- DWD (Klimadaten DWD-Station Mannheim) ----------------------------
 @dataclass(frozen=True, kw_only=True)
 class DwdSensorDescription(SensorEntityDescription):
@@ -248,12 +255,6 @@ DWD_SENSOR_TYPES: tuple[DwdSensorDescription, ...] = (
 )
 
 
-def _option_flag(entry: ConfigEntry, key: str, default: bool = True) -> bool:
-    val = entry.options.get(key)
-    if val is None:
-        val = entry.data.get(key, default)
-    return bool(val)
-
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -261,7 +262,7 @@ async def async_setup_entry(
     async_add_entities: AddEntitiesCallback,
 ) -> None:
     coordinator: SmartMannheimCoordinator = hass.data[DOMAIN][entry.entry_id]
-    stations = entry.options.get(CONF_STATIONS) or entry.data.get(CONF_STATIONS, [])
+    stations = get_stations(entry)
 
     entities: list[SensorEntity] = []
     for station in stations:
@@ -273,16 +274,16 @@ async def async_setup_entry(
                 continue
             entities.append(KlimaSensor(coordinator, station, description, meta))
 
-    if _option_flag(entry, CONF_INCLUDE_POLLEN):
+    if option_flag(entry, CONF_INCLUDE_POLLEN):
         for description in POLLEN_SENSOR_TYPES:
             entities.append(PollenSensor(coordinator, description))
 
-    if _option_flag(entry, CONF_INCLUDE_AQI):
+    if option_flag(entry, CONF_INCLUDE_AQI):
         for station in AQI_STATIONS:
             for description in AQI_SENSOR_TYPES:
                 entities.append(AqiSensor(coordinator, station, description))
 
-    if _option_flag(entry, CONF_INCLUDE_DWD):
+    if option_flag(entry, CONF_INCLUDE_DWD):
         for description in DWD_SENSOR_TYPES:
             entities.append(DwdSensor(coordinator, description))
 
@@ -329,7 +330,6 @@ class KlimaSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
         super().__init__(coordinator)
         self.entity_description = description
         self._location_id: str = station["locationId"]
-        self._station_name: str = station.get("name") or station["locationId"]
         self._meta = meta
         coords = station.get("coordinates") or []
         if len(coords) == 2:
@@ -339,23 +339,7 @@ class KlimaSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
         else:
             self._longitude = self._latitude = None
         self._attr_unique_id = f"{DOMAIN}_{self._location_id}_{description.key}"
-        # Use the catalog's commissioning date as `hw_version` so it shows
-        # up in the HA device card without needing a custom field.
-        device_info = DeviceInfo(
-            identifiers={(DOMAIN, self._location_id)},
-            name=self._station_name,
-            manufacturer="Stadt Mannheim",
-            model="Klimamessstation",
-            configuration_url="https://smartmannheim.de/datenartikel/klimamessnetz-mannheim/",
-        )
-        if meta:
-            commissioned = meta.get("commissioned_at")
-            if commissioned:
-                device_info["hw_version"] = commissioned
-            altitude = meta.get("altitude_m")
-            if altitude is not None:
-                device_info["model"] = f"Klimamessstation (Höhe {altitude} m NN)"
-        self._attr_device_info = device_info
+        self._attr_device_info = station_device_info(station, meta)
 
     def _reading(self) -> dict[str, Any] | None:
         data = self.coordinator.data or {}
@@ -507,13 +491,9 @@ class AqiSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
     def extra_state_attributes(self) -> dict[str, Any]:
         attrs = _timestamp_attr(self._reading())
         if self.entity_description.measurement_key == "lqi":
-            value = self.native_value
-            if value is not None:
-                # LQI bands are 1.0–4.99; clamp to int index 1..5.
-                band = max(1, min(5, int(value))) if value >= 1 else 1
-                label = LQI_LEVEL_LABELS.get(band)
-                if label:
-                    attrs["level"] = label
+            label = _lqi_label(self.native_value)
+            if label:
+                attrs["level"] = label
         return attrs
 
 

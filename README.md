@@ -6,7 +6,7 @@ A Home Assistant integration for the public [Smart City Mannheim](https://smartm
 
 ## What's inside
 
-- **Climate measurement network** — pick any of the ~130 city-wide stations; each becomes a HA device with Temperature, Humidity and Wind speed sensors plus a GPS pin on the map.
+- **Climate measurement network** — pick any of the ~420 city-wide stations; each becomes a HA device with Temperature, Humidity and Wind speed sensors plus a GPS pin on the map.
 - **Pollenflug (DWD)** — 8 pollen species (alder, birch, hazel, ash, grasses, rye, mugwort, ragweed) with the official DWD danger index.
 - **Luftqualitätsindex (UBA)** — air-quality monitoring station at Mannheim Friedrichsring: LQI, PM₁₀, PM₂,₅, NO₂.
 - **Klimadaten DWD-Station Mannheim** — the official German Weather Service station: Temperature, Humidity, Wind speed, Precipitation.
@@ -36,7 +36,7 @@ All three extra data sources (Pollen, AQI, DWD-Station) are **enabled by default
 ## Setup
 
 1. **Settings → Integrations → Add Integration → Smart City Mannheim**
-2. Enter a street, district or station code (e.g. `Feudenheim`, `Innenstadt`, `T-016`); leave empty to list all stations
+2. Choose **Nach Name oder Adresse suchen** and enter a street, district or station code (e.g. `Feudenheim`, `Innenstadt`, `T-016`) — or choose **Alle Stationen anzeigen** to skip the search
 3. Select matching station(s)
 4. Add more stations or finish
 
@@ -50,6 +50,8 @@ That's it — pollen, air quality and the DWD-Station turn on automatically.
 |---|---|
 | *Stationen verwalten* | Search/select climate stations exactly like first setup |
 | *Zusätzliche Datenquellen* | Toggle Pollenflug, Luftqualitätsindex and DWD-Station on/off |
+
+Deselected stations and disabled data sources are removed together with their devices and entities. You can also deselect every station and keep only the extra data sources.
 
 ---
 
@@ -161,7 +163,7 @@ The APIs are publicly readable but **not officially documented** — the provide
 1. **Sensor presence filtering** — the catalog's TT/RF/FF flags tell us which sensors are actually wired at each station, so the integration doesn't create permanently-unavailable entities.
 2. **Device enrichment** — altitude, Local Climate Zone, commissioning date and per-sensor measurement heights are surfaced on the HA device & entity attributes.
 
-The snapshot is static. To refresh it after the upstream catalog changes, re-run `build_station_metadata.py` in the repo root against the latest xlsx and commit the regenerated JSON.
+The snapshot is static and was generated from the official [Metadatenkatalog Klimamessnetz](https://www.smartmannheim.de/wp-content/uploads/2024/03/20240314_Metadatenkatalog_MA_Klimamessnetz.pdf) (xlsx edition). It is not refreshed automatically; after upstream catalog changes it has to be regenerated from the latest xlsx and committed.
 
 ---
 

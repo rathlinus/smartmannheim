@@ -7,13 +7,13 @@ from homeassistant.components.device_tracker import SourceType
 from homeassistant.components.device_tracker.config_entry import TrackerEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import metadata
-from .const import CONF_STATIONS, DOMAIN
+from .const import DOMAIN
 from .coordinator import SmartMannheimCoordinator
+from .helpers import get_stations, station_device_info
 
 
 async def async_setup_entry(
@@ -22,7 +22,7 @@ async def async_setup_entry(
     async_add_entities: AddEntitiesCallback,
 ) -> None:
     coordinator: SmartMannheimCoordinator = hass.data[DOMAIN][entry.entry_id]
-    stations = entry.options.get(CONF_STATIONS) or entry.data.get(CONF_STATIONS, [])
+    stations = get_stations(entry)
 
     trackers: list[KlimaStationTracker] = []
     for station in stations:
@@ -51,27 +51,12 @@ class KlimaStationTracker(
         super().__init__(coordinator)
         self._location_id: str = station["locationId"]
         self._meta = meta
-        station_name = station.get("name") or self._location_id
         # Backend stores GeoJSON order [lon, lat].
         lon, lat = station["coordinates"]
         self._lat: float = float(lat)
         self._lon: float = float(lon)
         self._attr_unique_id = f"{DOMAIN}_{self._location_id}_location"
-        device_info = DeviceInfo(
-            identifiers={(DOMAIN, self._location_id)},
-            name=station_name,
-            manufacturer="Stadt Mannheim",
-            model="Klimamessstation",
-            configuration_url="https://smartmannheim.de/datenartikel/klimamessnetz-mannheim/",
-        )
-        if meta:
-            if meta.get("commissioned_at"):
-                device_info["hw_version"] = meta["commissioned_at"]
-            if meta.get("altitude_m") is not None:
-                device_info["model"] = (
-                    f"Klimamessstation (Höhe {meta['altitude_m']} m NN)"
-                )
-        self._attr_device_info = device_info
+        self._attr_device_info = station_device_info(station, meta)
 
     @property
     def source_type(self) -> SourceType:
