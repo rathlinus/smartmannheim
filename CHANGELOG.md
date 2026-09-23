@@ -5,7 +5,35 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.3.0] - Unreleased
+### Changed — official climate API
+- Climate stations now use the official Smart City Mannheim API
+  (`api.smartmannheim.de`) instead of the dashboard backend. You pick
+  individual sensors (climate or wind); sensors at the same location
+  share one device.
+- **Rate limit:** the API allows 30 requests per hour, so climate
+  sensors update every `max(10, 2 × sensors)` minutes — 5 sensors every
+  10 minutes, 10 every 20. The setup screens show the interval, each
+  sensor has an `update_interval_min` attribute, and a Repairs notice
+  appears with more than 5 sensors.
+- Pollen, air quality and the DWD station stay on the dashboard backends,
+  with their own 10-minute coordinator.
+- Search by sensor code or street; the list is sorted by distance from
+  home. Street addresses come from a bundled snapshot because the API has
+  none.
+- Existing 0.2.x installs migrate automatically (config entry version 2):
+  old stations are mapped to their official sensors and entities keep
+  their entity IDs and history. A notification lists the new interval and
+  any stations that couldn't be matched.
+
+### Added
+- New climate entities: air pressure, wind direction (enabled), dew
+  point, min/max temperature, irradiance, gusts and gust direction
+  (disabled by default).
+- `sensor_snapshot.json` and `scripts/build_sensor_snapshot.py`.
+- Test suite (pytest-homeassistant-custom-component) and a GitHub
+  Actions workflow running pytest, ruff, hassfest and HACS validation.
+
 ### Fixed
 - DWD-Station wind speed was always unavailable: the series is now
   requested as `computeddata` instead of `timeseries`.
@@ -21,10 +49,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Shared config/options flow steps, device info and option helpers are
   no longer duplicated.
 - README: updated setup steps and metadata-catalog notes.
-
-### Added
-- Test suite (pytest-homeassistant-custom-component) and a GitHub
-  Actions workflow running pytest, ruff, hassfest and HACS validation.
 
 ## [0.2.1] - 2026-05-28
 ### Added

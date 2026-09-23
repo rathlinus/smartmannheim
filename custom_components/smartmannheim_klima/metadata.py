@@ -1,12 +1,13 @@
 """Loader + matcher for the Smart Mannheim station metadata catalog.
 
 The integration ships ``station_metadata.json``, a snapshot of the public
-Excel metadata catalog (built via ``build_station_metadata.py`` in the
-repo root). The API only gives us ``locationId`` + ``name`` per station;
-this module fuzzy-matches that name back to a metadata row so we can:
+Excel metadata catalog. The official API only gives us id, name and
+position per sensor; this module matches the sensor name (e.g.
+``0101-001-21``) back to a catalog row so we can enrich the HA device and
+entities with altitude, LCZ, commissioning date and measurement heights.
 
-  * skip sensors the station physically doesn't have, and
-  * enrich the HA device with altitude, LCZ, commissioning date, etc.
+Call :func:`load` from an executor before the first :func:`lookup`; it
+reads the file once and caches it.
 """
 from __future__ import annotations
 
@@ -26,12 +27,20 @@ _FILE = os.path.join(_HERE, "station_metadata.json")
 # or ``0101-001-21 | 0101-001-31``. Hyphenated IDs must stay intact.
 _TOKEN_RE = re.compile(r"[0-9A-Za-z]+(?:-[0-9A-Za-z]+){0,3}")
 
-# Internal sensor key → metadata catalog flag (column in the xlsx).
+# Official API parameter → metadata catalog flag (column in the xlsx).
 SENSOR_TO_META_KEY: dict[str, str] = {
     "temperature": "TT",
-    "humidity": "RF",
-    "wind_speed": "FF",
+    "airHumidity": "RF",
+    "averageWindSpeed": "FF",
+    "averageWindDirection": "DD",
+    "atmosphericPressure": "PP",
+    "irradiation": "GS",
 }
+
+
+def load() -> None:
+    """Warm the cache (blocking file I/O — run in an executor)."""
+    _index_by_id()
 
 
 @lru_cache(maxsize=1)
@@ -75,23 +84,6 @@ def lookup(api_station_name: str | None) -> dict[str, Any] | None:
         if hit:
             return hit
     return None
-
-
-def has_sensor(meta: dict[str, Any] | None, sensor_key: str) -> bool:
-    """Return True iff the metadata says this physical sensor is installed.
-
-    Falls back to True when metadata is unavailable so an empty/outdated
-    snapshot never silently drops entities.
-    """
-    if not meta:
-        return True
-    meta_key = SENSOR_TO_META_KEY.get(sensor_key)
-    if not meta_key:
-        return True
-    info = (meta.get("sensors") or {}).get(meta_key)
-    if not info:
-        return True
-    return bool(info.get("installed"))
 
 
 def sensor_info(meta: dict[str, Any] | None, sensor_key: str) -> dict[str, Any] | None:

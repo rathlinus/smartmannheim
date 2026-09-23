@@ -12,7 +12,7 @@ from homeassistant.config_entries import (
     ConfigFlowResult,
     OptionsFlow,
 )
-from homeassistant.core import callback
+from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.selector import (
     BooleanSelector,
@@ -31,7 +31,16 @@ from .const import (
     CONF_STATIONS,
     DOMAIN,
 )
-from .helpers import get_stations
+from .helpers import address_for, async_get_sensors, async_get_snapshot, get_stations
+from .official import (
+    KIND_CLIMATE,
+    KIND_WIND,
+    SENSORS_AT_MIN_INTERVAL,
+    climate_interval_minutes,
+    distance_m,
+    location_key,
+    sensor_kind,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -43,37 +52,77 @@ _EXTRAS_DEFAULTS: dict[str, bool] = {
 }
 
 
-def _station_label(station: dict[str, Any]) -> str:
-    name = (station.get("displayName") or station.get("name") or "").strip()
-    address = (station.get("address") or "").strip().strip(",").strip()
-    if address and address not in name:
-        return f"{name} — {address}" if name else address
-    return name or station.get("locationId", "?")
+_KIND_LABELS = {KIND_CLIMATE: "Klima", KIND_WIND: "Wind"}
 
 
-def _station_payload(station: dict[str, Any]) -> dict[str, Any]:
-    return {
-        "locationId": station["locationId"],
-        "name": _station_label(station),
-        "coordinates": (station.get("location") or {}).get("coordinates"),
-    }
+class _Catalog:
+    """Official sensor list plus labels, addresses and home distance."""
 
+    def __init__(
+        self,
+        sensors: list[dict[str, Any]],
+        snapshot: dict[str, Any],
+        home: list[float] | None,
+    ) -> None:
+        self.sensors = sensors
+        self._snapshot = snapshot
+        self._home = home
 
-def _matches(station: dict[str, Any], query: str) -> bool:
-    if not query:
-        return True
-    q = query.lower().strip()
-    for field in ("name", "displayName", "address"):
-        val = station.get(field)
-        if val and q in str(val).lower():
+    def address(self, sensor: dict[str, Any]) -> str | None:
+        return address_for(sensor, self._snapshot)
+
+    def distance_km(self, sensor: dict[str, Any]) -> float | None:
+        if not self._home or not sensor.get("coordinates"):
+            return None
+        return distance_m(sensor["coordinates"], self._home) / 1000
+
+    def label(self, sensor: dict[str, Any]) -> str:
+        parts = [sensor["name"], _KIND_LABELS[sensor_kind(sensor["params"])]]
+        if address := self.address(sensor):
+            parts.append(address)
+        if (km := self.distance_km(sensor)) is not None:
+            parts.append(f"{km:.1f} km".replace(".", ","))
+        return " · ".join(parts)
+
+    def sort_key(self, sensor: dict[str, Any]) -> tuple:
+        # Nearest first; sensors of one station stay together, climate
+        # before wind.
+        km = self.distance_km(sensor)
+        return (
+            km if km is not None else float("inf"),
+            location_key(sensor),
+            sensor_kind(sensor["params"]) != KIND_CLIMATE,
+            sensor["name"],
+        )
+
+    def matches(self, sensor: dict[str, Any], query: str) -> bool:
+        if not query:
             return True
-    return False
+        q = query.lower().strip()
+        return any(
+            q in text.lower()
+            for text in (sensor["name"], sensor["sensorId"], self.address(sensor) or "")
+        )
 
 
-async def _load_stations(hass) -> list[dict[str, Any]]:
-    session = async_get_clientsession(hass)
-    client = SmartMannheimClient(session)
-    return await client.list_stations()
+async def _load_stations(hass: HomeAssistant) -> list[dict[str, Any]]:
+    client = SmartMannheimClient(async_get_clientsession(hass))
+    return await async_get_sensors(hass, client)
+
+
+async def _load_catalog(hass: HomeAssistant) -> _Catalog:
+    sensors = await _load_stations(hass)
+    snapshot = await async_get_snapshot(hass)
+    home = [hass.config.longitude, hass.config.latitude] if hass.config.latitude else None
+    return _Catalog(sensors, snapshot, home)
+
+
+def _rate_placeholders(count: int) -> dict[str, str]:
+    return {
+        "selected_count": str(count),
+        "interval": str(climate_interval_minutes(count)),
+        "max_sensors": str(SENSORS_AT_MIN_INTERVAL),
+    }
 
 
 def _extras_schema(current: dict[str, Any]) -> vol.Schema:
@@ -100,7 +149,7 @@ def _extras_schema(current: dict[str, Any]) -> vol.Schema:
 class _AccumulatingFlow:
     """Search/pick/menu steps shared by the config and options flows.
 
-    Selections live in ``self._accumulated`` (``locationId -> payload``)
+    Selections live in ``self._accumulated`` (``sensorId -> payload``)
     across multiple search iterations; ``finish`` commits all of them.
     """
 
@@ -113,9 +162,9 @@ class _AccumulatingFlow:
         self, initial: list[dict[str, Any]] | None = None
     ) -> None:
         self._accumulated: dict[str, dict[str, Any]] = {
-            s["locationId"]: s for s in (initial or [])
+            s["sensorId"]: s for s in (initial or [])
         }
-        self._all_stations: list[dict[str, Any]] = []
+        self._catalog: _Catalog | None = None
         self._candidates: list[dict[str, Any]] = []
         self._query: str = ""
 
@@ -123,11 +172,14 @@ class _AccumulatingFlow:
         return self.async_show_form(
             step_id="search",
             data_schema=vol.Schema({vol.Optional(CONF_QUERY, default=""): str}),
-            description_placeholders={
-                "selected_count": str(len(self._accumulated)),
-            },
+            description_placeholders=_rate_placeholders(len(self._accumulated)),
             errors=errors or {},
         )
+
+    async def _get_catalog(self) -> _Catalog:
+        if self._catalog is None:
+            self._catalog = await _load_catalog(self.hass)
+        return self._catalog
 
     async def async_step_search(
         self, user_input: dict[str, Any] | None = None
@@ -136,13 +188,12 @@ class _AccumulatingFlow:
             return self._search_form()
         self._query = (user_input.get(CONF_QUERY) or "").strip()
         try:
-            if not self._all_stations:
-                self._all_stations = await _load_stations(self.hass)
+            catalog = await self._get_catalog()
         except SmartMannheimError as err:
             _LOGGER.error("Could not load station list: %s", err)
             return self._search_form({"base": "cannot_connect"})
         self._candidates = [
-            s for s in self._all_stations if _matches(s, self._query)
+            s for s in catalog.sensors if catalog.matches(s, self._query)
         ]
         if not self._candidates:
             return self._search_form({CONF_QUERY: "no_matches"})
@@ -158,23 +209,22 @@ class _AccumulatingFlow:
         silent menu re-render.
         """
         try:
-            if not self._all_stations:
-                self._all_stations = await _load_stations(self.hass)
+            catalog = await self._get_catalog()
         except SmartMannheimError as err:
             _LOGGER.error("Could not load station list: %s", err)
             return self._search_form({"base": "cannot_connect"})
         self._query = ""
-        self._candidates = list(self._all_stations)
+        self._candidates = list(catalog.sensors)
         return await self.async_step_pick()
 
     async def async_step_pick(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        candidate_ids = {s["locationId"] for s in self._candidates}
+        candidate_ids = {s["sensorId"] for s in self._candidates}
 
         if user_input is not None:
             selected_ids: list[str] = user_input[CONF_STATIONS]
-            by_id = {s["locationId"]: s for s in self._candidates}
+            by_id = {s["sensorId"]: s for s in self._candidates}
             # Items inside the current match-set that were unchecked are
             # removed; items outside the current match-set stay as they are.
             for sid in list(self._accumulated.keys()):
@@ -182,13 +232,14 @@ class _AccumulatingFlow:
                     del self._accumulated[sid]
             for sid in selected_ids:
                 if sid in by_id:
-                    self._accumulated[sid] = _station_payload(by_id[sid])
+                    self._accumulated[sid] = by_id[sid]
             return await self.async_step_menu()
 
+        catalog = await self._get_catalog()
         default = [sid for sid in self._accumulated if sid in candidate_ids]
         options = [
-            SelectOptionDict(value=s["locationId"], label=_station_label(s))
-            for s in sorted(self._candidates, key=_station_label)
+            SelectOptionDict(value=s["sensorId"], label=catalog.label(s))
+            for s in sorted(self._candidates, key=catalog.sort_key)
         ]
         schema = vol.Schema(
             {
@@ -210,7 +261,7 @@ class _AccumulatingFlow:
             description_placeholders={
                 "query": self._query or "—",
                 "match_count": str(len(self._candidates)),
-                "selected_count": str(len(self._accumulated)),
+                **_rate_placeholders(len(self._accumulated)),
             },
         )
 
@@ -224,9 +275,7 @@ class _AccumulatingFlow:
         return self.async_show_menu(
             step_id="menu",
             menu_options=menu_options,
-            description_placeholders={
-                "selected_count": str(len(self._accumulated)),
-            },
+            description_placeholders=_rate_placeholders(len(self._accumulated)),
         )
 
     async def async_step_search_more(
@@ -243,7 +292,8 @@ class _AccumulatingFlow:
 class SmartMannheimConfigFlow(_AccumulatingFlow, ConfigFlow, domain=DOMAIN):
     """Top-level menu → [search | all stations] → pick → [search more | finish]."""
 
-    VERSION = 1
+    # v2: stations are official API sensors (see migration.py).
+    VERSION = 2
 
     def __init__(self) -> None:
         self._init_state()
@@ -257,9 +307,7 @@ class SmartMannheimConfigFlow(_AccumulatingFlow, ConfigFlow, domain=DOMAIN):
         return self.async_show_menu(
             step_id="user",
             menu_options=["search", "all_stations"],
-            description_placeholders={
-                "selected_count": str(len(self._accumulated)),
-            },
+            description_placeholders=_rate_placeholders(len(self._accumulated)),
         )
 
     async def async_step_finish(

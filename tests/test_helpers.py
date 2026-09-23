@@ -13,7 +13,7 @@ from custom_components.smartmannheim_klima.helpers import (
     option_flag,
 )
 
-STATION = {"locationId": "a", "name": "A", "coordinates": [8.4, 49.4]}
+STATION = {"sensorId": "a", "name": "A", "coordinates": [8.4, 49.4], "params": []}
 
 
 def test_get_stations_falls_back_to_data():

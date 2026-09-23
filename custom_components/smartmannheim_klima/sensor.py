@@ -12,8 +12,11 @@ from homeassistant.components.sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
+    DEGREE,
     PERCENTAGE,
+    UnitOfIrradiance,
     UnitOfLength,
+    UnitOfPressure,
     UnitOfSpeed,
     UnitOfTemperature,
 )
@@ -26,64 +29,107 @@ from homeassistant.util import dt as dt_util
 from . import metadata
 from .const import (
     AQI_STATIONS,
-    CONF_INCLUDE_AQI,
-    CONF_INCLUDE_DWD,
-    CONF_INCLUDE_POLLEN,
     DOMAIN,
     DWD_DEVICE_ID,
-    MEAS_HUMIDITY,
-    MEAS_TEMPERATURE,
-    MEAS_WIND,
     POLLEN_DEVICE_ID,
     POLLEN_SERIES,
 )
-from .coordinator import SmartMannheimCoordinator
-from .helpers import get_stations, option_flag, station_device_info
+from .coordinator import ClimateCoordinator, ExtrasCoordinator, RuntimeData
+from .official import location_key
 
 # µg/m³ has no first-class HA constant; use the literal the AQI cards expect.
 UG_PER_M3 = "µg/m³"
 
 
-@dataclass(frozen=True, kw_only=True)
-class KlimaSensorDescription(SensorEntityDescription):
-    measurement_key: str
-
-
-STATION_SENSOR_TYPES: tuple[KlimaSensorDescription, ...] = (
-    KlimaSensorDescription(
-        key=MEAS_TEMPERATURE,
-        measurement_key=MEAS_TEMPERATURE,
-        translation_key=MEAS_TEMPERATURE,
-        name="Temperatur",
+# --- Official climate sensors -------------------------------------------
+# Keyed by the official API parameter name. The API declares no units;
+# they were checked against live data on 2026-09-23. Wind speed matches
+# the old dashboard values 1:1 (m/s: ~1 m/s at city sensors while the
+# DWD station read 3.2 m/s; km/h would mean near-total calm).
+# `minIrradiation` (bogus values around -1900) and `precipitationTick`
+# (undocumented, always 0) are deliberately not exposed.
+def _temperature(key: str, translation_key: str, enabled: bool = True) -> SensorEntityDescription:
+    return SensorEntityDescription(
+        key=key,
+        translation_key=translation_key,
         device_class=SensorDeviceClass.TEMPERATURE,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         suggested_display_precision=1,
-    ),
-    KlimaSensorDescription(
-        key=MEAS_HUMIDITY,
-        measurement_key=MEAS_HUMIDITY,
-        translation_key=MEAS_HUMIDITY,
-        name="Luftfeuchtigkeit",
-        device_class=SensorDeviceClass.HUMIDITY,
-        state_class=SensorStateClass.MEASUREMENT,
-        native_unit_of_measurement=PERCENTAGE,
-        suggested_display_precision=0,
-    ),
-    # The backend doesn't declare a unit. m/s was checked on 2026-09-23:
-    # typical readings of ~1 m/s (gusts ~2) next to the DWD station's
-    # 3.2 m/s at the same time; km/h would mean near-total calm.
-    KlimaSensorDescription(
-        key=MEAS_WIND,
-        measurement_key=MEAS_WIND,
-        translation_key=MEAS_WIND,
-        name="Windgeschwindigkeit",
+        entity_registry_enabled_default=enabled,
+    )
+
+
+def _wind_speed(key: str, translation_key: str, enabled: bool = True) -> SensorEntityDescription:
+    return SensorEntityDescription(
+        key=key,
+        translation_key=translation_key,
         device_class=SensorDeviceClass.WIND_SPEED,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfSpeed.METERS_PER_SECOND,
         suggested_display_precision=1,
-    ),
-)
+        entity_registry_enabled_default=enabled,
+    )
+
+
+def _irradiance(key: str, translation_key: str, enabled: bool = False) -> SensorEntityDescription:
+    return SensorEntityDescription(
+        key=key,
+        translation_key=translation_key,
+        device_class=SensorDeviceClass.IRRADIANCE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfIrradiance.WATTS_PER_SQUARE_METER,
+        suggested_display_precision=0,
+        entity_registry_enabled_default=enabled,
+    )
+
+
+def _direction(key: str, translation_key: str, enabled: bool = True) -> SensorEntityDescription:
+    # No device/state class: WIND_DIRECTION needs a newer HA than we
+    # support, and long-term mean statistics of angles are meaningless.
+    return SensorEntityDescription(
+        key=key,
+        translation_key=translation_key,
+        icon="mdi:compass-outline",
+        native_unit_of_measurement=DEGREE,
+        suggested_display_precision=0,
+        entity_registry_enabled_default=enabled,
+    )
+
+
+CLIMATE_SENSOR_TYPES: dict[str, SensorEntityDescription] = {
+    d.key: d
+    for d in (
+        _temperature("temperature", "temperature"),
+        SensorEntityDescription(
+            key="airHumidity",
+            translation_key="humidity",
+            device_class=SensorDeviceClass.HUMIDITY,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=PERCENTAGE,
+            suggested_display_precision=0,
+        ),
+        SensorEntityDescription(
+            key="atmosphericPressure",
+            translation_key="pressure",
+            device_class=SensorDeviceClass.ATMOSPHERIC_PRESSURE,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfPressure.HPA,
+            suggested_display_precision=1,
+        ),
+        _temperature("dewPoint", "dew_point", enabled=False),
+        _temperature("minTemperature", "min_temperature", enabled=False),
+        _temperature("maxTemperature", "max_temperature", enabled=False),
+        _irradiance("irradiation", "irradiation"),
+        _irradiance("maxIrradiation", "max_irradiation"),
+        _wind_speed("averageWindSpeed", "wind_speed"),
+        _wind_speed("minWindSpeed", "min_wind_speed", enabled=False),
+        _wind_speed("windGust1s", "wind_gust_1s", enabled=False),
+        _wind_speed("windGust3s", "wind_gust_3s", enabled=False),
+        _direction("averageWindDirection", "wind_direction"),
+        _direction("windGustDirection", "wind_gust_direction", enabled=False),
+    )
+}
 
 
 # --- Pollen ------------------------------------------------------------
@@ -261,31 +307,32 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    coordinator: SmartMannheimCoordinator = hass.data[DOMAIN][entry.entry_id]
-    stations = get_stations(entry)
-
+    runtime: RuntimeData = hass.data[DOMAIN][entry.entry_id]
     entities: list[SensorEntity] = []
-    for station in stations:
-        meta = metadata.lookup(station.get("name"))
-        for description in STATION_SENSOR_TYPES:
-            # Skip sensors the catalog says aren't installed at this station.
-            # When metadata is unknown, helper returns True (permissive).
-            if not metadata.has_sensor(meta, description.measurement_key):
-                continue
-            entities.append(KlimaSensor(coordinator, station, description, meta))
 
-    if option_flag(entry, CONF_INCLUDE_POLLEN):
-        for description in POLLEN_SENSOR_TYPES:
-            entities.append(PollenSensor(coordinator, description))
+    if runtime.climate is not None:
+        for sensor in runtime.sensors:
+            meta = metadata.lookup(sensor["name"])
+            device_info = runtime.devices[location_key(sensor)]
+            for param in sensor["params"]:
+                description = CLIMATE_SENSOR_TYPES.get(param)
+                if description is not None:
+                    entities.append(
+                        KlimaSensor(runtime.climate, sensor, description, device_info, meta)
+                    )
 
-    if option_flag(entry, CONF_INCLUDE_AQI):
-        for station in AQI_STATIONS:
-            for description in AQI_SENSOR_TYPES:
-                entities.append(AqiSensor(coordinator, station, description))
-
-    if option_flag(entry, CONF_INCLUDE_DWD):
-        for description in DWD_SENSOR_TYPES:
-            entities.append(DwdSensor(coordinator, description))
+    extras = runtime.extras
+    if extras is not None:
+        if extras.include_pollen:
+            for description in POLLEN_SENSOR_TYPES:
+                entities.append(PollenSensor(extras, description))
+        if extras.include_aqi:
+            for station in AQI_STATIONS:
+                for description in AQI_SENSOR_TYPES:
+                    entities.append(AqiSensor(extras, station, description))
+        if extras.include_dwd:
+            for description in DWD_SENSOR_TYPES:
+                entities.append(DwdSensor(extras, description))
 
     async_add_entities(entities)
 
@@ -314,64 +361,64 @@ def _timestamp_attr(reading: dict[str, Any] | None) -> dict[str, Any]:
     return out
 
 
-class KlimaSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
-    """One measurement for one climate station."""
+def _timestamp_only(reading: dict[str, Any] | None) -> dict[str, Any]:
+    if not reading or not reading.get("timestamp"):
+        return {}
+    parsed = dt_util.parse_datetime(reading["timestamp"])
+    return {"measured_at": parsed.isoformat()} if parsed else {}
+
+
+class KlimaSensor(CoordinatorEntity[ClimateCoordinator], SensorEntity):
+    """One parameter of one official climate sensor."""
 
     _attr_has_entity_name = True
-    entity_description: KlimaSensorDescription
 
     def __init__(
         self,
-        coordinator: SmartMannheimCoordinator,
-        station: dict[str, Any],
-        description: KlimaSensorDescription,
+        coordinator: ClimateCoordinator,
+        sensor: dict[str, Any],
+        description: SensorEntityDescription,
+        device_info: DeviceInfo,
         meta: dict[str, Any] | None = None,
     ) -> None:
         super().__init__(coordinator)
         self.entity_description = description
-        self._location_id: str = station["locationId"]
+        self._sensor_id: str = sensor["sensorId"]
+        self._sensor_name: str = sensor["name"]
         self._meta = meta
-        coords = station.get("coordinates") or []
-        if len(coords) == 2:
-            # Backend stores GeoJSON order [lon, lat].
-            self._longitude: float | None = float(coords[0])
-            self._latitude: float | None = float(coords[1])
-        else:
-            self._longitude = self._latitude = None
-        self._attr_unique_id = f"{DOMAIN}_{self._location_id}_{description.key}"
-        self._attr_device_info = station_device_info(station, meta)
+        coords = sensor.get("coordinates") or []
+        # The API uses GeoJSON order [lon, lat].
+        self._position = (float(coords[1]), float(coords[0])) if len(coords) == 2 else None
+        self._attr_unique_id = f"{DOMAIN}_{self._sensor_id}_{description.key}"
+        self._attr_device_info = device_info
 
     def _reading(self) -> dict[str, Any] | None:
-        data = self.coordinator.data or {}
-        stations = data.get("stations") or {}
-        return (stations.get(self._location_id) or {}).get(
-            self.entity_description.measurement_key
-        )
+        values = (self.coordinator.data or {}).get(self._sensor_id) or {}
+        return values.get(self.entity_description.key)
 
     @property
     def available(self) -> bool:
-        if not super().available:
-            return False
-        reading = self._reading()
-        return reading is not None and reading.get("indicator") is not None
+        return super().available and self._reading() is not None
 
     @property
     def native_value(self) -> float | None:
         reading = self._reading()
-        if reading is None:
-            return None
-        return _float_or_none(reading.get("indicator"))
+        return _float_or_none(reading["value"]) if reading else None
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
-        attrs: dict[str, Any] = {"location_id": self._location_id}
-        if self._latitude is not None and self._longitude is not None:
-            attrs["latitude"] = self._latitude
-            attrs["longitude"] = self._longitude
-        attrs.update(_timestamp_attr(self._reading()))
+        attrs: dict[str, Any] = {
+            "sensor_id": self._sensor_id,
+            "sensor_name": self._sensor_name,
+            # Shown so the stretched poll interval (API rate limit) is visible.
+            "update_interval_min": self.coordinator.interval_minutes,
+        }
+        if self._position:
+            attrs["latitude"], attrs["longitude"] = self._position
+        attrs.update(_timestamp_only(self._reading()))
         # Surface catalog-level context per sensor: measurement height &
         # the static station attrs (altitude, LCZ, commissioning date…).
-        info = metadata.sensor_info(self._meta, self.entity_description.measurement_key)
+        info = metadata.sensor_info(self._meta, self.entity_description.key)
         if info:
             if "height_m" in info:
                 attrs["measurement_height_m"] = info["height_m"]
@@ -381,7 +428,7 @@ class KlimaSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
         return attrs
 
 
-class PollenSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
+class PollenSensor(CoordinatorEntity[ExtrasCoordinator], SensorEntity):
     """One pollen species (DWD Pollenflug Mannheim)."""
 
     _attr_has_entity_name = True
@@ -389,7 +436,7 @@ class PollenSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
 
     def __init__(
         self,
-        coordinator: SmartMannheimCoordinator,
+        coordinator: ExtrasCoordinator,
         description: PollenSensorDescription,
     ) -> None:
         super().__init__(coordinator)
@@ -440,7 +487,7 @@ class PollenSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
         return attrs
 
 
-class AqiSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
+class AqiSensor(CoordinatorEntity[ExtrasCoordinator], SensorEntity):
     """One UBA air-quality metric at one station."""
 
     _attr_has_entity_name = True
@@ -448,7 +495,7 @@ class AqiSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
 
     def __init__(
         self,
-        coordinator: SmartMannheimCoordinator,
+        coordinator: ExtrasCoordinator,
         station: dict[str, Any],
         description: AqiSensorDescription,
     ) -> None:
@@ -497,7 +544,7 @@ class AqiSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
         return attrs
 
 
-class DwdSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
+class DwdSensor(CoordinatorEntity[ExtrasCoordinator], SensorEntity):
     """One DWD-station metric (Mannheim)."""
 
     _attr_has_entity_name = True
@@ -505,7 +552,7 @@ class DwdSensor(CoordinatorEntity[SmartMannheimCoordinator], SensorEntity):
 
     def __init__(
         self,
-        coordinator: SmartMannheimCoordinator,
+        coordinator: ExtrasCoordinator,
         description: DwdSensorDescription,
     ) -> None:
         super().__init__(coordinator)
