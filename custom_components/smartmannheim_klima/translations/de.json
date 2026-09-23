@@ -3,35 +3,39 @@
     "step": {
       "user": {
         "title": "Smart City Mannheim",
-        "description": "Wie möchtest du Stationen auswählen?\n\nBisher ausgewählt: {selected_count}",
+        "description": "Wie möchtest du Klimasensoren auswählen?\n\nBisher ausgewählt: {selected_count}",
         "menu_options": {
-          "search": "Nach Name oder Adresse suchen",
-          "all_stations": "Alle Stationen anzeigen"
+          "search": "Nach Sensorcode oder Straße suchen",
+          "all_stations": "Alle Sensoren anzeigen"
         }
       },
       "search": {
-        "title": "Stationen suchen",
-        "description": "Suche Stationen nach Name oder Adresse.\n\nBisher ausgewählt: {selected_count}",
-        "data": { "query": "Suche (Name / Adresse)" }
+        "title": "Sensoren suchen",
+        "description": "Suche nach Sensorcode (z. B. `0101-001`, `T-050`, `2303LH`) oder Straße. Die Liste zeigt Klima- und Windsensoren einzeln, die nächsten zuerst.\n\nMit {selected_count} Sensoren: Aktualisierung alle **{interval} Minuten**. Die offizielle API erlaubt 30 Anfragen pro Stunde – jeder Sensor braucht eine Anfrage pro Aktualisierung, also {max_sensors} Sensoren im 10-Minuten-Takt. Eine Station mit Temperatur und Wind zählt als 2 Sensoren.",
+        "data": {
+          "query": "Suche (Sensorcode / Straße)"
+        }
       },
       "pick": {
-        "title": "Stationen auswählen",
-        "description": "{match_count} Treffer für „{query}“. Insgesamt schon ausgewählt: {selected_count}.",
-        "data": { "stations": "Stationen" }
+        "title": "Sensoren auswählen",
+        "description": "{match_count} Treffer für „{query}“. Wähle einzelne Sensoren – Klima (Temperatur, Feuchte, Luftdruck, Strahlung) und Wind sind getrennte Sensoren derselben Station.\n\nMit {selected_count} Sensoren: Aktualisierung alle **{interval} Minuten**. Die offizielle API erlaubt 30 Anfragen pro Stunde – jeder Sensor braucht eine Anfrage pro Aktualisierung, also {max_sensors} Sensoren im 10-Minuten-Takt. Eine Station mit Temperatur und Wind zählt als 2 Sensoren.",
+        "data": {
+          "stations": "Sensoren"
+        }
       },
       "menu": {
-        "title": "Weitere Stationen hinzufügen?",
-        "description": "{selected_count} Stationen insgesamt ausgewählt.\n\nPollenflug, Luftqualität und DWD-Wetterstation sind standardmäßig aktiviert und können später unter „Konfigurieren“ angepasst werden.",
+        "title": "Weitere Sensoren hinzufügen?",
+        "description": "{selected_count} Sensoren insgesamt ausgewählt.\n\nMit {selected_count} Sensoren: Aktualisierung alle **{interval} Minuten**. Die offizielle API erlaubt 30 Anfragen pro Stunde – jeder Sensor braucht eine Anfrage pro Aktualisierung, also {max_sensors} Sensoren im 10-Minuten-Takt. Eine Station mit Temperatur und Wind zählt als 2 Sensoren.\n\nPollenflug, Luftqualität und DWD-Wetterstation sind standardmäßig aktiviert und können später unter „Konfigurieren“ angepasst werden.",
         "menu_options": {
           "search_more": "Weitere suchen",
-          "show_all_more": "Alle Stationen anzeigen",
+          "show_all_more": "Alle Sensoren anzeigen",
           "finish": "Fertig"
         }
       }
     },
     "error": {
-      "cannot_connect": "Verbindung zu Smart City Mannheim fehlgeschlagen.",
-      "no_matches": "Keine passenden Stationen gefunden."
+      "cannot_connect": "Verbindung zur Smart-City-Mannheim-API fehlgeschlagen.",
+      "no_matches": "Keine passenden Sensoren gefunden."
     },
     "abort": {
       "already_configured": "Die Integration ist schon eingerichtet. Du kannst die Stationsauswahl über 'Konfigurieren' ändern."
@@ -42,27 +46,31 @@
       "init": {
         "title": "Was möchtest du ändern?",
         "menu_options": {
-          "search": "Stationen suchen",
-          "all_stations": "Alle Stationen anzeigen",
+          "search": "Sensoren suchen",
+          "all_stations": "Alle Sensoren anzeigen",
           "extras": "Zusätzliche Datenquellen"
         }
       },
       "search": {
-        "title": "Stationen suchen",
-        "description": "Suche Stationen nach Name oder Adresse.\n\nBisher ausgewählt: {selected_count}",
-        "data": { "query": "Suche (Name / Adresse)" }
+        "title": "Sensoren suchen",
+        "description": "Suche nach Sensorcode (z. B. `0101-001`, `T-050`, `2303LH`) oder Straße. Die Liste zeigt Klima- und Windsensoren einzeln, die nächsten zuerst.\n\nMit {selected_count} Sensoren: Aktualisierung alle **{interval} Minuten**. Die offizielle API erlaubt 30 Anfragen pro Stunde – jeder Sensor braucht eine Anfrage pro Aktualisierung, also {max_sensors} Sensoren im 10-Minuten-Takt. Eine Station mit Temperatur und Wind zählt als 2 Sensoren.",
+        "data": {
+          "query": "Suche (Sensorcode / Straße)"
+        }
       },
       "pick": {
-        "title": "Stationen aktualisieren",
-        "description": "{match_count} Treffer für „{query}“. Insgesamt schon ausgewählt: {selected_count}.",
-        "data": { "stations": "Stationen" }
+        "title": "Sensoren aktualisieren",
+        "description": "{match_count} Treffer für „{query}“. Wähle einzelne Sensoren – Klima (Temperatur, Feuchte, Luftdruck, Strahlung) und Wind sind getrennte Sensoren derselben Station.\n\nMit {selected_count} Sensoren: Aktualisierung alle **{interval} Minuten**. Die offizielle API erlaubt 30 Anfragen pro Stunde – jeder Sensor braucht eine Anfrage pro Aktualisierung, also {max_sensors} Sensoren im 10-Minuten-Takt. Eine Station mit Temperatur und Wind zählt als 2 Sensoren.",
+        "data": {
+          "stations": "Sensoren"
+        }
       },
       "menu": {
-        "title": "Weitere Stationen hinzufügen?",
-        "description": "{selected_count} Stationen insgesamt ausgewählt.",
+        "title": "Weitere Sensoren hinzufügen?",
+        "description": "{selected_count} Sensoren insgesamt ausgewählt.\n\nMit {selected_count} Sensoren: Aktualisierung alle **{interval} Minuten**. Die offizielle API erlaubt 30 Anfragen pro Stunde – jeder Sensor braucht eine Anfrage pro Aktualisierung, also {max_sensors} Sensoren im 10-Minuten-Takt. Eine Station mit Temperatur und Wind zählt als 2 Sensoren.",
         "menu_options": {
           "search_more": "Weitere suchen",
-          "show_all_more": "Alle Stationen anzeigen",
+          "show_all_more": "Alle Sensoren anzeigen",
           "finish": "Fertig"
         }
       },
@@ -77,31 +85,111 @@
       }
     },
     "error": {
-      "cannot_connect": "Verbindung zum Klimamessnetz fehlgeschlagen.",
-      "no_matches": "Keine passenden Stationen gefunden."
+      "cannot_connect": "Verbindung zur Smart-City-Mannheim-API fehlgeschlagen.",
+      "no_matches": "Keine passenden Sensoren gefunden."
     }
   },
   "entity": {
     "sensor": {
-      "temperature": { "name": "Temperatur" },
-      "humidity": { "name": "Luftfeuchtigkeit" },
-      "wind_speed": { "name": "Windgeschwindigkeit" },
-      "pollen_alder":   { "name": "Erle" },
-      "pollen_birch":   { "name": "Birke" },
-      "pollen_hazel":   { "name": "Hasel" },
-      "pollen_ash":     { "name": "Esche" },
-      "pollen_grasses": { "name": "Gräser" },
-      "pollen_rye":     { "name": "Roggen" },
-      "pollen_mugwort": { "name": "Beifuß" },
-      "pollen_ragweed": { "name": "Ambrosia" },
-      "aqi_lqi":  { "name": "Luftqualitätsindex" },
-      "aqi_pm10": { "name": "Feinstaub PM₁₀" },
-      "aqi_pm25": { "name": "Feinstaub PM₂,₅" },
-      "aqi_no2":  { "name": "Stickstoffdioxid NO₂" },
-      "dwd_temperature":   { "name": "Temperatur" },
-      "dwd_humidity":      { "name": "Luftfeuchtigkeit" },
-      "dwd_wind_speed":    { "name": "Windgeschwindigkeit" },
-      "dwd_precipitation": { "name": "Niederschlag" }
+      "temperature": {
+        "name": "Temperatur"
+      },
+      "humidity": {
+        "name": "Luftfeuchtigkeit"
+      },
+      "wind_speed": {
+        "name": "Windgeschwindigkeit"
+      },
+      "pressure": {
+        "name": "Luftdruck"
+      },
+      "dew_point": {
+        "name": "Taupunkt"
+      },
+      "min_temperature": {
+        "name": "Temperatur (Minimum)"
+      },
+      "max_temperature": {
+        "name": "Temperatur (Maximum)"
+      },
+      "irradiation": {
+        "name": "Globalstrahlung"
+      },
+      "max_irradiation": {
+        "name": "Globalstrahlung (Maximum)"
+      },
+      "min_wind_speed": {
+        "name": "Windgeschwindigkeit (Minimum)"
+      },
+      "wind_gust_1s": {
+        "name": "Windböe (1 s)"
+      },
+      "wind_gust_3s": {
+        "name": "Windböe (3 s)"
+      },
+      "wind_direction": {
+        "name": "Windrichtung"
+      },
+      "wind_gust_direction": {
+        "name": "Böenrichtung"
+      },
+      "pollen_alder": {
+        "name": "Erle"
+      },
+      "pollen_birch": {
+        "name": "Birke"
+      },
+      "pollen_hazel": {
+        "name": "Hasel"
+      },
+      "pollen_ash": {
+        "name": "Esche"
+      },
+      "pollen_grasses": {
+        "name": "Gräser"
+      },
+      "pollen_rye": {
+        "name": "Roggen"
+      },
+      "pollen_mugwort": {
+        "name": "Beifuß"
+      },
+      "pollen_ragweed": {
+        "name": "Ambrosia"
+      },
+      "aqi_lqi": {
+        "name": "Luftqualitätsindex"
+      },
+      "aqi_pm10": {
+        "name": "Feinstaub PM₁₀"
+      },
+      "aqi_pm25": {
+        "name": "Feinstaub PM₂,₅"
+      },
+      "aqi_no2": {
+        "name": "Stickstoffdioxid NO₂"
+      },
+      "dwd_temperature": {
+        "name": "Temperatur"
+      },
+      "dwd_humidity": {
+        "name": "Luftfeuchtigkeit"
+      },
+      "dwd_wind_speed": {
+        "name": "Windgeschwindigkeit"
+      },
+      "dwd_precipitation": {
+        "name": "Niederschlag"
+      },
+      "dwd_precipitation_today": {
+        "name": "Niederschlag heute"
+      }
+    }
+  },
+  "issues": {
+    "too_many_sensors": {
+      "title": "Klimasensoren werden nur alle {interval} Minuten aktualisiert",
+      "description": "Du hast {count} Klimasensoren ausgewählt. Die offizielle Smart-City-Mannheim-API erlaubt 30 Anfragen pro Stunde, und jeder Sensor braucht eine Anfrage pro Aktualisierung. Deshalb werden die Werte nur alle {interval} Minuten statt alle 10 Minuten abgerufen.\n\nFür 10-Minuten-Aktualisierungen wähle höchstens {max_sensors} Sensoren unter Einstellungen → Geräte & Dienste → Smart City Mannheim → Konfigurieren. Pollenflug, Luftqualität und die DWD-Station sind davon nicht betroffen."
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "domain": "smartmannheim_klima",
   "name": "Smart City Mannheim",
-  "codeowners": [],
+  "codeowners": ["@rathlinus"],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/rathlinus/smartmannheim",
@@ -9,5 +9,5 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/rathlinus/smartmannheim/issues",
   "requirements": [],
-  "version": "0.2.1"
+  "version": "0.3.0"
 }

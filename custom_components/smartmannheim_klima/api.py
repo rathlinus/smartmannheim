@@ -1,26 +1,23 @@
-"""Async client for the Smart Mannheim climate-network backend."""
+"""Async clients for the official climate API and the dashboard backends."""
 from __future__ import annotations
 
 import asyncio
 import logging
 from datetime import datetime, timedelta, timezone
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import aiohttp
 from yarl import URL
 
 from .const import (
-    ACCOUNT_ID,
-    API_BASE,
-    APP_ID,
     AQI_ACCOUNT_ID,
     AQI_API_BASE,
     AQI_TOKEN,
-    DASHBOARD_TOKEN,
     DWD_ACCOUNT_ID,
     DWD_API_BASE,
     DWD_TOKEN,
-    MAP_TILE_ID,
+    OFFICIAL_API_BASE,
     POLLEN_ACCOUNT_ID,
     POLLEN_API_BASE,
     POLLEN_TOKEN,
@@ -29,9 +26,16 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
+_BERLIN = ZoneInfo("Europe/Berlin")
+_ISO = "%Y-%m-%dT%H:%M:%S.000Z"
+
 
 class SmartMannheimError(Exception):
     """Base error."""
+
+
+class SensorNotFoundError(SmartMannheimError):
+    """The official API doesn't know this sensor (HTTP 404)."""
 
 
 def _window_24h() -> tuple[str, str]:
@@ -42,62 +46,39 @@ def _window_24h() -> tuple[str, str]:
     return frm, to
 
 
-class SmartMannheimClient:
-    """Thin async wrapper around the public dashboard backend.
+def _window_today() -> tuple[str, str]:
+    """Return a (from, to) ISO pair from local midnight in Mannheim until now."""
+    now = datetime.now(timezone.utc)
+    midnight = now.astimezone(_BERLIN).replace(hour=0, minute=0, second=0, microsecond=0)
+    return midnight.astimezone(timezone.utc).strftime(_ISO), now.strftime(_ISO)
 
-    The public "dashboard token" acts as a shared read key: it is put into
-    the `id` query parameter on every call. Per-station reads put the
-    station id into the request body as `entityId`.
+
+class SmartMannheimClient:
+    """Thin async wrapper around the Smart Mannheim backends.
+
+    Climate stations use the official API (plain GETs, no auth). Pollen,
+    AQI and the DWD station still use the public dashboard backends, where
+    the dashboard token goes into the ``id`` query parameter.
     """
 
     def __init__(self, session: aiohttp.ClientSession) -> None:
         self._session = session
 
-    async def list_stations(self) -> list[dict[str, Any]]:
-        """Return the list of all climate stations on the map."""
-        url = URL(f"{API_BASE}/dashboarddata").with_query(
-            {"accountId": ACCOUNT_ID, "id": DASHBOARD_TOKEN}
-        )
-        body = {"appId": APP_ID, "dashboardTemplateTileId": MAP_TILE_ID}
-        data = await self._post(url, body)
-        if not isinstance(data, list):
-            raise SmartMannheimError(f"Unexpected station list payload: {data!r}")
+    async def list_sensors(self) -> dict[str, Any]:
+        """Raw ``/climate/sensors`` payload (limited to 4 calls/hour)."""
+        data = await self._get(URL(f"{OFFICIAL_API_BASE}/climate/sensors"))
+        if not isinstance(data, dict) or not isinstance(data.get("sensors"), list):
+            raise SmartMannheimError(f"Unexpected sensor list payload: {data!r:.200}")
         return data
 
-    async def get_indicator(
-        self, entity_id: str, measurement: dict[str, Any]
-    ) -> dict[str, Any] | None:
-        """Return latest value for one measurement at one station, or None."""
-        frm, to = _window_24h()
-
-        url = URL(f"{API_BASE}/dashboarddata").with_query(
-            {"accountId": ACCOUNT_ID, "id": DASHBOARD_TOKEN}
-        )
-        # Per-measurement digits field name mirrors what the SPA sends:
-        # wind uses `displayDigits`, the others use `numDigits`.
-        timeseries_entry = {
-            "timeSeriesId": measurement["timeseries_id"],
-            "aggregationFunction": "",
-            "gapFill": "None",
-            "displayName": measurement["display_name"],
-            measurement["digits_field"]: measurement["digits"],
-            "definitionType": "timeseries",
-        }
-        body = {
-            "timeseries": [timeseries_entry],
-            "from": frm,
-            "to": to,
-            "accountId": ACCOUNT_ID,
-            "orient": "analytics",
-            "timezone": "Europe/Berlin",
-            "dashboardTemplateTileId": measurement["tile_id"],
-            "appId": APP_ID,
-            "entityId": entity_id,
-        }
-        data = await self._post(url, body)
-        if not isinstance(data, list) or not data:
-            return None
-        return data[0]
+    async def get_measurements(self, sensor_id: str) -> list[dict[str, Any]]:
+        """Rows of the last 60 minutes for one sensor (6 calls/hour/sensor)."""
+        url = URL(f"{OFFICIAL_API_BASE}/climate/measurements") / sensor_id
+        data = await self._get(url)
+        if not isinstance(data, dict):
+            raise SmartMannheimError(f"Unexpected measurements payload: {data!r:.200}")
+        rows = data.get("data") or []
+        return [r for r in rows if isinstance(r, dict)]
 
     async def get_pollen_indicator(
         self, series: dict[str, Any]
@@ -170,8 +151,12 @@ class SmartMannheimClient:
     async def get_dwd_indicator(
         self, series: dict[str, Any]
     ) -> dict[str, Any] | None:
-        """Latest value for one DWD-station metric (Klimadaten dashboard)."""
-        frm, to = _window_24h()
+        """Latest value for one DWD-station metric (Klimadaten dashboard).
+
+        Series with ``aggregation``/``window`` are aggregated by the backend,
+        e.g. the precipitation sum since local midnight.
+        """
+        frm, to = _window_today() if series.get("window") == "today" else _window_24h()
         url = URL(f"{DWD_API_BASE}/timeseriesanalyticsindicator").with_query(
             {"accountId": DWD_ACCOUNT_ID, "id": DWD_TOKEN}
         )
@@ -179,11 +164,11 @@ class SmartMannheimClient:
             "timeseries": [
                 {
                     "timeSeriesId": series["timeseries_id"],
-                    "aggregationFunction": "",
+                    "aggregationFunction": series.get("aggregation", ""),
                     "gapFill": "None",
                     "displayName": series["display_name"],
                     "displayDigits": 1,
-                    "definitionType": "timeseries",
+                    "definitionType": series.get("definition_type", "timeseries"),
                 }
             ],
             "from": frm,
@@ -195,16 +180,37 @@ class SmartMannheimClient:
         data = await self._post(url, body)
         if not isinstance(data, list) or not data:
             return None
-        return data[0]
+        reading = data[0]
+        if (
+            series.get("aggregation") == "sum"
+            and reading.get("indicator") is None
+            and (reading.get("warning") or {}).get("code") == "NO_DATA_FOUND"
+        ):
+            # Nothing recorded since midnight yet (DWD data lags ~45 min):
+            # the sum so far is 0, not unknown.
+            reading = {**reading, "indicator": 0, "warning": None}
+        return reading
+
+    async def _get(self, url: URL) -> Any:
+        return await self._request("GET", url)
 
     async def _post(self, url: URL, body: dict[str, Any]) -> Any:
+        return await self._request("POST", url, body)
+
+    async def _request(
+        self, method: str, url: URL, body: dict[str, Any] | None = None
+    ) -> Any:
         timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
         try:
-            async with self._session.post(url, json=body, timeout=timeout) as resp:
+            async with self._session.request(
+                method, url, json=body, timeout=timeout
+            ) as resp:
+                if resp.status == 404 and url.host == URL(OFFICIAL_API_BASE).host:
+                    raise SensorNotFoundError(f"Not found: {url}")
                 if resp.status >= 400:
                     text = await resp.text()
                     raise SmartMannheimError(
-                        f"{resp.status} {resp.reason} for {url}: {text[:200]}"
+                        f"HTTP {resp.status} for {url}: {text[:200]}"
                     )
                 return await resp.json(content_type=None)
         except asyncio.TimeoutError as err:

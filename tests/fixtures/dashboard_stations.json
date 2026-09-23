@@ -1,0 +1,5449 @@
+[
+  {
+    "locationId": "e64131a0-2def-e7fb-57eb-8310476d47a2",
+    "name": "T-002 | 2306LW027 ARCHIV_22.05.2026",
+    "displayName": "Am Aubuckel ,  ",
+    "address": "Am Aubuckel ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.521318,
+        49.493182
+      ]
+    }
+  },
+  {
+    "locationId": "efa477a6-97b1-44a9-8002-488761a2efa9",
+    "name": "0101-001-21 | 0101-001-31",
+    "displayName": "0101-001-21 | 0101-001-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475061,
+        49.496309
+      ]
+    }
+  },
+  {
+    "locationId": "fe2a92de-3454-40bc-b96a-83db3a06c032",
+    "name": "0101-003-21 | 0101-003-31",
+    "displayName": "0101-003-21 | 0101-003-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.463735,
+        49.489057
+      ]
+    }
+  },
+  {
+    "locationId": "db2a279f-7924-4762-8608-ef21755b9edc",
+    "name": "0101-013-21",
+    "displayName": "0101-013-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474863,
+        49.497718
+      ]
+    }
+  },
+  {
+    "locationId": "31b2fb28-e727-4d6d-aba6-2e1a849a45f7",
+    "name": "0101-019-21 | 2304LW057 ARCHIV_22.05.2026",
+    "displayName": "0101-019-21 | 2304LW057 ARCHIV_22.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474861417154155,
+        49.50418896018963
+      ]
+    }
+  },
+  {
+    "locationId": "88de0bc2-6275-46df-a410-a3d3e1c38023",
+    "name": "0101-023-21 | 0101-023-31",
+    "displayName": "0101-023-21 | 0101-023-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.477159,
+        49.504884
+      ]
+    }
+  },
+  {
+    "locationId": "3274d355-0187-4992-9333-3221205b06aa",
+    "name": "T-050 - SCM auf der Buga",
+    "displayName": "T-050 - SCM auf der Buga",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.524207292500968,
+        49.50154792653951
+      ]
+    }
+  },
+  {
+    "locationId": "80c63ccf-2dfb-4e33-8ae0-5fadd51531da",
+    "name": "0101-030-21",
+    "displayName": "0101-030-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.478586,
+        49.499352
+      ]
+    }
+  },
+  {
+    "locationId": "44761516-e926-4cba-b50f-77245d0cff8e",
+    "name": "0101-034-21 | 0101-034-31",
+    "displayName": "Dammstraße 1, 68169 Mannheim",
+    "address": "Dammstraße 1, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471889,
+        49.495826
+      ]
+    }
+  },
+  {
+    "locationId": "a771e425-e84d-4c8a-b0ce-bac099eb0db8",
+    "name": "0101-035-21 | 2305LW083 ARCHIV_22.05.2026",
+    "displayName": "0101-035-21 | 2305LW083 ARCHIV_22.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.479342,
+        49.501487
+      ]
+    }
+  },
+  {
+    "locationId": "780f7585-1fa2-4eef-acfa-c8aca97ca12d",
+    "name": "0101-009-31 | 0101-009-21",
+    "displayName": "0101-009-31 | 0101-009-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475355,
+        49.499036
+      ]
+    }
+  },
+  {
+    "locationId": "e5244dea-f593-4320-9a73-b157d7cb56b3",
+    "name": "0101-007-31 | 0101-007-21",
+    "displayName": "0101-007-31 | 0101-007-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.484276,
+        49.498677
+      ]
+    }
+  },
+  {
+    "locationId": "8197b48d-4dfe-45c4-bb0f-8df4cd02e2d4",
+    "name": "0101-012-21 | 2304LW119",
+    "displayName": "0101-012-21 | 2304LW119",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.486057272500398,
+        49.49846109390819
+      ]
+    }
+  },
+  {
+    "locationId": "ae99ef22-1d6b-41b9-bb55-001340b0c9e4",
+    "name": "0101-014-21 | 0101-014-31",
+    "displayName": "0101-014-21 | 0101-014-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474372,
+        49.496764
+      ]
+    }
+  },
+  {
+    "locationId": "6f344461-cb1c-4d39-8709-f6b78c5fd5bd",
+    "name": "0101-016-21 | 0101-016-31",
+    "displayName": "0101-016-21 | 0101-016-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.473939,
+        49.496496
+      ]
+    }
+  },
+  {
+    "locationId": "9d321837-3b4f-4267-978f-c11706fbebcd",
+    "name": "0101-022-21 | 0101-022-31",
+    "displayName": "0101-022-21 | 0101-022-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.467251,
+        49.481235
+      ]
+    }
+  },
+  {
+    "locationId": "e053a6bc-91fe-4613-8aef-f92b1bd242dd",
+    "name": "0101-026-21",
+    "displayName": "Nikolaus-Otto-Straße 3, 68169 Mannheim",
+    "address": "Nikolaus-Otto-Straße 3, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474853,
+        49.504181
+      ]
+    }
+  },
+  {
+    "locationId": "555b9c37-97b4-4f70-a5f3-022bdb0dbcbd",
+    "name": "0101-027-21 | 2304LW076 ARCHIV_29.05.2026",
+    "displayName": "0101-027-21 | 2304LW076 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.484409,
+        49.499903
+      ]
+    }
+  },
+  {
+    "locationId": "66e66caa-a7de-7c3f-f7d7-c02cab7b3b64",
+    "name": "T-053 | 0101-074-31 ARCHIV_29.05.2026",
+    "displayName": "James-Monroe-Ring 79, 68309 Mannheim",
+    "address": "James-Monroe-Ring 79, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52224209016958,
+        49.5224047741848
+      ]
+    }
+  },
+  {
+    "locationId": "9cbb4887-732d-4370-bba3-713e60098aaa",
+    "name": "0101-015-31 | 0101-015-21",
+    "displayName": "0101-015-31 | 0101-015-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.476449,
+        49.501801
+      ]
+    }
+  },
+  {
+    "locationId": "e569788f-0bc9-4a6c-bd83-6201f8504986",
+    "name": "0101-010-31 | 0101-010-21",
+    "displayName": "0101-010-31 | 0101-010-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.481056,
+        49.499149
+      ]
+    }
+  },
+  {
+    "locationId": "56039df5-0ada-4306-9e5c-ab16a8bac528",
+    "name": "0101-029-31",
+    "displayName": "0101-029-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.484662,
+        49.500807
+      ]
+    }
+  },
+  {
+    "locationId": "0c1f7c33-3664-9dae-e574-290e6959edea",
+    "name": "W-004 | 2303LH110",
+    "displayName": "W-004 | 2303LH110",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46393265508793,
+        49.49228319362219
+      ]
+    }
+  },
+  {
+    "locationId": "fee60a36-0fcd-bfe6-cb71-9df591eb5ff8",
+    "name": "0101-008-21 | 2306LW009 ARCHIV_22.05.2026 | 2501LW089",
+    "displayName": "0101-008-21 | 2306LW009 ARCHIV_22.05.2026 | 2501LW089",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.464963,
+        49.497988
+      ]
+    }
+  },
+  {
+    "locationId": "097f5d0d-c2aa-408f-9c54-c4c2b887ff3b",
+    "name": "0101-017-21 | 2306LW002 | 2305LW146",
+    "displayName": "0101-017-21 | 2306LW002 | 2305LW146",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471639,
+        49.502796
+      ]
+    }
+  },
+  {
+    "locationId": "a5ca6268-2106-4401-8782-3c78e9915a54",
+    "name": "0101-021-21 | 2305LW016 ARCHIV_29.05.2026",
+    "displayName": "0101-021-21 | 2305LW016 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.473022,
+        49.505407
+      ]
+    }
+  },
+  {
+    "locationId": "285d7a69-a802-46c0-9aed-e9b37a595aa5",
+    "name": "0101-024-21 | 2304LW161 ARCHIV_29.05.2026",
+    "displayName": "0101-024-21 | 2304LW161 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.466468,
+        49.497563
+      ]
+    }
+  },
+  {
+    "locationId": "bc5c16e7-f6db-4ab1-8486-b7b08390a7b8",
+    "name": "0101-025-21 | 2306LW028",
+    "displayName": "0101-025-21 | 2306LW028",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.485543,
+        49.499912
+      ]
+    }
+  },
+  {
+    "locationId": "309c28e6-89b3-49f9-8929-7dea3a4ff18a",
+    "name": "0101-032-21",
+    "displayName": "0101-032-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474809,
+        49.505747
+      ]
+    }
+  },
+  {
+    "locationId": "0599b19b-2adc-4c57-bb3f-846c1df992b9",
+    "name": "0101-002-21",
+    "displayName": "0101-002-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471729411394918,
+        49.504562546431174
+      ]
+    }
+  },
+  {
+    "locationId": "bd126fe9-ff2e-4999-a18b-bedc83e9544b",
+    "name": "0101-004-21 | 2306LW045",
+    "displayName": "0101-004-21 | 2306LW045",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.488133,
+        49.50025
+      ]
+    }
+  },
+  {
+    "locationId": "9b2b254e-bbae-47b3-ba0a-87e79c16dae0",
+    "name": "0101-006-21 | 2306LW167 ARCHIV_29.05.2026",
+    "displayName": "0101-006-21 | 2306LW167 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.472247,
+        49.497058
+      ]
+    }
+  },
+  {
+    "locationId": "1d3373ef-adab-4ffb-aa3e-5cf7ef9f56c7",
+    "name": "0101-011-21",
+    "displayName": "0101-011-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475691,
+        49.50673
+      ]
+    }
+  },
+  {
+    "locationId": "a4c2c106-b43e-4372-be8d-051d7872cd19",
+    "name": "0101-018-21",
+    "displayName": "0101-018-21",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.467059782298735,
+        49.494217463961924
+      ]
+    }
+  },
+  {
+    "locationId": "d8846ddf-9010-4895-be1d-8c6ec72b86a9",
+    "name": "0101-020-21 | 2305LW157",
+    "displayName": "0101-020-21 | 2305LW157",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.468667,
+        49.505161
+      ]
+    }
+  },
+  {
+    "locationId": "cfb812b8-c942-408d-858c-4d3b6ed04ee4",
+    "name": "0101-028-21 | 2306LW030",
+    "displayName": "0101-028-21 | 2306LW030",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.463888,
+        49.499382
+      ]
+    }
+  },
+  {
+    "locationId": "88090682-1878-2faa-3dde-9ef13399fa53",
+    "name": "0101-031-21 | 2304LW102 | 2306LH113",
+    "displayName": "0101-031-21 | 2304LW102 | 2306LH113",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51931458269921,
+        49.50140943822919
+      ]
+    }
+  },
+  {
+    "locationId": "45a282a6-0579-4a2e-acc9-d37f6d688012",
+    "name": "0101-033-21 | 0101-033-31",
+    "displayName": "0101-033-21 | 0101-033-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.481706,
+        49.501232
+      ]
+    }
+  },
+  {
+    "locationId": "355595d1-b1ba-4fd2-b2de-6accfacbb744",
+    "name": "0301-001-11",
+    "displayName": "0301-001-11",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.558466,
+        49.50635
+      ]
+    }
+  },
+  {
+    "locationId": "00a323be-d4ad-de98-4920-658a07afeb40",
+    "name": "2303LH006 | 2306LW007 ARCHIV_29.05.2026",
+    "displayName": "2303LH006 | 2306LW007 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47679,
+        49.47384
+      ]
+    }
+  },
+  {
+    "locationId": "2137c842-c287-2769-a9b1-3d78d9865aca",
+    "name": "2303LH007 | 2304LW084 ARCHIV_29.05.2026",
+    "displayName": "Theodor-Storm-Straße 8A, 68259 Mannheim",
+    "address": "Theodor-Storm-Straße 8A, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5308213865657,
+        49.4903217940031
+      ]
+    }
+  },
+  {
+    "locationId": "c21b05ce-2771-5148-5377-0c5fe87c148c",
+    "name": "2303LH008 | 2306LW034",
+    "displayName": "Kapuzinerplanken 1, 68161 Mannheim",
+    "address": "Kapuzinerplanken 1, 68161 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46974893320796,
+        49.485542903341
+      ]
+    }
+  },
+  {
+    "locationId": "f497d943-1371-c434-4e27-cec2ecafab5b",
+    "name": "2303LH009 | 2304LW098 ARCHIV_29.05.2026",
+    "displayName": "Walter-Krause-Straße 11b, 68163 Mannheim",
+    "address": "Walter-Krause-Straße 11b, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48767045817265,
+        49.4690500869039
+      ]
+    }
+  },
+  {
+    "locationId": "7e3c9004-a124-d0f5-192a-244dffbd25d5",
+    "name": "2303LH012 | 2304LW136",
+    "displayName": "Bäckerweg 50, 68309 Mannheim",
+    "address": "Bäckerweg 50, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.508696,
+        49.503751
+      ]
+    }
+  },
+  {
+    "locationId": "b7750f75-2569-ce8f-685e-d3b9b325af5c",
+    "name": "2303LH013 | 2305LW015 ARCHIV_05.05.2026",
+    "displayName": "2303LH013 | 2305LW015 ARCHIV_05.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.529096650591926,
+        49.53263337541339
+      ]
+    }
+  },
+  {
+    "locationId": "4108e1c5-6eb9-b072-dc34-4dbbc79344e4",
+    "name": "2303LH014 | 2306LW017",
+    "displayName": "2303LH014 | 2306LW017",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.464414308960881,
+        49.49203570175474
+      ]
+    }
+  },
+  {
+    "locationId": "2cfedadf-0796-0849-83f9-ea5d0759348a",
+    "name": "2303LH015 | 2306LW165",
+    "displayName": "George-Sullivan-Ring 68, 68309 Mannheim",
+    "address": "George-Sullivan-Ring 68, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53719435688581,
+        49.5228052925639
+      ]
+    }
+  },
+  {
+    "locationId": "TinyUsteg",
+    "name": "2303LH016 | 2507LW048",
+    "displayName": "Speckweg 41, 68305 Mannheim",
+    "address": "Speckweg 41, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47692,
+        49.473906
+      ]
+    }
+  },
+  {
+    "locationId": "161640b8-15b6-93ea-ef4e-1321889e4fb8",
+    "name": "2303LH020 | 2306LW012",
+    "displayName": "2303LH020 | 2306LW012",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.476413,
+        49.473698
+      ]
+    }
+  },
+  {
+    "locationId": "b93c435a-85c7-ecd3-3a89-e9cb0fa5efc0",
+    "name": "2303LH022 | 2305LW023 ARCHIV_29.05.2026",
+    "displayName": "Schriesheimer Straße 42, 68219 Mannheim",
+    "address": "Schriesheimer Straße 42, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53189562083274,
+        49.4342341128671
+      ]
+    }
+  },
+  {
+    "locationId": "5ddb36ed-95e7-f935-c4a1-b46ea55a91e3",
+    "name": "2303LH023 | 2306LW041",
+    "displayName": "2303LH023 | 2306LW041",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.464338849528357,
+        49.492661682029535
+      ]
+    }
+  },
+  {
+    "locationId": "bb8ec4bf-6a3f-1625-5dfc-966e99b7b495",
+    "name": "2303LH024 | 2304LW112",
+    "displayName": "Sonderburger Straße 32, 68307 Mannheim",
+    "address": "Sonderburger Straße 32, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48098346458367,
+        49.5408552668228
+      ]
+    }
+  },
+  {
+    "locationId": "2a7a4b6e-3ddd-6ef4-90ef-4d809cd3cd91",
+    "name": "2303LH025 | 2304LW152",
+    "displayName": "Speckweg 179-181, 68305 Mannheim",
+    "address": "Speckweg 179-181, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50165745701168,
+        49.5196745164135
+      ]
+    }
+  },
+  {
+    "locationId": "bf4570d5-a565-e687-40be-f0b9e0608cf1",
+    "name": "2303LH026 | 2305LW049 ARCHIV_29.05.2026",
+    "displayName": "Promenadenweg 20, 68199 Mannheim",
+    "address": "Promenadenweg 20, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46529062848145,
+        49.4581304442414
+      ]
+    }
+  },
+  {
+    "locationId": "35c9666c-0deb-24cd-cb1c-a290eb1fea03",
+    "name": "2303LH027 | 2305LW101",
+    "displayName": "Abraham-Lincoln-Allee 38, 68309 Mannheim",
+    "address": "Abraham-Lincoln-Allee 38, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53466108013691,
+        49.5213313556115
+      ]
+    }
+  },
+  {
+    "locationId": "93a134b0-e8ea-b61f-1840-9977730fbd60",
+    "name": "2303LH030 | 2305LW028",
+    "displayName": "2303LH030 | 2305LW028",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.464285813015456,
+        49.49193675783488
+      ]
+    }
+  },
+  {
+    "locationId": "15949856-10ac-2a78-934b-03ad7d1e7ffb",
+    "name": "2303LH031 | 2305LW022 ARCHIV_29.05.2026",
+    "displayName": "John-Deere-Straße 77, 68163 Mannheim",
+    "address": "John-Deere-Straße 77, 68163 Mannheim",
+    "location": {
+      "coordinates": [
+        8.477179445854981,
+        49.47282472992352
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "64d2e6b3-c605-6827-e599-1286afa06d5c",
+    "name": "0101-074-21 | 2304LW158 ARCHIV_29.05.2026",
+    "displayName": "Talstraße 125, 68259 Mannheim",
+    "address": "Talstraße 125, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52428382717446,
+        49.4962197434562
+      ]
+    }
+  },
+  {
+    "locationId": "8f4b3914-4696-940b-18f3-4273d9b47947",
+    "name": "2303LH038 | 2305LW051",
+    "displayName": "2303LH038 | 2305LW051",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.477326413813497,
+        49.47423384883475
+      ]
+    }
+  },
+  {
+    "locationId": "185c3cb5-cc22-1be5-619e-7545f6c0a441",
+    "name": "2303LH039 | 2304LW127 ARCHIV_22.05.2026",
+    "displayName": "2303LH039 | 2304LW127 ARCHIV_22.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474539281475828,
+        49.47427713140662
+      ]
+    }
+  },
+  {
+    "locationId": "eea6fdd3-ccaf-b4a3-1aac-9c5c6d2da8ec",
+    "name": "2303LH041 | 2305LH128 | 2305LW004 ARCHIV_29.05.2026",
+    "displayName": "2303LH041 | 2305LH128 | 2305LW004 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.462225777301018,
+        49.487947225095084
+      ]
+    }
+  },
+  {
+    "locationId": "bfdbbba8-c429-9b38-1a1e-ebf5c9e40095",
+    "name": "0101-095-21 | 0101-095-31 ARCHIV_29.05.2026",
+    "displayName": "0101-095-21 | 0101-095-31 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.463546281151523,
+        49.49185067263654
+      ]
+    }
+  },
+  {
+    "locationId": "209a5779-4176-d970-b5aa-cc87f95b1980",
+    "name": "2303LH047 | 2304LW153 ARCHIV_22.05.2026",
+    "displayName": "2303LH047 | 2304LW153 ARCHIV_22.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.488157,
+        49.522789
+      ]
+    }
+  },
+  {
+    "locationId": "7da19a3b-f168-cd9f-72de-ceb9d485bf54",
+    "name": "2303LH054 | 2305LW056 ARCHIV_22.05.2026 | 2507LW073",
+    "displayName": "Kleine Riedstraße 2, 68169 Mannheim",
+    "address": "Kleine Riedstraße 2, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46834234015505,
+        49.5011632187322
+      ]
+    }
+  },
+  {
+    "locationId": "9ae4727b-12a9-4ef9-157e-8b6f2a222016",
+    "name": "2303LH055 | 2305LW009 ARCHIV_29.05.2026",
+    "displayName": "H5 3, 68159 Mannheim",
+    "address": "H5 3, 68159 Mannheim",
+    "location": {
+      "coordinates": [
+        8.464139,
+        49.491947
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "810973ba-3154-1a1e-0ad7-c291a570908d",
+    "name": "2303LH056 | 2304LW092",
+    "displayName": "2303LH056 | 2304LW092",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.542326596082594,
+        49.43498303356929
+      ]
+    }
+  },
+  {
+    "locationId": "6a579985-c575-54e3-72e9-b8ecc93c6775",
+    "name": "2303LH057 | 2305LW020",
+    "displayName": "Oswaldstraße 1, 68259 Mannheim",
+    "address": "Oswaldstraße 1, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54889019498812,
+        49.4962722230895
+      ]
+    }
+  },
+  {
+    "locationId": "b9d153da-b1d6-ae8b-9ddf-ee84d009028d",
+    "name": "2303LH058 | 2304LW107 ARCHIV_22.05.2026",
+    "displayName": "2303LH058 | 2304LW107 ARCHIV_22.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475717842977716,
+        49.47344197924497
+      ]
+    }
+  },
+  {
+    "locationId": "9b8a3981-1db5-3974-3218-055136345502",
+    "name": "0101-036-21 | 0101-036-31 ARCHIV_29.05.2026",
+    "displayName": "Ruhrorter Straße 9-21, 68219 Mannheim",
+    "address": "Ruhrorter Straße 9-21, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51902437669142,
+        49.423656072692
+      ]
+    }
+  },
+  {
+    "locationId": "b84d93ad-c567-01ee-c783-c54eb1814018",
+    "name": "0101-049-21 | 0101-049-31 ARCHIV_29.05.2026",
+    "displayName": "Lindenhofstraße 106, 68163 Mannheim",
+    "address": "Lindenhofstraße 106, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47174046992822,
+        49.4709007062494
+      ]
+    }
+  },
+  {
+    "locationId": "caedcd7d-4b03-4221-82b0-e21f0b546a00",
+    "name": "0101-046-21 | 0101-046-31",
+    "displayName": "L637 4, 68239 Mannheim",
+    "address": "L637 4, 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.566951,
+        49.463482
+      ]
+    }
+  },
+  {
+    "locationId": "600f609d-e6dc-4407-ad3f-74c21fcdae1f",
+    "name": "2303LH062 | 2303LH115 | 2304LW131 | 2304LW123 | 2304LW099 | 2304LW091 | 2304LW081 | 2304LW093 | 2305LH154 | 2306LH073 | 2306LH092 | 2306LH103 | 2306LH111 | 2306LH145 | 2306LH150 | 2306LH183 | 2305LW034 | 2305LW052 | 2305LW026 | 2306LW005 | 2306LW052 | 2306LW055 | 2305LW066 | 0101-036-31 | 2305LW104 | 2305LW111 | 2305LW132 | 2305LW153 | 2305LW156 | 2306LW123 | 2306LW149 | 2306LW150 | 2306LW161 | 2306LW168",
+    "displayName": "Cheliusstraße 21, 68167 Mannheim",
+    "address": "Cheliusstraße 21, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.493746,
+        49.495104
+      ]
+    }
+  },
+  {
+    "locationId": "375812fc-f8a6-78c1-d4f6-fa89b6790202",
+    "name": "0101-084-21 | 0101-084-31 ARCHIV_29.05.2026",
+    "displayName": "Eichenweg 2, 68305 Mannheim",
+    "address": "Eichenweg 2, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50047515963257,
+        49.5345804651161
+      ]
+    }
+  },
+  {
+    "locationId": "b1722bb3-eee5-92c3-974d-90b245f23f32",
+    "name": "0101-092-21 | 0101-092-31",
+    "displayName": "Stabhalterstraße 8, 68307 Mannheim",
+    "address": "Stabhalterstraße 8, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.446759,
+        49.559604
+      ]
+    }
+  },
+  {
+    "locationId": "e946ef8d-dd03-feb1-4873-04a65d4663a7",
+    "name": "0101-066-21 | 0101-066-31 ARCHIV_22.05.2026",
+    "displayName": "Roßlauer Weg 6, 68309 Mannheim",
+    "address": "Roßlauer Weg 6, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54822697583822,
+        49.5149989931398
+      ]
+    }
+  },
+  {
+    "locationId": "0ae5c3b6-b548-052f-cd16-fde28dfd21cb",
+    "name": "0101-085-21 | 0101-085-31",
+    "displayName": "Eichenweg 13, 68305 Mannheim",
+    "address": "Eichenweg 13, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50043333252953,
+        49.5355046212169
+      ]
+    }
+  },
+  {
+    "locationId": "35d3e6bf-08ec-e5d2-b36f-6f47ebe0842a",
+    "name": "0101-062-21 | 0101-062-31 ARCHIV_29.05.2026",
+    "displayName": "0101-062-21 | 0101-062-31 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "coordinates": [
+        8.517611,
+        49.505631
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "af5a215b-f461-428b-f7b2-06436c24bd34",
+    "name": "0101-060-21 | 0101-060-31",
+    "displayName": "Am Aubuckel 81, 68259 Mannheim",
+    "address": "Am Aubuckel 81, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5172405791163,
+        49.496877390854
+      ]
+    }
+  },
+  {
+    "locationId": "5167db52-2ecf-c409-1496-6113f5c4d305",
+    "name": "0101-063-21 | 0101-063-31 ARCHIV_29.05.2026",
+    "displayName": "Saarbrücker Straße 1, 68309 Mannheim",
+    "address": "Saarbrücker Straße 1, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51635453233233,
+        49.507753524424
+      ]
+    }
+  },
+  {
+    "locationId": "2fdaeed9-b1c9-3daa-6b24-0bfa2ba674cf",
+    "name": "0101-071-21 | 0101-071-31",
+    "displayName": "Steinstraße 3, 68305 Mannheim",
+    "address": "Steinstraße 3, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47440538892545,
+        49.518748529439
+      ]
+    }
+  },
+  {
+    "locationId": "7dc764c7-b16a-4d06-e894-880a2424a8fd",
+    "name": "2303LH071 | 2306LW018 ARCHIV_29.05.2026",
+    "displayName": "Neuostheimer Straße , 68239 Mannheim",
+    "address": "Neuostheimer Straße , 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.55300330569006,
+        49.4613259666383
+      ]
+    }
+  },
+  {
+    "locationId": "0131769b-de68-3b95-908f-6e2b23e85ad7",
+    "name": "0101-070-21 | 0101-070-31 ARCHIV_29.05.2026",
+    "displayName": "Speckweg 209, 68305 Mannheim",
+    "address": "Speckweg 209, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50536341929696,
+        49.5185673679475
+      ]
+    }
+  },
+  {
+    "locationId": "1e741498-a4e4-46a2-b5dd-f1d96521598a",
+    "name": "0101-059-21 | 0101-059-31 | 2306LW038",
+    "displayName": "Hafenstraße 33, 68159 Mannheim",
+    "address": "Hafenstraße 33, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.457382,
+        49.496214
+      ]
+    }
+  },
+  {
+    "locationId": "8ea3c908-1ceb-9d70-abc4-9eb65db649ba",
+    "name": "0101-076-21 | 0101-076-31",
+    "displayName": "Wachtstraße 1, 68305 Mannheim",
+    "address": "Wachtstraße 1, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47916287999418,
+        49.5250079569453
+      ]
+    }
+  },
+  {
+    "locationId": "2d89f389-51a2-1d0c-50cd-6419129121d3",
+    "name": "0101-064-21 | 0101-064-31",
+    "displayName": "Lagerstraße 4, 68169 Mannheim",
+    "address": "Lagerstraße 4, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.464179,
+        49.510531
+      ]
+    }
+  },
+  {
+    "locationId": "22af8ac2-664b-f8e3-ad2d-c99c61240352",
+    "name": "0101-057-21 | 0101-057-31 ARCHIV_29.05.2026",
+    "displayName": "Talstraße 106A, 68259 Mannheim",
+    "address": "Talstraße 106A, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52553684602872,
+        49.4937098348042
+      ]
+    }
+  },
+  {
+    "locationId": "1b53ef96-9f51-240d-fbe6-939328c8956a",
+    "name": "0101-079-21 | 0101-079-31",
+    "displayName": "Ölhafenstraße 34, 68169 Mannheim",
+    "address": "Ölhafenstraße 34, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44852287835131,
+        49.5266669874872
+      ]
+    }
+  },
+  {
+    "locationId": "656cec7c-85c0-7b8c-8cd5-781adbd8c2dd",
+    "name": "0101-082-21 | 0101-082-31",
+    "displayName": "Waldstraße 52, 68305 Mannheim",
+    "address": "Waldstraße 52, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48874967812095,
+        49.5285953079238
+      ]
+    }
+  },
+  {
+    "locationId": "7664ff1a-9041-91bf-90fb-8c0bf4249b2c",
+    "name": "0101-089-21 | 0101-089-31",
+    "displayName": "Memeler Straße 66, 68307 Mannheim",
+    "address": "Memeler Straße 66, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46872321706821,
+        49.5442018743865
+      ]
+    }
+  },
+  {
+    "locationId": "f294ee9f-2e0f-e606-8f33-bec113728f8b",
+    "name": "0101-061-21 | 0101-061-31",
+    "displayName": "Espenstraße 1, 68167 Mannheim",
+    "address": "Espenstraße 1, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4944781641751,
+        49.5055359770244
+      ]
+    }
+  },
+  {
+    "locationId": "9658bf19-136b-7329-27d1-575927c72b50",
+    "name": "0101-050-21 | 0101-050-31 ARCHIV_29.05.2026",
+    "displayName": "Coblitzweg 6, 68163 Mannheim",
+    "address": "Coblitzweg 6, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53407000998984,
+        49.473962530256
+      ]
+    }
+  },
+  {
+    "locationId": "773ef72d-2aff-fe9a-c3b4-0a5fc2aaea04",
+    "name": "0101-094-21 ARCHIV_29.05.2026",
+    "displayName": "0101-094-21 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.463990186732932,
+        49.49167209214959
+      ]
+    }
+  },
+  {
+    "locationId": "42965793-03c4-0fcc-681c-6c74d3dd4b43",
+    "name": "0101-068-21 | 0101-068-31",
+    "displayName": "Speckweg 211, 68305 Mannheim",
+    "address": "Speckweg 211, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.506656,
+        49.518087
+      ]
+    }
+  },
+  {
+    "locationId": "ed216e62-f2e6-1a4d-1692-0f8ff1a73103",
+    "name": "0101-081-21 | 0101-081-31",
+    "displayName": "Unter den Birken 31, 68305 Mannheim",
+    "address": "Unter den Birken 31, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49531609945607,
+        49.5282783677618
+      ]
+    }
+  },
+  {
+    "locationId": "72d2ac7b-edb8-6a32-10d2-dc5e16e83ae1",
+    "name": "0101-044-21",
+    "displayName": "Mallaustraße 65, 68219 Mannheim",
+    "address": "Mallaustraße 65, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5186075801078,
+        49.4530166962003
+      ]
+    }
+  },
+  {
+    "locationId": "e40d0565-8e78-ae3c-ae6a-76995d3fdf63",
+    "name": "0101-056-21 | 0101-056-31",
+    "displayName": "Friedrichsring 14, 68161 Mannheim",
+    "address": "Friedrichsring 14, 68161 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47447808772878,
+        49.4921350711325
+      ]
+    }
+  },
+  {
+    "locationId": "3c3190fb-925b-3c54-6269-e8deb3c4192f",
+    "name": "2303LH088 | 2305LW095 ARCHIV_29.05.2026",
+    "displayName": "Memeler Straße 79, 68307 Mannheim",
+    "address": "Memeler Straße 79, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4671931439138,
+        49.54416162624
+      ]
+    }
+  },
+  {
+    "locationId": "16abe54d-c625-6f65-5c91-4e9de9eed44e",
+    "name": "0101-043-21 | 0101-043-31",
+    "displayName": "Belfortstraße 59, 68199 Mannheim",
+    "address": "Belfortstraße 59, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49365946231407,
+        49.447211752878
+      ]
+    }
+  },
+  {
+    "locationId": "d2a00bcf-f185-024f-b2d5-be5b01df669f",
+    "name": "0101-038-21 | 0101-038-31 ARCHIV_11.05.2026",
+    "displayName": "Mülhauser Straße 57, 68229 Mannheim",
+    "address": "Mülhauser Straße 57, 68229 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.58361426217143,
+        49.4379100755941
+      ]
+    }
+  },
+  {
+    "locationId": "e693b152-8dd4-7630-ba0b-c22458470f9c",
+    "name": "0101-042-21 | 0101-042-31",
+    "displayName": "Langlachweg 11A, 68229 Mannheim",
+    "address": "Langlachweg 11A, 68229 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.57299808767635,
+        49.4459355266578
+      ]
+    }
+  },
+  {
+    "locationId": "a48c89e2-536b-f689-cb71-9f239b815f2d",
+    "name": "0101-051-21 | 0101-051-31 ARCHIV_29.05.2026",
+    "displayName": "Lindenhofstraße 37, 68163 Mannheim",
+    "address": "Lindenhofstraße 37, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47124266937485,
+        49.4739659478085
+      ]
+    }
+  },
+  {
+    "locationId": "c4bb3321-ab88-da55-bab2-9e302f531c18",
+    "name": "0101-091-21 | 0101-091-31",
+    "displayName": "Kirschgartshäuser Straße 27, 68307 Mannheim",
+    "address": "Kirschgartshäuser Straße 27, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44920120428142,
+        49.5556557972278
+      ]
+    }
+  },
+  {
+    "locationId": "1477406f-37ae-30a0-e195-d2cd41afc3a6",
+    "name": "2303LH095 | 2409LW005",
+    "displayName": " , 68239 Mannheim",
+    "address": " , 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.55076338623315,
+        49.4596761347504
+      ]
+    }
+  },
+  {
+    "locationId": "4d12705a-54d6-cc79-323f-948f8285e160",
+    "name": "0101-088-21 | 0101-088-31 ARCHIV_22.05.2026",
+    "displayName": "Fahrgasse 13, 68307 Mannheim",
+    "address": "Fahrgasse 13, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.441309,
+        49.543821
+      ]
+    }
+  },
+  {
+    "locationId": "3d2c1542-1851-cf0a-f88c-f4c7a4d8194e",
+    "name": "0101-045-21 | 0101-045-31 ARCHIV_29.05.2026",
+    "displayName": "Franz-Sigel-Straße 1, 68199 Mannheim",
+    "address": "Franz-Sigel-Straße 1, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47918823141497,
+        49.4629566038338
+      ]
+    }
+  },
+  {
+    "locationId": "92a011df-4e8a-b4c3-d2c7-745f93ff2598",
+    "name": "0101-065-21 | 0101-065-31 ARCHIV_22.05.2026",
+    "displayName": " , 68169 Mannheim",
+    "address": " , 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45673282514117,
+        49.5134285554689
+      ]
+    }
+  },
+  {
+    "locationId": "176e240d-2c82-3c00-4d2e-8d8417a9003b",
+    "name": "2303LH099 | 2304LW101 | 2407LH024",
+    "displayName": "Am Weidenbergel 65-67, 68305 Mannheim",
+    "address": "Am Weidenbergel 65-67, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51453345446067,
+        49.5232766242304
+      ]
+    }
+  },
+  {
+    "locationId": "ad064c2a-244a-febc-ffab-cdf112f94b43",
+    "name": "0101-054-21 | 0101-054-31",
+    "displayName": "N7 19, 68161 Mannheim",
+    "address": "N7 19, 68161 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46981221206695,
+        49.4841124122268
+      ]
+    }
+  },
+  {
+    "locationId": "5d149e64-09d5-e14d-9ac0-e61e838e6eea",
+    "name": "2303LH101 | 2305LW072",
+    "displayName": "Hochuferstraße 56, 68169 Mannheim",
+    "address": "Hochuferstraße 56, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48620989523972,
+        49.5064105398077
+      ]
+    }
+  },
+  {
+    "locationId": "77538ce7-b541-8a58-bd67-8a705337a11c",
+    "name": "0101-048-21 | 0101-048-31 ARCHIV_29.05.2026",
+    "displayName": "Schwarzwaldstraße 1/1, 68163 Mannheim",
+    "address": "Schwarzwaldstraße 1/1, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47021573494316,
+        49.4702640711946
+      ]
+    }
+  },
+  {
+    "locationId": "c0b9f169-4654-1d37-8a5e-c1b8097cfa29",
+    "name": "0101-052-21 | 0101-052-31 ARCHIV_29.05.2026",
+    "displayName": " , 68163 Mannheim",
+    "address": " , 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51298764644816,
+        49.4785092099879
+      ]
+    }
+  },
+  {
+    "locationId": "f7b3748b-2df6-5dce-ebed-2eb1334758c0",
+    "name": "0101-047-21 | 0101-047-31 ARCHIV_22.05.2026",
+    "displayName": "Peterskopfstraße 1, 68163 Mannheim",
+    "address": "Peterskopfstraße 1, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47443257185224,
+        49.4661578191645
+      ]
+    }
+  },
+  {
+    "locationId": "e3ad4fe7-73f0-8237-1005-19f9133aac18",
+    "name": "0101-090-21 | 0101-090-31 ARCHIV_29.05.2026",
+    "displayName": "Groß-Gerauer Straße 35, 68307 Mannheim",
+    "address": "Groß-Gerauer Straße 35, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44346801003543,
+        49.5489481523654
+      ]
+    }
+  },
+  {
+    "locationId": "f48fbdbc-0320-2dac-3a68-9dc9bbf8ae5f",
+    "name": "2303LH106 | 2305LW085",
+    "displayName": "Oppauer Straße 43, 68305 Mannheim",
+    "address": "Oppauer Straße 43, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47682053864236,
+        49.5282003417486
+      ]
+    }
+  },
+  {
+    "locationId": "ac7a1848-cf9f-b783-f0de-16efe6c85947",
+    "name": "0101-077-21 | 0101-077-31",
+    "displayName": "Höchster Straße 13, 68305 Mannheim",
+    "address": "Höchster Straße 13, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48843174136417,
+        49.5260627126855
+      ]
+    }
+  },
+  {
+    "locationId": "b9dedc2d-2bd7-82c1-73c2-4dbd21efdc99",
+    "name": "0101-039-21 | 2507LW025",
+    "displayName": "Mülhauser Straße 41B, 68229 Mannheim",
+    "address": "Mülhauser Straße 41B, 68229 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.58164903431843,
+        49.4379998864324
+      ]
+    }
+  },
+  {
+    "locationId": "97a24159-8de1-39a1-8e06-aa4e420dbc99",
+    "name": "0101-040-21 | 0101-040-31",
+    "displayName": "Strahlenburgstraße 35, 68219 Mannheim",
+    "address": "Strahlenburgstraße 35, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5333415659507,
+        49.4450037981867
+      ]
+    }
+  },
+  {
+    "locationId": "75cc8f0f-6685-aa23-13cc-d74e78166c9f",
+    "name": "0101-078-21 | 0101-078-31 ARCHIV_29.05.2026",
+    "displayName": "Pfungstadter Straße 4, 68305 Mannheim",
+    "address": "Pfungstadter Straße 4, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49244840510245,
+        49.5262883107225
+      ]
+    }
+  },
+  {
+    "locationId": "8a90a026-7d34-f777-14f5-40886dcf46cf",
+    "name": "2303LH112 | 2409LW065",
+    "displayName": "Heinrich-Heine-Straße 3, 68199 Mannheim",
+    "address": "Heinrich-Heine-Straße 3, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48555088332353,
+        49.4590518631237
+      ]
+    }
+  },
+  {
+    "locationId": "f3d63288-dec4-f3a9-9b20-bba62ef18a00",
+    "name": "0101-086-21 | 0101-086-31 ARCHIV_29.05.2026",
+    "displayName": "Eichenweg 28, 68305 Mannheim",
+    "address": "Eichenweg 28, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50145060828614,
+        49.5365315390308
+      ]
+    }
+  },
+  {
+    "locationId": "d079d09e-bd04-a50e-72f3-60aa9c8d1946",
+    "name": "0101-041-21 | 0101-041-31 ARCHIV_29.05.2026",
+    "displayName": "Main-Neckar-Bahn-Straße 45, 68535 Edingen-Neckarhausen",
+    "address": "Main-Neckar-Bahn-Straße 45, 68535 Edingen-Neckarhausen",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5779628300318,
+        49.4452506544342
+      ]
+    }
+  },
+  {
+    "locationId": "de06c08a-d8fa-3687-7475-f1ced2fc9020",
+    "name": "0101-058-21 | 0101-058-31",
+    "displayName": "Werftstraße 33, 68159 Mannheim",
+    "address": "Werftstraße 33, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45845624004894,
+        49.4959220667085
+      ]
+    }
+  },
+  {
+    "locationId": "50d536d2-c405-5de4-1e1c-77b8d9649c10",
+    "name": "0101-080-21 | 0101-080-31 ARCHIV_29.05.2026",
+    "displayName": "Baldurstraße 57, 68305 Mannheim",
+    "address": "Baldurstraße 57, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50501976356648,
+        49.5271397301199
+      ]
+    }
+  },
+  {
+    "locationId": "9883009b-c336-16a9-9fc4-cf407330e110",
+    "name": "2303LH118 | 2304LW089 ARCHIV_29.05.2026",
+    "displayName": "Käfertaler Straße 204, 68167 Mannheim",
+    "address": "Käfertaler Straße 204, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49381422529241,
+        49.4980221163125
+      ]
+    }
+  },
+  {
+    "locationId": "a01d83fc-f42e-1183-2fb8-7a5289ff71f9",
+    "name": "0101-093-21 | 0101-093-31 ARCHIV_29.05.2026",
+    "displayName": "Halberstadter Weg 24, 68307 Mannheim",
+    "address": "Halberstadter Weg 24, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48031603540388,
+        49.5649228159639
+      ]
+    }
+  },
+  {
+    "locationId": "d10aecae-1619-23d4-e3b0-7f4466da4c45",
+    "name": "2303LH120 | 2305LW018 ARCHIV_22.05.2026",
+    "displayName": "Kapellenstraße 1, 68239 Mannheim",
+    "address": "Kapellenstraße 1, 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.55574902256005,
+        49.4630485858752
+      ]
+    }
+  },
+  {
+    "locationId": "c200ca95-5270-83d6-d615-0eb4889ed6fa",
+    "name": "0101-075-21 | 0101-075-31",
+    "displayName": "Lampertheimer Straße 131B, 68305 Mannheim",
+    "address": "Lampertheimer Straße 131B, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.511313,
+        49.524939
+      ]
+    }
+  },
+  {
+    "locationId": "ed0e7dc7-a2f4-cd07-9d7d-e7afe11e795f",
+    "name": "0101-067-21 | 0101-067-31 ARCHIV_29.05.2026",
+    "displayName": "Alter Postweg 7, 68309 Mannheim",
+    "address": "Alter Postweg 7, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51997333849823,
+        49.5160487479593
+      ]
+    }
+  },
+  {
+    "locationId": "0156a821-7eba-affc-b7bf-fda1148a37de",
+    "name": "0101-055-21 | 0101-055-31",
+    "displayName": "H5 3, 68159 Mannheim",
+    "address": "H5 3, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46472536,
+        49.49219004
+      ]
+    }
+  },
+  {
+    "locationId": "a553d8c1-9fcf-227c-f4db-077eccf3d98d",
+    "name": "0101-072-21 | 2306LH099 | 0101-072-31",
+    "displayName": "Speckweg 151, 68305 Mannheim",
+    "address": "Speckweg 151, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4989755127713,
+        49.5207346733514
+      ]
+    }
+  },
+  {
+    "locationId": "465f31c3-f4fa-e4e2-b360-074c1b90903a",
+    "name": "2303LH125 | 2305LH129 | 2305LW003",
+    "displayName": "Waldpforte 199, 68305 Mannheim",
+    "address": "Waldpforte 199, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49777483229156,
+        49.5391417493301
+      ]
+    }
+  },
+  {
+    "locationId": "dcc897f9-527f-7223-457b-0c7d157e4324",
+    "name": "0101-073-21 | 0101-073-31 ARCHIV_29.05.2026",
+    "displayName": "Wiesbadener Straße 1, 68305 Mannheim",
+    "address": "Wiesbadener Straße 1, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49332926293612,
+        49.5220202363716
+      ]
+    }
+  },
+  {
+    "locationId": "c8fe0deb-e572-a5c9-6104-28abf0bda712",
+    "name": "0101-083-21 | 0101-083-31",
+    "displayName": "Donarstraße 45, 68305 Mannheim",
+    "address": "Donarstraße 45, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.499983,
+        49.530521
+      ]
+    }
+  },
+  {
+    "locationId": "c4993b49-8cdb-8b87-5354-4e9532cab992",
+    "name": "0101-037-21 | 0101-037-31 ARCHIV_22.05.2026",
+    "displayName": "Relaisstraße 79, 68219 Mannheim",
+    "address": "Relaisstraße 79, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52711374615487,
+        49.4338389393302
+      ]
+    }
+  },
+  {
+    "locationId": "8cb2c341-736e-e112-3190-7260a97077cb",
+    "name": "0101-087-21",
+    "displayName": "Bromberger Baumgang 5, 68307 Mannheim",
+    "address": "Bromberger Baumgang 5, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47713160178318,
+        49.5425439810082
+      ]
+    }
+  },
+  {
+    "locationId": "c8e83350-1570-2552-eb5f-6e5aaf0ebf7a",
+    "name": "0101-053-21 | 0101-053-31",
+    "displayName": "Lauffener Straße 26, 68259 Mannheim",
+    "address": "Lauffener Straße 26, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53534863304752,
+        49.4816428492555
+      ]
+    }
+  },
+  {
+    "locationId": "39be64a4-3dcf-f16f-819e-69308f305377",
+    "name": "2304LW113 | 2305LH184",
+    "displayName": "O7 16, 68161 Mannheim",
+    "address": "O7 16, 68161 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.466266,
+        49.487656
+      ]
+    }
+  },
+  {
+    "locationId": "4611a7b1-2802-b334-8337-8eff364c6609",
+    "name": "2304LW115 | 2507LH072",
+    "displayName": "Karl-Blind-Straße 3, 68199 Mannheim",
+    "address": "Karl-Blind-Straße 3, 68199 Mannheim",
+    "location": {
+      "coordinates": [
+        8.48392,
+        49.464691
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "c7770742-0cbe-e2bc-f2a7-ec7bb72c9104",
+    "name": "2304LW114 ARCHIV_22.05.2026 | 2305LH180",
+    "displayName": "Glücksteinallee 43, 68163 Mannheim",
+    "address": "Glücksteinallee 43, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47242985370208,
+        49.4753144972795
+      ]
+    }
+  },
+  {
+    "locationId": "98db1070-4825-08ab-b359-a2a8923405bf",
+    "name": "2304LW116 ARCHIV_29.05.2026 | 2305LH194",
+    "displayName": "Wasserwerkstraße 195, 68309 Mannheim",
+    "address": "Wasserwerkstraße 195, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52591,
+        49.52493
+      ]
+    }
+  },
+  {
+    "locationId": "03e84da1-d974-2611-cd39-e80c3fea7fc2",
+    "name": "2304LW118 ARCHIV_29.05.2026 | 2305LH122",
+    "displayName": "Seckenheimer Landstraße 16, 68163 Mannheim",
+    "address": "Seckenheimer Landstraße 16, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51386774745307,
+        49.4764382881006
+      ]
+    }
+  },
+  {
+    "locationId": "0bb08790-1af6-7067-95ed-cb1aaa80031d",
+    "name": "2304LW151 ARCHIV_29.05.2026 | 2305LH107",
+    "displayName": "Gutenbergstraße 28, 68167 Mannheim",
+    "address": "Gutenbergstraße 28, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49830462510682,
+        49.4968343877467
+      ]
+    }
+  },
+  {
+    "locationId": "0c33c506-9460-039c-eaed-f15046fc55b3",
+    "name": "2304LW145 ARCHIV_22.05.2026 | 2305LH094",
+    "displayName": "Neckarpromenade 15/456, 68167 Mannheim",
+    "address": "Neckarpromenade 15/456, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475657,
+        49.495163
+      ]
+    }
+  },
+  {
+    "locationId": "f37f59d6-93bd-6b38-9580-2da082e5b773",
+    "name": "2304LW150 | 2306LH097",
+    "displayName": " , 68161 Mannheim",
+    "address": " , 68161 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47424,
+        49.484684
+      ]
+    }
+  },
+  {
+    "locationId": "527ecd9a-1240-44bc-9790-6bfbfdef41a1",
+    "name": "2304LW143 | 2305LH179",
+    "displayName": "Talstraße 155, 68259 Mannheim",
+    "address": "Talstraße 155, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.525488,
+        49.498494
+      ]
+    }
+  },
+  {
+    "locationId": "15318280-3b57-8160-3820-bde5eb373528",
+    "name": "2304LW138 ARCHIV_22.05.2026 | 2306LH149",
+    "displayName": "A3 6–8, 68159 Mannheim",
+    "address": "A3 6–8, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46114062849787,
+        49.4850668771065
+      ]
+    }
+  },
+  {
+    "locationId": "df7c53f0-d6be-d23d-005f-3c637a80bd2e",
+    "name": "2304LW140 | 2305LH116",
+    "displayName": "Memeler Straße 82, 68307 Mannheim",
+    "address": "Memeler Straße 82, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4657726692662,
+        49.5439584029451
+      ]
+    }
+  },
+  {
+    "locationId": "0cfb5fa2-ba1c-2b98-7814-4840a4d6c5f7",
+    "name": "2304LW163 | 2306LH078",
+    "displayName": "2304LW163 | 2306LH078",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50807074529005,
+        49.5138683004924
+      ]
+    }
+  },
+  {
+    "locationId": "41d887d8-93b7-7f06-6d3c-d6a26624a124",
+    "name": "2304LW134 | 2406LH091",
+    "displayName": "H 5 2, 68159 Mannheim",
+    "address": "H 5 2, 68159 Mannheim",
+    "location": {
+      "coordinates": [
+        8.465159,
+        49.491763
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "aaf9e5fb-5fd5-57c5-cde7-2d1e6c450b64",
+    "name": "2304LW133 | 2305LH109 | 2305LW150",
+    "displayName": "Baldurstraße 37, 68305 Mannheim",
+    "address": "Baldurstraße 37, 68305 Mannheim",
+    "location": {
+      "coordinates": [
+        8.502477,
+        49.528422
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "5ddad705-df32-e119-89ed-d666115fb9eb",
+    "name": "2304LW132 | 2406LH094",
+    "displayName": "R6 10, 68161 Mannheim",
+    "address": "R6 10, 68161 Mannheim",
+    "location": {
+      "coordinates": [
+        8.472493,
+        49.487228
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "f57a1fad-68d0-bbf3-db39-9226eaed80f7",
+    "name": "2304LW135 | 2305LH114",
+    "displayName": "Birkenauer Straße 55, 68309 Mannheim",
+    "address": "Birkenauer Straße 55, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.531944,
+        49.515667
+      ]
+    }
+  },
+  {
+    "locationId": "092657a9-f130-6a1d-ebe0-18a2a3468bf1",
+    "name": "2304LW159",
+    "displayName": "Speckweg 41, 68305 Mannheim",
+    "address": "Speckweg 41, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48757908694741,
+        49.5228053463253
+      ]
+    }
+  },
+  {
+    "locationId": "0e745d22-0988-0cd3-22d0-9696ae15ce8e",
+    "name": "2304LW160 | 2306LH184",
+    "displayName": "Nebeniusstraße 10, 68167 Mannheim",
+    "address": "Nebeniusstraße 10, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49110782932606,
+        49.4982083095853
+      ]
+    }
+  },
+  {
+    "locationId": "460bba45-bdb0-3160-d609-bf75f69ee697",
+    "name": "2304LW125 ARCHIV_22.05.2026 | 2305LH099",
+    "displayName": "Apoldaer Weg 38, 68309 Mannheim",
+    "address": "Apoldaer Weg 38, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5456881622346,
+        49.5137351176055
+      ]
+    }
+  },
+  {
+    "locationId": "746f2a00-2272-9861-d12a-d2c9f149d556",
+    "name": "2304LW124 | 2306LH120",
+    "displayName": "John-Deere-Straße 93, 68163 Mannheim",
+    "address": "John-Deere-Straße 93, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48026,
+        49.471624
+      ]
+    }
+  },
+  {
+    "locationId": "14739b98-0caf-ff02-6ef6-ef68918d0137",
+    "name": "0101-069-31 ARCHIV_22.05.2026 | 0101-069-21",
+    "displayName": "Maria-Kirch-Straße , 68305 Mannheim",
+    "address": "Maria-Kirch-Straße , 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5079477294695,
+        49.5183460943583
+      ]
+    }
+  },
+  {
+    "locationId": "dd6f3a34-109f-4b79-94d3-30c7c3bc3c59",
+    "name": "2304LW126",
+    "displayName": "Flensburger Ring 30, 68305 Mannheim",
+    "address": "Flensburger Ring 30, 68305 Mannheim",
+    "location": {
+      "coordinates": [
+        8.487955,
+        49.531443
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "0dc3d07c-45c0-6ebb-3f9a-2731b54164b9",
+    "name": "2304LW121 | 2305LH095",
+    "displayName": "Augustaanlage 58, 68165 Mannheim",
+    "address": "Augustaanlage 58, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48751272,
+        49.47919269
+      ]
+    }
+  },
+  {
+    "locationId": "0dbba115-9b2f-c5c7-e441-d121858adee5",
+    "name": "2304LW086 ARCHIV_29.05.2026 | 2305LH182",
+    "displayName": "August-Bebel-Straße 46, 68199 Mannheim",
+    "address": "August-Bebel-Straße 46, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48159975654971,
+        49.4638216741485
+      ]
+    }
+  },
+  {
+    "locationId": "e5ce972b-af2a-7e75-b8a1-ebfdffdf4a9a",
+    "name": "2304LW064 | 2306LH125",
+    "displayName": "Innstraße 9, 68199 Mannheim",
+    "address": "Innstraße 9, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.506054,
+        49.448559
+      ]
+    }
+  },
+  {
+    "locationId": "999e5bc4-8937-d51b-1d26-ddfbc30d2ea2",
+    "name": "2304LW111 | 2410LH021",
+    "displayName": " , 68159 Mannheim",
+    "address": " , 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4623976,
+        49.491171
+      ]
+    }
+  },
+  {
+    "locationId": "86d2157f-4d02-b65d-02be-8e159a48c0a5",
+    "name": "2304LW094 | 2306LH115",
+    "displayName": "Möhlstraße 5, 68165 Mannheim",
+    "address": "Möhlstraße 5, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.488032,
+        49.475766
+      ]
+    }
+  },
+  {
+    "locationId": "6998a6e9-ba18-c2d0-3170-0df27c73459e",
+    "name": "2304LW095 ARCHIV_29.05.2026 | 2305LH106",
+    "displayName": "George-Washington-Straße 146, 68309 Mannheim",
+    "address": "George-Washington-Straße 146, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52709265386159,
+        49.5169511182154
+      ]
+    }
+  },
+  {
+    "locationId": "a0dfe199-dfd0-ef29-cdfe-3f998bac7fa9",
+    "name": "2304LW097 | 2306LH089",
+    "displayName": "2304LW097 | 2306LH089",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.472062,
+        49.492572
+      ]
+    }
+  },
+  {
+    "locationId": "d11f62e2-7260-9ce0-139a-af5cd97e2d91",
+    "name": "2304LW109 ARCHIV_29.05.2026 | 2305LH082",
+    "displayName": "Promenadenweg 5, 68199 Mannheim",
+    "address": "Promenadenweg 5, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46735306290729,
+        49.4521242849413
+      ]
+    }
+  },
+  {
+    "locationId": "373bde7b-c255-7834-7a14-d5a135a35887",
+    "name": "2304LW082 ARCHIV_29.05.2026 | 2305LH178",
+    "displayName": "Aufeldweg III 4, 68199 Mannheim",
+    "address": "Aufeldweg III 4, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48757461807058,
+        49.448750461165
+      ]
+    }
+  },
+  {
+    "locationId": "404ea3f0-8e5b-5ffd-1c79-85362b0dd47c",
+    "name": "2304LW074 | 2306LH117",
+    "displayName": "Theodor-Storm-Straße 100, 68259 Mannheim",
+    "address": "Theodor-Storm-Straße 100, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.542929,
+        49.490057
+      ]
+    }
+  },
+  {
+    "locationId": "08877204-9570-03a7-1335-1cf103029c9b",
+    "name": "2304LW070 | 2306LH090",
+    "displayName": "Zeppelinstraße 8, 68169 Mannheim",
+    "address": "Zeppelinstraße 8, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.463239,
+        49.505422
+      ]
+    }
+  },
+  {
+    "locationId": "74653a5d-3714-1c72-c3d1-d75b21f7ee90",
+    "name": "2304LW083 | 2306LH127",
+    "displayName": "2304LW083 | 2306LH127",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46202,
+        49.486536
+      ]
+    }
+  },
+  {
+    "locationId": "db45d46e-52b5-d53a-e76f-b093f9057fb5",
+    "name": "2304LW077 ARCHIV_22.05.2026 | 2305LH083",
+    "displayName": "Rheinauer Ring 146, 68219 Mannheim",
+    "address": "Rheinauer Ring 146, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.534435,
+        49.433789
+      ]
+    }
+  },
+  {
+    "locationId": "ae6b388f-da17-64a2-70fb-95e2510eecd2",
+    "name": "2304LW108 ARCHIV_22.05.2026 | 2306LH141",
+    "displayName": "Columbusstraße 1, 68309 Mannheim",
+    "address": "Columbusstraße 1, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.538638888888888,
+        49.51711111111111
+      ]
+    }
+  },
+  {
+    "locationId": "fee08e0d-9b50-41f7-985b-09896d148162",
+    "name": "2304LW090 ARCHIV_22.05.2026 | 2305LH147",
+    "displayName": "Grenzweg 10, 68163 Mannheim",
+    "address": "Grenzweg 10, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48353703,
+        49.46936288
+      ]
+    }
+  },
+  {
+    "locationId": "f5354092-ea6b-4a95-a103-cadb2b534ee4",
+    "name": "2304LW088",
+    "displayName": " , 68239 Mannheim",
+    "address": " , 68239 Mannheim",
+    "location": {
+      "coordinates": [
+        8.56342,
+        49.45885
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "971ccaa0-42d8-5e31-ae6c-f623b49ef9b7",
+    "name": "2304LW085 ARCHIV_29.05.2026 | 2305LH170",
+    "displayName": "Sporwörthstraße 21, 68219 Mannheim",
+    "address": "Sporwörthstraße 21, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52071956422473,
+        49.4444831881973
+      ]
+    }
+  },
+  {
+    "locationId": "3731b15c-a254-de96-5444-2985d5df9771",
+    "name": "2305LH071 | 2507LW125",
+    "displayName": "2305LH071 | 2507LW125",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47943044996997,
+        49.5609598274592
+      ]
+    }
+  },
+  {
+    "locationId": "6cfe0981-ff31-5b7f-ef18-6d99454a9612",
+    "name": "2305LH072 | 2305LW024 ARCHIV_29.05.2026",
+    "displayName": " , 68309 Mannheim",
+    "address": " , 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53088642317885,
+        49.5187347260369
+      ]
+    }
+  },
+  {
+    "locationId": "2e268b9f-915d-6c9c-211e-0dc7efbefdff",
+    "name": "2305LH073 | 2306LW042",
+    "displayName": "Landzungenstraße 8, 68159 Mannheim",
+    "address": "Landzungenstraße 8, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.452695,
+        49.497739
+      ]
+    }
+  },
+  {
+    "locationId": "67eea4ed-8aea-e40d-c8d7-879de658929a",
+    "name": "2305LH075 | 2306LW047 ARCHIV_29.05.2026",
+    "displayName": "Schleusenweg 6, 68159 Mannheim",
+    "address": "Schleusenweg 6, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.453413,
+        49.486415
+      ]
+    }
+  },
+  {
+    "locationId": "8f91246e-7890-610a-d9ef-2709becfd106",
+    "name": "2305LH076 | 2305LW131",
+    "displayName": "Obere Riedstraße 37, 68309 Mannheim",
+    "address": "Obere Riedstraße 37, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51361111,
+        49.51286111
+      ]
+    }
+  },
+  {
+    "locationId": "97eaf88a-79db-040d-d400-dfc88715b7d2",
+    "name": "2305LH077 | 2507LW167",
+    "displayName": "2305LH077 | 2507LW167",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46905625765758,
+        49.4832514855144
+      ]
+    }
+  },
+  {
+    "locationId": "dc2b67fd-f214-1782-3494-28f4e8446d66",
+    "name": "2305LH079 | 2306LW001 ARCHIV_29.05.2026",
+    "displayName": "Nikolaus-Otto-Straße 5, 68169 Mannheim",
+    "address": "Nikolaus-Otto-Straße 5, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474222222222222,
+        49.50241666666667
+      ]
+    }
+  },
+  {
+    "locationId": "36913055-f39a-5cd5-9553-de65c89cac60",
+    "name": "2305LH080 | 2507LW118",
+    "displayName": "2305LH080 | 2507LW118",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48662490652076,
+        49.4850880230926
+      ]
+    }
+  },
+  {
+    "locationId": "Moritz2",
+    "name": "2305LH081 | 2501LW085",
+    "displayName": "Sachsenstraße 55, 68309 Mannheim",
+    "address": "Sachsenstraße 55, 68309 Mannheim",
+    "location": {
+      "coordinates": [
+        8.548052,
+        49.508071
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "380dfb5a-9d62-5382-3618-0e7f836efbab",
+    "name": "2305LH084 | 2305LW086",
+    "displayName": "Distelsand 11, 68219 Mannheim",
+    "address": "Distelsand 11, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53390551141979,
+        49.4288016803096
+      ]
+    }
+  },
+  {
+    "locationId": "518b2f31-59c1-38b6-603f-8b9ea65885b9",
+    "name": "2305LH085 | 2306LW044 ARCHIV_29.05.2026",
+    "displayName": "Mundenheimer Straße 57, 68219 Mannheim",
+    "address": "Mundenheimer Straße 57, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51118703834476,
+        49.442538079858
+      ]
+    }
+  },
+  {
+    "locationId": "63161fe9-c607-fb92-e749-2e26931ee332",
+    "name": "2305LH086 | 2305LW102 ARCHIV_29.05.2026",
+    "displayName": "Wacholderstraße 34, 68199 Mannheim",
+    "address": "Wacholderstraße 34, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48820203238448,
+        49.4584162174896
+      ]
+    }
+  },
+  {
+    "locationId": "7f377809-8c25-8700-b3f8-305cbeae7856",
+    "name": "2305LH087 | 2507LW124",
+    "displayName": "2305LH087 | 2507LW124",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4819537651215,
+        49.4558660232446
+      ]
+    }
+  },
+  {
+    "locationId": "13b4050b-f69c-6330-87d8-a77a00d69ab3",
+    "name": "2305LH088 | 2306LW073",
+    "displayName": "2305LH088 | 2306LW073",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48603290346302,
+        49.4878999614334
+      ]
+    }
+  },
+  {
+    "locationId": "ade3d66b-5ff8-88b3-6d8a-9f6e7274f0c6",
+    "name": "2305LH089 | 2306LW125",
+    "displayName": "Landteilstraße 27, 68163 Mannheim",
+    "address": "Landteilstraße 27, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.472251,
+        49.472368
+      ]
+    }
+  },
+  {
+    "locationId": "96629676-fdcc-281e-c1af-d934b78bcbb6",
+    "name": "2305LH090 | 2306LW039",
+    "displayName": "2305LH090 | 2306LW039",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.472424,
+        49.494284
+      ]
+    }
+  },
+  {
+    "locationId": "f270dfea-290d-74fc-ae9d-445312e1395c",
+    "name": "2305LH091 | 2305LW006 ARCHIV_29.05.2026",
+    "displayName": "Robert-Funari-Straße 2-6, 68309 Mannheim",
+    "address": "Robert-Funari-Straße 2-6, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5260386483306,
+        49.5154292203027
+      ]
+    }
+  },
+  {
+    "locationId": "39801283-5921-e42f-bdde-0bea32d9b37f",
+    "name": "2305LH092 | 2305LW031 ARCHIV_29.05.2026",
+    "displayName": "Abraham-Lincoln-Allee 2, 68309 Mannheim",
+    "address": "Abraham-Lincoln-Allee 2, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53625,
+        49.51877777777778
+      ]
+    }
+  },
+  {
+    "locationId": "0b54dc3a-7b06-24b2-6325-70ff2bd79350",
+    "name": "2305LH093 | 2305LW154",
+    "displayName": "Antwerpener Straße 20, 68219 Mannheim",
+    "address": "Antwerpener Straße 20, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50613719365472,
+        49.4177965027105
+      ]
+    }
+  },
+  {
+    "locationId": "dff64f7a-77a5-2e24-0439-89e27d0ee45c",
+    "name": "2305LH096",
+    "displayName": "2305LH096",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.480731,
+        49.505884
+      ]
+    }
+  },
+  {
+    "locationId": "7c04ef44-075d-8cb2-7a05-00e327585b70",
+    "name": "2305LH097 | 2507LW170",
+    "displayName": "2305LH097 | 2507LW170",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45853554600922,
+        49.4872455626585
+      ]
+    }
+  },
+  {
+    "locationId": "96c9b337-e800-1a1c-72ec-22ed9a81a218",
+    "name": "2305LH098 | 2306LW121",
+    "displayName": "2305LH098 | 2306LW121",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.448261,
+        49.490919
+      ]
+    }
+  },
+  {
+    "locationId": "b6f2ae1f-f0af-39fe-dcd6-886a38a8c5fd",
+    "name": "2305LH100 | 2305LW099 ARCHIV_22.05.2026",
+    "displayName": "Am Exerzierplatz 12, 68167 Mannheim",
+    "address": "Am Exerzierplatz 12, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.496415,
+        49.504121
+      ]
+    }
+  },
+  {
+    "locationId": "75420960-9772-aa21-aeb1-d2f95f83b4a4",
+    "name": "2305LH101 | 2305LW100",
+    "displayName": "2305LH101 | 2305LW100",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.469812,
+        49.50495
+      ]
+    }
+  },
+  {
+    "locationId": "16bb259f-07c5-847f-e9ab-2b109bda3686",
+    "name": "2305LH102 | 2507LW190",
+    "displayName": "2305LH102 | 2507LW190",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48854403199963,
+        49.4864721456792
+      ]
+    }
+  },
+  {
+    "locationId": "11966d99-d177-a64f-c80a-2a15a845f98b",
+    "name": "2305LH103 | 2507LW113",
+    "displayName": "2305LH103 | 2507LW113",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45930047170283,
+        49.4943636605813
+      ]
+    }
+  },
+  {
+    "locationId": "f53f485e-3e3d-cbdf-ca56-837e68bddbe8",
+    "name": "2305LH104 | 2306LW060 ARCHIV_22.05.2026",
+    "displayName": "B6 8, 68159 Mannheim",
+    "address": "B6 8, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46042509600511,
+        49.4877846951479
+      ]
+    }
+  },
+  {
+    "locationId": "398b21c5-f2cd-9dc2-36f6-40b6debca1c2",
+    "name": "2305LH105 | 2306LW074 ARCHIV_29.05.2026",
+    "displayName": "Wingertstraße 66A, 68199 Mannheim",
+    "address": "Wingertstraße 66A, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.488025,
+        49.458942
+      ]
+    }
+  },
+  {
+    "locationId": "8b1a7a72-075d-ec1e-93ba-f56f0963e20f",
+    "name": "2305LH108 | 2305LW152 | 2409LW004",
+    "displayName": "Casterfeldstraße 164, 68219 Mannheim",
+    "address": "Casterfeldstraße 164, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.512566,
+        49.444231
+      ]
+    }
+  },
+  {
+    "locationId": "3c56c281-32ad-a0ba-8998-7754a465f716",
+    "name": "2305LH110 | 2305LW129",
+    "displayName": "K9753 75, 68259 Mannheim",
+    "address": "K9753 75, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52839847,
+        49.4871624
+      ]
+    }
+  },
+  {
+    "locationId": "0dc75f72-4b10-ab90-3536-e0668654f687",
+    "name": "2305LH111 | 2305LW082",
+    "displayName": "Rheingoldstraße 109, 68199 Mannheim",
+    "address": "Rheingoldstraße 109, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.478046,
+        49.452415
+      ]
+    }
+  },
+  {
+    "locationId": "0ac8e9c8-6847-409d-8b2c-81af5a4a9eb1",
+    "name": "2305LH112",
+    "displayName": "2305LH112",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.461111838945603,
+        49.50055518927387
+      ]
+    }
+  },
+  {
+    "locationId": "be93ca95-e9b3-12db-effe-db193093d5e7",
+    "name": "2305LH113 | 2507LW123",
+    "displayName": "2305LH113 | 2507LW123",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45916597089243,
+        49.4862006398431
+      ]
+    }
+  },
+  {
+    "locationId": "e8a8e04e-8e5d-9568-0ace-bc96c41fe865",
+    "name": "2305LH115 | 2507LW152",
+    "displayName": "2305LH115 | 2507LW152",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.538631,
+        49.48414
+      ]
+    }
+  },
+  {
+    "locationId": "c42191b9-2c45-67b1-0e85-68bc0f55b7b8",
+    "name": "2305LH117 | 2306LW037",
+    "displayName": "Ruhrorter Straße 45, 68219 Mannheim",
+    "address": "Ruhrorter Straße 45, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.514962,
+        49.433379
+      ]
+    }
+  },
+  {
+    "locationId": "343bf09f-68d0-d583-2e34-93d7efd5e3a4",
+    "name": "2305LH118 | 2305LW010 | 2409LW038",
+    "displayName": "Brückeswasen 10, 68199 Mannheim",
+    "address": "Brückeswasen 10, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49811912939649,
+        49.4531455865543
+      ]
+    }
+  },
+  {
+    "locationId": "47b2e49f-a3cc-3352-c736-2af2a39bf494",
+    "name": "2305LH119 | 2305LW067",
+    "displayName": "Langstraße 84, 68169 Mannheim",
+    "address": "Langstraße 84, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46206769551243,
+        49.5008900729968
+      ]
+    }
+  },
+  {
+    "locationId": "0bf920e5-9f9a-5bc7-4e3f-89322ba63ba1",
+    "name": "2305LH120 | 2305LW112",
+    "displayName": "Belchenstraße 16, 68163 Mannheim",
+    "address": "Belchenstraße 16, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46926360338171,
+        49.4632970001339
+      ]
+    }
+  },
+  {
+    "locationId": "e412292f-4d1a-492e-8174-cf9cb27cfc4b",
+    "name": "2305LH123",
+    "displayName": "Straße Ohne Straßennamen , 68163 Mannheim",
+    "address": "Straße Ohne Straßennamen , 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.515905,
+        49.470667
+      ]
+    }
+  },
+  {
+    "locationId": "f4ebdaac-d47b-6e02-1183-00d671a5e415",
+    "name": "2305LH124 | 2507LW138",
+    "displayName": "2305LH124 | 2507LW138",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48541619864825,
+        49.4821792249124
+      ]
+    }
+  },
+  {
+    "locationId": "45b0a2e1-ddea-7125-67c7-45dc4a6bd265",
+    "name": "2305LH125 | 2306LW014 ARCHIV_29.05.2026",
+    "displayName": "2305LH125 | 2306LW014 ARCHIV_29.05.2026",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47512,
+        49.516056
+      ]
+    }
+  },
+  {
+    "locationId": "9607e86d-e326-0fe5-2437-531085d96d08",
+    "name": "2305LH126 | 2305LW076",
+    "displayName": "Johannes-Hoffart-Straße 19, 68163 Mannheim",
+    "address": "Johannes-Hoffart-Straße 19, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.513204,
+        49.463936
+      ]
+    }
+  },
+  {
+    "locationId": "67edfce8-5a3a-d8fd-7952-5cc2764c97e9",
+    "name": "2305LH127 | 2305LW033 ARCHIV_22.05.2026",
+    "displayName": "Fahrlachstraße 38, 68165 Mannheim",
+    "address": "Fahrlachstraße 38, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49714902954856,
+        49.4712969054908
+      ]
+    }
+  },
+  {
+    "locationId": "f2c8a5a1-33f1-620a-be6f-c9d665e32b50",
+    "name": "2305LH130 | 2305LW062",
+    "displayName": "Rudolf-Diesel-Straße 39, 68169 Mannheim",
+    "address": "Rudolf-Diesel-Straße 39, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46203,
+        49.521603
+      ]
+    }
+  },
+  {
+    "locationId": "bb661fc7-a033-669f-9870-3b1fcb1132b6",
+    "name": "2305LH131 | 2507LW112",
+    "displayName": "2305LH131 | 2507LW112",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49352,
+        49.479902
+      ]
+    }
+  },
+  {
+    "locationId": "8a6d7f39-ed92-8527-fed6-5b26ab4a2cd3",
+    "name": "2305LH132 | 2507LW173",
+    "displayName": "2305LH132 | 2507LW173",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.527169,
+        49.513931
+      ]
+    }
+  },
+  {
+    "locationId": "9700a034-9e7c-8217-043c-84f1f8b307a2",
+    "name": "2305LH133 | 2306LW075 ARCHIV_29.05.2026",
+    "displayName": "Pommernstraße 71, 68309 Mannheim",
+    "address": "Pommernstraße 71, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5355651950197,
+        49.5049327237336
+      ]
+    }
+  },
+  {
+    "locationId": "be334b9c-997d-949c-aeef-27384dd6d108",
+    "name": "2305LH134 | 2306LW013",
+    "displayName": "Mollstraße 46, 68165 Mannheim",
+    "address": "Mollstraße 46, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48357768648486,
+        49.4843193908772
+      ]
+    }
+  },
+  {
+    "locationId": "c980a26c-403c-2cee-688e-13171b1def07",
+    "name": "2305LH135 | 2306LW076",
+    "displayName": "Hirschgasse 19, 68229 Mannheim",
+    "address": "Hirschgasse 19, 68229 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.571431,
+        49.432642
+      ]
+    }
+  },
+  {
+    "locationId": "c8fb13fb-7572-7298-6474-8639af97882e",
+    "name": "2305LH136 | 2305LW079 ARCHIV_29.05.2026",
+    "displayName": "Angelstraße 14-16, 68199 Mannheim",
+    "address": "Angelstraße 14-16, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49538291412701,
+        49.4529233248461
+      ]
+    }
+  },
+  {
+    "locationId": "b62b5a45-1093-16ab-cba0-6bab98de854a",
+    "name": "2305LH137 | 2507LW171",
+    "displayName": "2305LH137 | 2507LW171",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44808321631592,
+        49.5077430149446
+      ]
+    }
+  },
+  {
+    "locationId": "3ba33d0f-9791-df66-1b0a-ef3d979aab99",
+    "name": "2305LH138 | 2306LW145",
+    "displayName": "2305LH138 | 2306LW145",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.575889,
+        49.440536
+      ]
+    }
+  },
+  {
+    "locationId": "89f8301b-5288-f0dc-97c6-9bcce1b11732",
+    "name": "2305LH139 | 2306LW023",
+    "displayName": "Altriper Straße 25, 68199 Mannheim",
+    "address": "Altriper Straße 25, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50459977134485,
+        49.444981539748
+      ]
+    }
+  },
+  {
+    "locationId": "081cf670-9593-400a-8bc3-078b3de3bc1e",
+    "name": "2305LH140",
+    "displayName": "Windeckstraße 6, 68163 Mannheim",
+    "address": "Windeckstraße 6, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46652494735826,
+        49.47356786661
+      ]
+    }
+  },
+  {
+    "locationId": "d3410dee-f69b-42b3-9de5-e5bb0968351b",
+    "name": "2305LH141",
+    "displayName": "2305LH141",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.449203,
+        49.541341
+      ]
+    }
+  },
+  {
+    "locationId": "f63fe61a-533d-a368-e7d3-81e4c7c1f1d7",
+    "name": "2305LH142 | 2306LW020",
+    "displayName": "Roonstraße 6, 68165 Mannheim",
+    "address": "Roonstraße 6, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475435,
+        49.481979
+      ]
+    }
+  },
+  {
+    "locationId": "942db136-3da5-d44f-c998-90e25d5048d5",
+    "name": "2305LH143 | 2305LW107",
+    "displayName": " , 68219 Mannheim",
+    "address": " , 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.536395,
+        49.423808
+      ]
+    }
+  },
+  {
+    "locationId": "a04c2203-f411-4492-08b2-91779a41713f",
+    "name": "2305LH144 | 2507LW183",
+    "displayName": "2305LH144 | 2507LW183",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52608090300378,
+        49.4211630673353
+      ]
+    }
+  },
+  {
+    "locationId": "a04ad108-b4c1-2d71-6aa7-3ad0ba385cec",
+    "name": "2305LH145 | 2409LW022",
+    "displayName": "Steinzeugstraße 17, 68229 Mannheim",
+    "address": "Steinzeugstraße 17, 68229 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.56743107170095,
+        49.4465326417854
+      ]
+    }
+  },
+  {
+    "locationId": "521767e4-59dc-623c-a585-47d9b189009e",
+    "name": "2305LH146 | 2501LW091",
+    "displayName": "2305LH146 | 2501LW091",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.467838,
+        49.48975
+      ]
+    }
+  },
+  {
+    "locationId": "5acd05fb-8f1c-54e5-6026-4c37fba7fcd5",
+    "name": "2305LH148 | 2507LW175",
+    "displayName": "2305LH148 | 2507LW175",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49802553100289,
+        49.4554759185666
+      ]
+    }
+  },
+  {
+    "locationId": "97e24394-68d4-7317-2a83-c3fef44b96f0",
+    "name": "2305LH149 | 2305LW035 ARCHIV_29.05.2026 | 2507LW058",
+    "displayName": "Stockhornstraße 3, 68169 Mannheim",
+    "address": "Stockhornstraße 3, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.460638888888889,
+        49.50105555555555
+      ]
+    }
+  },
+  {
+    "locationId": "8a4dab60-a7ff-5e6e-a8da-fac1dbd80cfc",
+    "name": "2305LH150 | 2306LW003",
+    "displayName": "Spinelli - Bks 1586, 68259 Mannheim",
+    "address": "Spinelli - Bks 1586, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.522052,
+        49.495927
+      ]
+    }
+  },
+  {
+    "locationId": "6593af5f-b512-2c1e-de2a-4ab95d6f1660",
+    "name": "2305LH151 | 2306LW011 ARCHIV_22.05.2026",
+    "displayName": "Schlachthofstraße 13, 68165 Mannheim",
+    "address": "Schlachthofstraße 13, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48938484939602,
+        49.473591386799
+      ]
+    }
+  },
+  {
+    "locationId": "75dba147-0036-9a7a-4835-52423909305d",
+    "name": "2305LH152 | 2306LW006",
+    "displayName": " , 68169 Mannheim",
+    "address": " , 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49187190713569,
+        49.5103601652608
+      ]
+    }
+  },
+  {
+    "locationId": "d1ffd737-96c8-691b-e250-acdad50d2f54",
+    "name": "2305LH153 | 2305LW040 ARCHIV_22.05.2026",
+    "displayName": "Bunsenstraße 1, 68169 Mannheim",
+    "address": "Bunsenstraße 1, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45954068630353,
+        49.5001355279703
+      ]
+    }
+  },
+  {
+    "locationId": "523d417f-29de-e2a3-1b4a-022a0237f836",
+    "name": "2305LH155 | 2305LW071",
+    "displayName": "Sullivan Bks 210, 68309 Mannheim",
+    "address": "Sullivan Bks 210, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53180731726465,
+        49.5241426587121
+      ]
+    }
+  },
+  {
+    "locationId": "4305e53b-5fd1-3813-1838-f534f2b32fb1",
+    "name": "2305LH156 | 2305LW060",
+    "displayName": "Floßwörthstraße 45, 68199 Mannheim",
+    "address": "Floßwörthstraße 45, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50132086628194,
+        49.4590355337201
+      ]
+    }
+  },
+  {
+    "locationId": "2fb696f6-42cd-c8ac-76bb-33a85f030cf6",
+    "name": "2305LH157 | 2305LW089",
+    "displayName": "Bassermannstraße 32, 68165 Mannheim",
+    "address": "Bassermannstraße 32, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48367286807404,
+        49.4873253684662
+      ]
+    }
+  },
+  {
+    "locationId": "9ae3ca76-f209-32e8-c6e9-4094ba262575",
+    "name": "2305LH158 | 2306LW063 ARCHIV_29.05.2026",
+    "displayName": "Maybachstraße 10-16, 68169 Mannheim",
+    "address": "Maybachstraße 10-16, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471668,
+        49.504551
+      ]
+    }
+  },
+  {
+    "locationId": "63abbfd1-d792-4693-adf6-696c5dfdb4a1",
+    "name": "2305LH159 | 2306LW035",
+    "displayName": " , 68167 Mannheim",
+    "address": " , 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.489088,
+        49.498735
+      ]
+    }
+  },
+  {
+    "locationId": "3c47d106-b8a2-a3cc-3751-79d886748dd5",
+    "name": "2305LH160 | 2305LW163",
+    "displayName": "2305LH160 | 2305LW163",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.518454,
+        49.462905
+      ]
+    }
+  },
+  {
+    "locationId": "3ef990a6-ccba-6804-c9a2-5fd36f510c1d",
+    "name": "2305LH161 | 2305LW106",
+    "displayName": "2305LH161 | 2305LW106",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.458066166742489,
+        49.52720277010722
+      ]
+    }
+  },
+  {
+    "locationId": "2fa067cc-c7c6-5390-e65b-d8c56b6321f9",
+    "name": "2305LH162 | 2305LW075",
+    "displayName": "2305LH162 | 2305LW075",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.499919,
+        49.475011
+      ]
+    }
+  },
+  {
+    "locationId": "f63a6110-39e3-6523-4866-2bf7caa099e5",
+    "name": "2305LH164 | 2306LW026 ARCHIV_29.05.2026",
+    "displayName": "Wiesenstraße 6, 68169 Mannheim",
+    "address": "Wiesenstraße 6, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46394537132064,
+        49.5039132466079
+      ]
+    }
+  },
+  {
+    "locationId": "e417c9e1-ce69-52d4-12bf-e26d0ef3e700",
+    "name": "2305LH165 | 2409LW006 ARCHIV_29.05.2026",
+    "displayName": "Brandenburger Straße 42, 68309 Mannheim",
+    "address": "Brandenburger Straße 42, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53582537019293,
+        49.5140366879478
+      ]
+    }
+  },
+  {
+    "locationId": "00fce508-da46-dc6b-b133-d66a5dc0db3b",
+    "name": "2305LH166 | 2409LW091",
+    "displayName": "Altrheinstraße , 68305 Mannheim",
+    "address": "Altrheinstraße , 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47484833717072,
+        49.5264281792128
+      ]
+    }
+  },
+  {
+    "locationId": "8e1e3ef3-cd76-c2b5-346a-c507a35674ce",
+    "name": "2305LH167 | 2507LW189",
+    "displayName": "2305LH167 | 2507LW189",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46056120021042,
+        49.4954382687205
+      ]
+    }
+  },
+  {
+    "locationId": "a0044090-1572-764d-3baf-857a4d192610",
+    "name": "2305LH169 | 2507LW144",
+    "displayName": "2305LH169 | 2507LW144",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53620052147042,
+        49.5105023322614
+      ]
+    }
+  },
+  {
+    "locationId": "934092c6-fe45-3684-81b8-c07ea13110b8",
+    "name": "2305LH171 | 2507LW115",
+    "displayName": "2305LH171 | 2507LW115",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46750582891837,
+        49.5300016441372
+      ]
+    }
+  },
+  {
+    "locationId": "e985bf51-febb-2318-f4af-b73402aace79",
+    "name": "2305LH172 | 2507LW153",
+    "displayName": "2305LH172 | 2507LW153",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.522415,
+        49.51145
+      ]
+    }
+  },
+  {
+    "locationId": "51afa574-b518-a1b1-a019-bbb519fc5606",
+    "name": "2305LH173 | 2507LW164",
+    "displayName": "2305LH173 | 2507LW164",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52823333366209,
+        49.5050427700734
+      ]
+    }
+  },
+  {
+    "locationId": "7e52e0a4-f775-792f-98db-0451e0588f57",
+    "name": "2305LH174 | 2304LW029",
+    "displayName": "2305LH174 | 2304LW029",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.504122,
+        49.502045
+      ]
+    }
+  },
+  {
+    "locationId": "0da31f00-2478-373e-715e-ea8fe2c046dc",
+    "name": "2305LH175 | 2507LW155",
+    "displayName": "2305LH175 | 2507LW155",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47879557595395,
+        49.4599166444504
+      ]
+    }
+  },
+  {
+    "locationId": "22c76c2a-2d91-ac87-ae2b-adb0d6c9eeb3",
+    "name": "2305LH176 | 2305LW130",
+    "displayName": "2305LH176 | 2305LW130",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.479682,
+        49.477608
+      ]
+    }
+  },
+  {
+    "locationId": "09495f81-1fdd-b8fb-314e-694dafd0ee77",
+    "name": "2305LH177 | 2507LW141",
+    "displayName": "2305LH177 | 2507LW141",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50510860440787,
+        49.4602365551283
+      ]
+    }
+  },
+  {
+    "locationId": "62f67e0d-ca0f-4bfb-88cd-902b0ef07456",
+    "name": "2305LH181",
+    "displayName": "Käfertaler Straße 235, 68167 Mannheim",
+    "address": "Käfertaler Straße 235, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.496844,
+        49.499813
+      ]
+    }
+  },
+  {
+    "locationId": "50cf6b47-f413-dd7d-a867-bc6679c6a468",
+    "name": "2305LH183 | 2507LW121",
+    "displayName": "2305LH183 | 2507LW121",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.531162,
+        49.521229
+      ]
+    }
+  },
+  {
+    "locationId": "39465b34-3e8e-e40b-9cfc-fc43b0aa0e60",
+    "name": "2305LH185 | 2507LW117",
+    "displayName": "2305LH185 | 2507LW117",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.481135,
+        49.496379
+      ]
+    }
+  },
+  {
+    "locationId": "e36f8f98-e85d-5fe2-1182-67e051f5d804",
+    "name": "2305LH186 | 2507LW127",
+    "displayName": "2305LH186 | 2507LW127",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.526799,
+        49.507219
+      ]
+    }
+  },
+  {
+    "locationId": "096b0a6a-2a20-1188-4e51-47fce158958a",
+    "name": "2305LH187 | 2305LW069 ARCHIV_29.05.2026",
+    "displayName": "Weimarer Straße 32, 68309 Mannheim",
+    "address": "Weimarer Straße 32, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54102579115052,
+        49.511307590768
+      ]
+    }
+  },
+  {
+    "locationId": "2349e3ce-0006-22a0-07ec-20cb3e4852e4",
+    "name": "2305LH188 | 2305LW050 ARCHIV_29.05.2026",
+    "displayName": "Leutweinstraße 55, 68219 Mannheim",
+    "address": "Leutweinstraße 55, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.53052,
+        49.419657
+      ]
+    }
+  },
+  {
+    "locationId": "716ad07b-e6f9-a806-177e-ec7ed75ac0bf",
+    "name": "2305LH190 | 2507LW130",
+    "displayName": "2305LH190 | 2507LW130",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.458565,
+        49.504611
+      ]
+    }
+  },
+  {
+    "locationId": "14882a3d-a05b-69ba-df61-e1ea3d3099a1",
+    "name": "2305LH191 | 2305LW090",
+    "displayName": "Starnberger Weg 1, 68219 Mannheim",
+    "address": "Starnberger Weg 1, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52952735170306,
+        49.4138213615421
+      ]
+    }
+  },
+  {
+    "locationId": "8a1bd95a-cef2-033a-de7e-d366ad6ec907",
+    "name": "2305LH192 | 2305LW158",
+    "displayName": " , 68259 Mannheim",
+    "address": " , 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54868,
+        49.498809
+      ]
+    }
+  },
+  {
+    "locationId": "8fdf2b69-dbbd-4a42-bcfd-8d01f957e498",
+    "name": "2305LH193 | 2305LW155",
+    "displayName": "Paul-Wittsack-Straße 6, 68163 Mannheim",
+    "address": "Paul-Wittsack-Straße 6, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.482288,
+        49.469635
+      ]
+    }
+  },
+  {
+    "locationId": "7e6fd4d2-dc16-44a2-64c3-4dc7a032d79a",
+    "name": "2305LH195 | 2507LW122",
+    "displayName": "2305LH195 | 2507LW122",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48545994811495,
+        49.4609001960666
+      ]
+    }
+  },
+  {
+    "locationId": "b1ed8e81-cc55-46a8-be1a-7862e9015f0c",
+    "name": "2306LH071 | 2304LW027",
+    "displayName": "Irisweg 2, 68309 Mannheim",
+    "address": "Irisweg 2, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.511079,
+        49.516563
+      ]
+    }
+  },
+  {
+    "locationId": "690bfc16-bfcc-47bf-b352-6dcc46b9da66",
+    "name": "2306LH072 | 2305LW057",
+    "displayName": "Ulmenweg 1, 68169 Mannheim",
+    "address": "Ulmenweg 1, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.487321,
+        49.504402
+      ]
+    }
+  },
+  {
+    "locationId": "e43c5eaa-48bb-ed91-0c62-638e9f80be18",
+    "name": "2306LH074 | 2306LW054",
+    "displayName": "Boehringerstraße 16, 68307 Mannheim",
+    "address": "Boehringerstraße 16, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4772,
+        49.534767
+      ]
+    }
+  },
+  {
+    "locationId": "dfc001ac-dca3-8746-cb00-cdf67c7402a2",
+    "name": "2306LH075 | 2306LW040 ARCHIV_29.05.2026",
+    "displayName": "Bühler Straße 20, 68239 Mannheim",
+    "address": "Bühler Straße 20, 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.557169,
+        49.465966
+      ]
+    }
+  },
+  {
+    "locationId": "c46ffaff-e798-9517-5b8e-45a14197866d",
+    "name": "2306LH076 | 2305LW147",
+    "displayName": "Strandbadweg 1, 68199 Mannheim",
+    "address": "Strandbadweg 1, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45213888888888,
+        49.446
+      ]
+    }
+  },
+  {
+    "locationId": "5c5525b4-6a28-4577-5f5b-1571b6d9ca2a",
+    "name": "2306LH077 | 2306LW151",
+    "displayName": "Marianne-Cohn-Straße 22, 68167 Mannheim",
+    "address": "Marianne-Cohn-Straße 22, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.490603,
+        49.503168
+      ]
+    }
+  },
+  {
+    "locationId": "3a2e657f-53dc-311d-043e-f58b5f032106",
+    "name": "2306LH079 | 2306LW032",
+    "displayName": "Meßkircher Straße 25, 68239 Mannheim",
+    "address": "Meßkircher Straße 25, 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.564253,
+        49.462747
+      ]
+    }
+  },
+  {
+    "locationId": "0c9522d6-5af5-8094-f783-1b3d68d794d4",
+    "name": "2306LH080 | 2306LW050",
+    "displayName": "Ortsstraße 11, 68259 Mannheim",
+    "address": "Ortsstraße 11, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.577068,
+        49.513914
+      ]
+    }
+  },
+  {
+    "locationId": "75bf06cc-fb85-b6fd-3ed8-7825284fa273",
+    "name": "2306LH081 | 2305LW149 ARCHIV_22.05.2026",
+    "displayName": "Ausgasse 6, 68307 Mannheim",
+    "address": "Ausgasse 6, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44285260794755,
+        49.5454116817885
+      ]
+    }
+  },
+  {
+    "locationId": "f04c4a0c-9986-4637-3390-d7836aa218b4",
+    "name": "2306LH083 | 2306LW164",
+    "displayName": "2306LH083 | 2306LW164",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.482599113620443,
+        49.445185838319176
+      ]
+    }
+  },
+  {
+    "locationId": "520f4b6e-498b-cba4-80c5-16d071d20292",
+    "name": "2306LH084 | 2507LW103",
+    "displayName": "2306LH084 | 2507LW103",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46253712817787,
+        49.5148716493293
+      ]
+    }
+  },
+  {
+    "locationId": "9d59911e-cd3f-48e8-8e8d-49757a4ea9e3",
+    "name": "2306LH085 | 2306LW061",
+    "displayName": "Im Pfeifferswörth 26, 68167 Mannheim",
+    "address": "Im Pfeifferswörth 26, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.502926,
+        49.487976
+      ]
+    }
+  },
+  {
+    "locationId": "e7021d2d-b84c-ac3e-86e5-d07ce32c898e",
+    "name": "2306LH086 | 2305LW084",
+    "displayName": "Waldhofstraße 9, 68169 Mannheim",
+    "address": "Waldhofstraße 9, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47171,
+        49.498642
+      ]
+    }
+  },
+  {
+    "locationId": "eadac6f8-872d-9cf6-ecf7-65a859c0cfee",
+    "name": "2306LH088",
+    "displayName": "Einsteinstraße 21, 68169 Mannheim",
+    "address": "Einsteinstraße 21, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45646841004408,
+        49.5161994517478
+      ]
+    }
+  },
+  {
+    "locationId": "0e5a4949-0984-3920-717b-650c9fce54d8",
+    "name": "2306LH091 | 2306LW025 ARCHIV_29.05.2026",
+    "displayName": "Osterburker Straße 19, 68259 Mannheim",
+    "address": "Osterburker Straße 19, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54633303446008,
+        49.4933721102595
+      ]
+    }
+  },
+  {
+    "locationId": "dce1d650-1c21-0b07-9fb3-429d3635d9f8",
+    "name": "2306LH093 | 2507LW166",
+    "displayName": "2306LH093 | 2507LW166",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.536253,
+        49.507533
+      ]
+    }
+  },
+  {
+    "locationId": "d34c1db0-bbe0-482b-7a29-40553ef0c0d2",
+    "name": "2306LH094 | 2507LW136",
+    "displayName": "2306LH094 | 2507LW136",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47882709893065,
+        49.4854189085181
+      ]
+    }
+  },
+  {
+    "locationId": "600f609d-e6dc-4407-ad3f-74c21fcda444",
+    "name": "2306LH095 | 2507LW181",
+    "displayName": "Berliner Straße 23, 67059 Ludwigshafen am Rhein",
+    "address": "Berliner Straße 23, 67059 Ludwigshafen am Rhein",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44434422,
+        49.47991871
+      ]
+    }
+  },
+  {
+    "locationId": "f3fe183c-a965-a688-33ee-a26e8098676b",
+    "name": "2306LH096 | 2305LW092 ARCHIV_29.05.2026",
+    "displayName": "Schwarzwaldstraße 29, 68163 Mannheim",
+    "address": "Schwarzwaldstraße 29, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46726086697013,
+        49.4681006941888
+      ]
+    }
+  },
+  {
+    "locationId": "d3574508-d691-1531-b202-38e7becd759b",
+    "name": "2306LH098 | 2306LW166",
+    "displayName": "Am Sandhang 28, 68239 Mannheim",
+    "address": "Am Sandhang 28, 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.566113,
+        49.45296
+      ]
+    }
+  },
+  {
+    "locationId": "c26dacbd-3610-d334-84ef-841fe6587658",
+    "name": "2306LH100 | 2507LW168",
+    "displayName": "2306LH100 | 2507LW168",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47844316014078,
+        49.4901244069867
+      ]
+    }
+  },
+  {
+    "locationId": "97bab18e-5938-c5ee-bb80-8dd815b6adda",
+    "name": "2306LH104 | 2507LW111",
+    "displayName": "2306LH104 | 2507LW111",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.57164566157839,
+        49.4296776547326
+      ]
+    }
+  },
+  {
+    "locationId": "bc259bc4-644b-01b0-7ba6-1f40a5b8e980",
+    "name": "2306LH105 | 2305LW110 ARCHIV_29.05.2026",
+    "displayName": "Wespinstraße 17, 68165 Mannheim",
+    "address": "Wespinstraße 17, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48336111111111,
+        49.478722
+      ]
+    }
+  },
+  {
+    "locationId": "657965cf-f0c0-5fb2-62c8-d7332cbf9ce9",
+    "name": "2306LH106 | 2507LW108",
+    "displayName": "2306LH106 | 2507LW108",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.431101,
+        49.567003
+      ]
+    }
+  },
+  {
+    "locationId": "dd713119-0d31-8c31-706b-65f167763937",
+    "name": "2306LH107 | 2306LW053",
+    "displayName": "Sandhofer Straße 265/1, 68307 Mannheim",
+    "address": "Sandhofer Straße 265/1, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.450436,
+        49.53923
+      ]
+    }
+  },
+  {
+    "locationId": "ffb50c7b-24d5-493b-9424-a7de7d3d9ee9",
+    "name": "0101-005-21 | 2305LW073 | 2306LW122 | 2507LH069",
+    "displayName": "0101-005-21 | 2305LW073 | 2306LW122 | 2507LH069",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.477111,
+        49.505489
+      ]
+    }
+  },
+  {
+    "locationId": "d5e38dcc-d6ac-4fb7-e758-0512ba0eff6f",
+    "name": "2306LH109 | 2306LW062 ARCHIV_22.05.2026",
+    "displayName": "Feldbergstraße 37, 68163 Mannheim",
+    "address": "Feldbergstraße 37, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47247465178883,
+        49.4591917720096
+      ]
+    }
+  },
+  {
+    "locationId": "16f325ff-5cb9-53b0-4267-ad6dacf45369",
+    "name": "2306LH110 | 2306LW016",
+    "displayName": "2306LH110 | 2306LW016",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52213534794175,
+        49.467468718568
+      ]
+    }
+  },
+  {
+    "locationId": "3975464a-32db-0d5b-cf41-85547d1db819",
+    "name": "2306LH112 | 2305LW064 ARCHIV_29.05.2026 | 2507LW004",
+    "displayName": "2306LH112 | 2305LW064 ARCHIV_29.05.2026 | 2507LW004",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.479702,
+        49.482394
+      ]
+    }
+  },
+  {
+    "locationId": "d0323596-ccba-fe29-4e02-6897786d13c0",
+    "name": "2306LH114 | 2305LW043",
+    "displayName": "Marienburger Straße 37-39, 68307 Mannheim",
+    "address": "Marienburger Straße 37-39, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.473713,
+        49.548099
+      ]
+    }
+  },
+  {
+    "locationId": "71660467-ed4f-75d1-c686-b16c3b36736e",
+    "name": "2306LH116 | 2305LW108",
+    "displayName": "Wachenheimer Straße 73, 68309 Mannheim",
+    "address": "Wachenheimer Straße 73, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51499,
+        49.503051
+      ]
+    }
+  },
+  {
+    "locationId": "b613e3f6-0bab-4464-ba7d-a9dc6fc00879",
+    "name": "2306LH118 | 2305LW161",
+    "displayName": "Weinheimer Straße 66, 68309 Mannheim",
+    "address": "Weinheimer Straße 66, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.523266,
+        49.508939
+      ]
+    }
+  },
+  {
+    "locationId": "99781e05-ee45-4e3d-d4ed-110ed1735de8",
+    "name": "2306LH119 | 2305LW103",
+    "displayName": "Rebhuhnstraße 2, 68307 Mannheim",
+    "address": "Rebhuhnstraße 2, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.452357,
+        49.548934
+      ]
+    }
+  },
+  {
+    "locationId": "68347e09-96f6-69ac-14ae-c49a647a6e5b",
+    "name": "2306LH121 | 2507LW176",
+    "displayName": "2306LH121 | 2507LW176",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49886002929491,
+        49.477742444107
+      ]
+    }
+  },
+  {
+    "locationId": "a0e95e0a-3f71-aed2-70c8-d7289c6c92e8",
+    "name": "2306LH122 | 2306LW126",
+    "displayName": "Boveristraße 22-34, 68309 Mannheim",
+    "address": "Boveristraße 22-34, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50001,
+        49.509425
+      ]
+    }
+  },
+  {
+    "locationId": "1aaee2ec-e649-39f0-0103-6c095fe29aa7",
+    "name": "2306LH123 | 2305LW098 ARCHIV_29.05.2026",
+    "displayName": "Feldstraße 49, 68259 Mannheim",
+    "address": "Feldstraße 49, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54196526876051,
+        49.4888178409648
+      ]
+    }
+  },
+  {
+    "locationId": "502aec51-0c0b-486c-b465-70b4b949d445",
+    "name": "2306LH124",
+    "displayName": "Am Oberen Luisenpark 27, 68165 Mannheim",
+    "address": "Am Oberen Luisenpark 27, 68165 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.492899,
+        49.481426
+      ]
+    }
+  },
+  {
+    "locationId": "403017cc-790b-787a-f10d-11f5fa167297",
+    "name": "2306LH128 | 2306LW127",
+    "displayName": "Straßburger Ring 33, 68229 Mannheim",
+    "address": "Straßburger Ring 33, 68229 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.581799,
+        49.442372
+      ]
+    }
+  },
+  {
+    "locationId": "67e19ece-faea-173e-b577-290f366eb18f",
+    "name": "2306LH129 | 2306LW128",
+    "displayName": "Mosbacher Straße 86, 68259 Mannheim",
+    "address": "Mosbacher Straße 86, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54392,
+        49.497621
+      ]
+    }
+  },
+  {
+    "locationId": "4575f97e-29ac-720c-e3ad-ad868c2ef01a",
+    "name": "2306LH130 | 2507LW148",
+    "displayName": "Rudolf-Diesel-Straße 39, 68169 Mannheim",
+    "address": "Rudolf-Diesel-Straße 39, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471939,
+        49.488481
+      ]
+    }
+  },
+  {
+    "locationId": "38a8f847-23c3-970e-459c-f3a294709fda",
+    "name": "2306LH131 | 2306LW146",
+    "displayName": "2306LH131 | 2306LW146",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.535061,
+        49.515885
+      ]
+    }
+  },
+  {
+    "locationId": "4b9920e0-7790-35c8-f63a-331137b6ea82",
+    "name": "2306LH132 | 2305LW091",
+    "displayName": "2306LH132 | 2305LW091",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48318126136136,
+        49.4864282616588
+      ]
+    }
+  },
+  {
+    "locationId": "95be78fe-2300-5bba-f48a-15423aa36487",
+    "name": "2306LH133 | 2507LW178",
+    "displayName": "2306LH133 | 2507LW178",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49400018767017,
+        49.4866422980213
+      ]
+    }
+  },
+  {
+    "locationId": "a2a516e9-c93a-0a6b-e160-4327f50d395e",
+    "name": "2306LH134 | 2305LW081",
+    "displayName": " , 68305 Mannheim",
+    "address": " , 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.501884,
+        49.523822
+      ]
+    }
+  },
+  {
+    "locationId": "a18608f1-2a8c-efcf-78a2-95fe4899f6dd",
+    "name": "2306LH135 | 2306LW163 ARCHIV_22.05.2026",
+    "displayName": "Badener Straße 43, 68239 Mannheim",
+    "address": "Badener Straße 43, 68239 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.55374269107625,
+        49.4684392601855
+      ]
+    }
+  },
+  {
+    "locationId": "c5641560-a034-e857-f975-55884c5e35c6",
+    "name": "2306LH136 | 2305LW058",
+    "displayName": "Floßwörthstraße 10, 68199 Mannheim",
+    "address": "Floßwörthstraße 10, 68199 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49447,
+        49.462964
+      ]
+    }
+  },
+  {
+    "locationId": "b57671f6-8be6-2bda-698d-57c5ccea8c91",
+    "name": "2306LH137 | 2306LW064",
+    "displayName": "Christian-Friedrich-Schwan-Straße 112, 68167 Mannheim",
+    "address": "Christian-Friedrich-Schwan-Straße 112, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50222391360049,
+        49.4970146546706
+      ]
+    }
+  },
+  {
+    "locationId": "9333d064-2a4a-5e6a-9702-137184592302",
+    "name": "2306LH142 | 2507LW109",
+    "displayName": "2306LH142 | 2507LW109",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.504154,
+        49.483454
+      ]
+    }
+  },
+  {
+    "locationId": "709b8aab-f19c-fe8d-1281-3009eaa5b4b7",
+    "name": "2306LH143 | 2507LW186",
+    "displayName": "2306LH143 | 2507LW186",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49401402,
+        49.46838264
+      ]
+    }
+  },
+  {
+    "locationId": "f28d583d-930e-5922-8470-938c63c7f468",
+    "name": "2306LH144 | 2305LW036",
+    "displayName": "Carl-Zuckmayer-Straße 33, 68169 Mannheim",
+    "address": "Carl-Zuckmayer-Straße 33, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475657,
+        49.511028
+      ]
+    }
+  },
+  {
+    "locationId": "383a6b47-e855-61cd-a781-e30693b77e67",
+    "name": "2306LH146 | 2306LW162 ARCHIV_29.05.2026",
+    "displayName": "Sandrain 64, 68219 Mannheim",
+    "address": "Sandrain 64, 68219 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51998441884927,
+        49.4483505998272
+      ]
+    }
+  },
+  {
+    "locationId": "5eb2f151-0490-3e3a-f12f-dfafa0b8dc71",
+    "name": "2306LH151 | 2306LW015",
+    "displayName": "2306LH151 | 2306LW015",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.55002744370236,
+        49.4693780290938
+      ]
+    }
+  },
+  {
+    "locationId": "ea069ef0-b270-9e21-1fea-0f73fa1c3808",
+    "name": "2306LH152 | 2507LH076 | 2507LW104",
+    "displayName": "Gorch-Fock-Straße 10, 68259 Mannheim",
+    "address": "Gorch-Fock-Straße 10, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.529375,
+        49.484197
+      ]
+    }
+  },
+  {
+    "locationId": "3a14e51d-59db-8018-1bea-48d44e4277ee",
+    "name": "2306LH153 | 2306LW024",
+    "displayName": "Der Hohe Weg zum Rhein 32, 68307 Mannheim",
+    "address": "Der Hohe Weg zum Rhein 32, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.446973,
+        49.584815
+      ]
+    }
+  },
+  {
+    "locationId": "fdfe26cc-1f1e-567d-d031-cefdc2935cf4",
+    "name": "2306LH155 | 2306LW043",
+    "displayName": "Völklinger Straße 40, 68259 Mannheim",
+    "address": "Völklinger Straße 40, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.517943,
+        49.504319
+      ]
+    }
+  },
+  {
+    "locationId": "1542e167-f10c-a98c-73e3-9bed8f321c2f",
+    "name": "2306LH157 | 2305LW133",
+    "displayName": "Sandhofer Straße 266, 68307 Mannheim",
+    "address": "Sandhofer Straße 266, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.449003,
+        49.542368
+      ]
+    }
+  },
+  {
+    "locationId": "5a11b3b7-8501-090e-2ad7-ddbafd9b315a",
+    "name": "2306LH158 | 2305LW162",
+    "displayName": " , 68305 Mannheim",
+    "address": " , 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.496395,
+        49.515046
+      ]
+    }
+  },
+  {
+    "locationId": "0859afd4-508d-de05-ce49-45c051bc3fbf",
+    "name": "2306LH159 | 2306LW033",
+    "displayName": "Bürgermeister-Fuchs-Straße 45, 68169 Mannheim",
+    "address": "Bürgermeister-Fuchs-Straße 45, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.464994,
+        49.50202
+      ]
+    }
+  },
+  {
+    "locationId": "bda051c4-db09-071d-629a-a292446c72b8",
+    "name": "2306LH160 | 2305LW165",
+    "displayName": "2306LH160 | 2305LW165",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.482031,
+        49.471998
+      ]
+    }
+  },
+  {
+    "locationId": "b8348602-3b6b-6b52-4f7c-0ba634cc16c0",
+    "name": "2306LH161",
+    "displayName": "Bürgermeister-Fuchs-Straße 2, 68169 Mannheim",
+    "address": "Bürgermeister-Fuchs-Straße 2, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46143469871358,
+        49.4996332638164
+      ]
+    }
+  },
+  {
+    "locationId": "d0bbe35c-e682-45c6-aca1-99c82ead78f0",
+    "name": "2306LH162",
+    "displayName": "Neustadter Straße 79, 68309 Mannheim",
+    "address": "Neustadter Straße 79, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.508705,
+        49.49791
+      ]
+    }
+  },
+  {
+    "locationId": "1254854f-21d5-3bf5-6465-841b95f188f8",
+    "name": "2306LH163 | 2306LW056",
+    "displayName": "Kranichweg 25, 68307 Mannheim",
+    "address": "Kranichweg 25, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.455423,
+        49.542141
+      ]
+    }
+  },
+  {
+    "locationId": "404382a6-64c3-41e1-81d3-15b88dc32a54",
+    "name": "2306LH164 | 2305LW160",
+    "displayName": "Christian-Morgenstern-Straße 1, 68259 Mannheim",
+    "address": "Christian-Morgenstern-Straße 1, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.524203,
+        49.484493
+      ]
+    }
+  },
+  {
+    "locationId": "b59a23f7-79db-405f-844b-ea2aac0435cc",
+    "name": "2306LH165 | 2306LW080",
+    "displayName": "Kattowitzer Zeile 63, 68307 Mannheim",
+    "address": "Kattowitzer Zeile 63, 68307 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474156,
+        49.543316
+      ]
+    }
+  },
+  {
+    "locationId": "72a0e3b6-5b10-11a9-7706-774e218ecf2a",
+    "name": "2306LH166 | 2305LW070",
+    "displayName": "Gorxheimer Straße , 68309 Mannheim",
+    "address": "Gorxheimer Straße , 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.544733,
+        49.518115
+      ]
+    }
+  },
+  {
+    "locationId": "35ad11e4-4853-4d4e-aa94-a5ee253a7e68",
+    "name": "2306LH167 | 2306LW019",
+    "displayName": "Oskar-von-Miller-Straße 20, 68309 Mannheim",
+    "address": "Oskar-von-Miller-Straße 20, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.498167,
+        49.513158
+      ]
+    }
+  },
+  {
+    "locationId": "f0f31846-7a48-52d8-e973-e0046c8e7c4d",
+    "name": "2306LH168 | 2507LW145",
+    "displayName": "2306LH168 | 2507LW145",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50364384623077,
+        49.4528216291612
+      ]
+    }
+  },
+  {
+    "locationId": "441822d5-a33e-7a9a-eb98-901fce5da3d8",
+    "name": "2306LH169 | 2507LW135",
+    "displayName": "2306LH169 | 2507LW135",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4627893768937,
+        49.4958235078703
+      ]
+    }
+  },
+  {
+    "locationId": "51552734-f37f-9581-a308-f9e273ded491",
+    "name": "2306LH170 | 2306LW059",
+    "displayName": " , 68259 Mannheim",
+    "address": " , 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5124123,
+        49.48818521
+      ]
+    }
+  },
+  {
+    "locationId": "d9bb63ba-275a-dc99-5920-70b25fd99c1d",
+    "name": "2306LH171 | 2507LW110",
+    "displayName": "2306LH171 | 2507LW110",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.579769,
+        49.511226
+      ]
+    }
+  },
+  {
+    "locationId": "82ef203d-a704-489a-94f0-9a4bbab97350",
+    "name": "2306LH172 | 2305LW134",
+    "displayName": "Korbangel 28, 68305 Mannheim",
+    "address": "Korbangel 28, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.497123,
+        49.518038
+      ]
+    }
+  },
+  {
+    "locationId": "16c5db3f-c071-371c-af38-1082889c7b70",
+    "name": "2306LH173 | 2306LW022",
+    "displayName": "2306LH173 | 2306LW022",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.514985,
+        49.514534
+      ]
+    }
+  },
+  {
+    "locationId": "ae9dfaa5-a404-bed6-4b47-bc5d7f782ec7",
+    "name": "2306LH174 | 2305LW011",
+    "displayName": "D5 1/1, 68159 Mannheim",
+    "address": "D5 1/1, 68159 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46151353423039,
+        49.4884790576369
+      ]
+    }
+  },
+  {
+    "locationId": "98af5879-1de2-0670-9166-08dd01e79c95",
+    "name": "2306LH175 | 2306LW077",
+    "displayName": "Sandhofer Straße 24, 68305 Mannheim",
+    "address": "Sandhofer Straße 24, 68305 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474405,
+        49.517612
+      ]
+    }
+  },
+  {
+    "locationId": "e5d92b83-cd26-21db-49c5-466b2bbeaac5",
+    "name": "2306LH176 | 2507LW191",
+    "displayName": "2306LH176 | 2507LW191",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46375231769554,
+        49.4942099810152
+      ]
+    }
+  },
+  {
+    "locationId": "2d97dfff-b7a2-1898-0834-b5cd0463d500",
+    "name": "2306LH178 | 2507LW185",
+    "displayName": "2306LH178 | 2507LW185",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48629638,
+        49.45974682
+      ]
+    }
+  },
+  {
+    "locationId": "ed2e55eb-4d16-4dce-aaea-d408e4c7b0e8",
+    "name": "2306LH179 | 2305LW148",
+    "displayName": "George-Washington-Straße 42D, 68309 Mannheim",
+    "address": "George-Washington-Straße 42D, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.531786,
+        49.517466
+      ]
+    }
+  },
+  {
+    "locationId": "d057672c-7c0c-6280-6621-e71d59fff0c7",
+    "name": "2306LH180 | 2306LW078 ARCHIV_29.05.2026",
+    "displayName": "Fröhlichstraße 4, 68169 Mannheim",
+    "address": "Fröhlichstraße 4, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46104780792684,
+        49.5002995871549
+      ]
+    }
+  },
+  {
+    "locationId": "0e738eff-2a2d-0f2b-f502-221f5117290b",
+    "name": "2306LH181 | 2305LW105",
+    "displayName": "Theodor-Kutzer-Ufer 1, 68167 Mannheim",
+    "address": "Theodor-Kutzer-Ufer 1, 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.491629,
+        49.490134
+      ]
+    }
+  },
+  {
+    "locationId": "4000f2a1-e4b8-2ca8-1ef6-d41d69b70068",
+    "name": "2306LH182 | 2306LW021",
+    "displayName": " , 68167 Mannheim",
+    "address": " , 68167 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.479131,
+        49.495078
+      ]
+    }
+  },
+  {
+    "locationId": "c1695f8e-6cbf-8d9b-02b6-f7bf37af6c72",
+    "name": "2306LH185 | 2507LW091",
+    "displayName": "2306LH185 | 2507LW091",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.43188,
+        49.550295
+      ]
+    }
+  },
+  {
+    "locationId": "088909b1-1a80-1e71-3d51-bcd8b22bd27f",
+    "name": "2306LH186 | 2305LW014 ARCHIV_22.05.2026",
+    "displayName": " , 68169 Mannheim",
+    "address": " , 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46098,
+        49.499808
+      ]
+    }
+  },
+  {
+    "locationId": "72f7de10-8d09-de98-3702-5bd4078917e8",
+    "name": "2306LH187 | 2306LW010 ARCHIV_22.05.2026",
+    "displayName": "Lochgärtenweg 4, 68163 Mannheim",
+    "address": "Lochgärtenweg 4, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50178985393186,
+        49.4699424835544
+      ]
+    }
+  },
+  {
+    "locationId": "dfced3a1-26a3-6182-637f-7b788b7b8518",
+    "name": "2306LH188 | 2507LW129",
+    "displayName": "2306LH188 | 2507LW129",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50619197463368,
+        49.4664956818163
+      ]
+    }
+  },
+  {
+    "locationId": "5fe3bf25-3f05-311a-f400-c6d12a4a562c",
+    "name": "2306LH189 | 2306LW124 ARCHIV_29.05.2026",
+    "displayName": "Eberswalder Weg 1, 68309 Mannheim",
+    "address": "Eberswalder Weg 1, 68309 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52968426504048,
+        49.5103428077599
+      ]
+    }
+  },
+  {
+    "locationId": "5b9ad40e-ef6a-e295-5a07-48d42a33c2e9",
+    "name": "2306LH190 | 2305LW166",
+    "displayName": "K9753 145, 68259 Mannheim",
+    "address": "K9753 145, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.520932,
+        49.488658
+      ]
+    }
+  },
+  {
+    "locationId": "457937a6-0e46-bc99-0608-d932ba3e376c",
+    "name": "2305LW002 | 2507LH074",
+    "displayName": "Hans-Klüber-Platz , 67059 Ludwigshafen am Rhein",
+    "address": "Hans-Klüber-Platz , 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44315215,
+        49.48033132
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "50dbc6ae-a644-4174-bc55-7754d662f212",
+    "name": "2305LW041",
+    "displayName": " , 68167 Mannheim",
+    "address": " , 68167 Mannheim",
+    "location": {
+      "coordinates": [
+        8.503371,
+        49.492755
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "c82e9896-c11a-e98e-934e-2c2cf41d955f",
+    "name": "2305LW044 | 2406LH075",
+    "displayName": " ,  Mannheim",
+    "address": " ,  Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474763,
+        49.469477
+      ]
+    }
+  },
+  {
+    "locationId": "6ee17f17-9a1c-40f4-b559-fb80bc2ace5c",
+    "name": "2305LW045",
+    "displayName": "Werderstraße 2, 68165 Mannheim",
+    "address": "Werderstraße 2, 68165 Mannheim",
+    "location": {
+      "coordinates": [
+        8.478095,
+        49.48081
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "957bf448-af10-ca04-08ab-3876fdaad679",
+    "name": "2305LW048 | 2406LH063",
+    "displayName": "Niederfeldstraße 73, 68199 Mannheim",
+    "address": "Niederfeldstraße 73, 68199 Mannheim",
+    "location": {
+      "coordinates": [
+        8.484192,
+        49.462304
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "1b224342-0b03-ce72-ad9b-b768da6f7416",
+    "name": "2305LW055 | 2410LH003",
+    "displayName": "2305LW055 | 2410LH003",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475584,
+        49.470718
+      ]
+    }
+  },
+  {
+    "locationId": "1a253af6-fa01-4806-8a8b-500abd5c21bc",
+    "name": "2305LW077",
+    "displayName": "H4 9, 68159 Mannheim",
+    "address": "H4 9, 68159 Mannheim",
+    "location": {
+      "coordinates": [
+        8.464941,
+        49.491203
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "12b4c98e-a837-4fc6-8ac2-8a61dbd75f9d",
+    "name": "0101-057-31",
+    "displayName": "0101-057-31",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52553684602872,
+        49.4937098348042
+      ]
+    }
+  },
+  {
+    "locationId": "78f036de-905c-cb35-c541-5836006515f1",
+    "name": "2304LW030 ARCHIV_22.05.2026",
+    "displayName": "Sachsenstraße 55, 68309 Mannheim",
+    "address": "Sachsenstraße 55, 68309 Mannheim",
+    "location": {
+      "coordinates": [
+        8.548592,
+        49.508091
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "8bdadffb-939d-4dd0-b855-9f5a5a3271c5",
+    "name": "0101-073-31",
+    "displayName": "Am Aubuckel 81, 68259 Mannheim",
+    "address": "Am Aubuckel 81, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49332926293612,
+        49.5220202363716
+      ]
+    }
+  },
+  {
+    "locationId": "55bf891a-a7c9-4b19-9b6d-a796deb0619f",
+    "name": "2306LW029",
+    "displayName": "Lange Rötterstraße 11-19, 68167 Mannheim",
+    "address": "Lange Rötterstraße 11-19, 68167 Mannheim",
+    "location": {
+      "coordinates": [
+        8.476477,
+        49.497148
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "37edd20b-a1c6-4a19-8499-3b264916a9ea",
+    "name": "2306LW049",
+    "displayName": "Gorch-Fock-Straße 10, 68259 Mannheim",
+    "address": "Gorch-Fock-Straße 10, 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.529374,
+        49.484198
+      ]
+    }
+  },
+  {
+    "locationId": "a5a75541-c6d5-4cc2-9c6f-c1a272b321bd",
+    "name": "2306LW051",
+    "displayName": "Paul-Wittsack-Straße 10, 68163 Mannheim",
+    "address": "Paul-Wittsack-Straße 10, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.462225777301018,
+        49.487947225095084
+      ]
+    }
+  },
+  {
+    "locationId": "f7d65526-8df9-aa04-6402-36a143df2074",
+    "name": "2305LW059 | 2507LH043",
+    "displayName": "Kaiser-Wilhelm-Straße 52, 67059 Ludwigshafen am Rhein",
+    "address": "Kaiser-Wilhelm-Straße 52, 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44457893,
+        49.47973532
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "c5040a9a-4bff-727f-8be9-91430a8d1af7",
+    "name": "2305LW061 | 2406LH073",
+    "displayName": "2305LW061 | 2406LH073",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475215,
+        49.470784
+      ]
+    }
+  },
+  {
+    "locationId": "69ea0f5d-5b62-508e-b546-044ba16c73b6",
+    "name": "2305LW065 | 2410LH011",
+    "displayName": "2305LW065 | 2410LH011",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.476399,
+        49.484744
+      ]
+    }
+  },
+  {
+    "locationId": "16cf6fed-46c7-c7bc-244b-92585a83b794",
+    "name": "2305LW068 ARCHIV_29.05.2026",
+    "displayName": "Windeckstraße 6, 68163 Mannheim",
+    "address": "Windeckstraße 6, 68163 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46652494735826,
+        49.47356786661
+      ]
+    }
+  },
+  {
+    "locationId": "93fa1937-9b4c-4982-97f1-84cc630df22d",
+    "name": "2305LW093",
+    "displayName": "2305LW093",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.467251,
+        49.481235
+      ]
+    }
+  },
+  {
+    "locationId": "defa78ae-2744-676f-8ed4-08c78f005598",
+    "name": "2305LW096 | 2507LH073",
+    "displayName": "Wredestraße 26, 67059 Ludwigshafen am Rhein",
+    "address": "Wredestraße 26, 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44741699,
+        49.47957144
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "f26e2755-4a00-4b29-e439-c03ad733281f",
+    "name": "2305LW097",
+    "displayName": "2305LW097",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.547643,
+        49.457855
+      ]
+    }
+  },
+  {
+    "locationId": "6b2b34cc-0474-7410-e48f-080f8682e84c",
+    "name": "2305LW109 | 2507LH078",
+    "displayName": "Berliner Straße 23, 67059 Ludwigshafen am Rhein",
+    "address": "Berliner Straße 23, 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44372516,
+        49.4803909
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "5abe6b0d-785d-4687-9c63-9363aacf985d",
+    "name": "2305LW136",
+    "displayName": "Carl-Zuckmayer-Straße 33, 68169 Mannheim",
+    "address": "Carl-Zuckmayer-Straße 33, 68169 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.481841,
+        49.470736
+      ]
+    }
+  },
+  {
+    "locationId": "242e6b24-96b5-3070-3309-5bc50c8e4be3",
+    "name": "2305LW151 | 2507LH083",
+    "displayName": "Hans-Klüber-Platz , 67059 Ludwigshafen am Rhein",
+    "address": "Hans-Klüber-Platz , 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44351168,
+        49.48016964
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "69b87bb2-ffbb-f989-877c-6e585ce55574",
+    "name": "2306LW147 | 2507LH044",
+    "displayName": "Karl-Kornmann-Platz/Bahnhofstraße 30, 67059 Ludwigshafen am Rhein",
+    "address": "Karl-Kornmann-Platz/Bahnhofstraße 30, 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44277895,
+        49.48199053
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "d2c4717e-d6d7-7948-43f6-fcfd9264a11c",
+    "name": "2306LW148 | 2507LH019",
+    "displayName": "Karl-Kornmann-Platz/Bahnhofstraße 30, 67059 Ludwigshafen am Rhein",
+    "address": "Karl-Kornmann-Platz/Bahnhofstraße 30, 67059 Ludwigshafen am Rhein",
+    "location": {
+      "coordinates": [
+        8.44285625,
+        49.48161728
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "0e7743b6-552d-30c9-78a0-1564f13aeb89",
+    "name": "2407LH022 | 2501LW077",
+    "displayName": "2407LH022 | 2501LW077",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.477929,
+        49.475731
+      ]
+    }
+  },
+  {
+    "locationId": "bb523279-759b-19a4-a71b-36c3c87a7c1c",
+    "name": "2409LW020 | 2507LH092",
+    "displayName": "2409LW020 | 2507LH092",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.462331,
+        49.492208
+      ]
+    }
+  },
+  {
+    "locationId": "6b6ffbce-2a76-f024-03ab-1315d8f38501",
+    "name": "2407LW045 | 2507LH029 | 2507LH059 | 2507LH104",
+    "displayName": "Siebenbürger Straße , 68259 Mannheim",
+    "address": "Siebenbürger Straße , 68259 Mannheim",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.558289,
+        49.506408
+      ]
+    }
+  },
+  {
+    "locationId": "c42ffc10-20e0-5aeb-47b0-4085ac4aaf1f",
+    "name": "2507LH039 | 2501LW083",
+    "displayName": "2507LH039 | 2501LW083",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.476497,
+        49.487861
+      ]
+    }
+  },
+  {
+    "locationId": "75c74423-a536-50d2-8811-ce3548f73748",
+    "name": "2507LH036 | 2507LW120",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50613537031297,
+        49.5072819547062
+      ]
+    }
+  },
+  {
+    "locationId": "f7cc9002-3d48-f555-ffad-4fb973fe55cc",
+    "name": "2507LH082 | 2507LW131",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.556405,
+        49.51616
+      ]
+    }
+  },
+  {
+    "locationId": "7759c7c2-65a0-d4a9-4812-93898456e663",
+    "name": "2507LH042 | 2507LW157",
+    "displayName": "Konrad-Adenauer-Brücke ,  ",
+    "address": "Konrad-Adenauer-Brücke ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45656,
+        49.481341
+      ]
+    }
+  },
+  {
+    "locationId": "1b0b9ff4-0abc-30a2-042f-25c266b2164f",
+    "name": "2501LW090 | 2507LH008",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471848,
+        49.520574
+      ]
+    }
+  },
+  {
+    "locationId": "a52408fd-7e17-fd15-48af-54e0179f8eba",
+    "name": "2501LW082 | 2507LH051",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.557299,
+        49.470713
+      ]
+    }
+  },
+  {
+    "locationId": "0e454430-9fd5-e388-62d2-86343dbf4021",
+    "name": "2501LW092 | 2507LH052",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.481919,
+        49.524756
+      ]
+    }
+  },
+  {
+    "locationId": "Modellflugplatz Mannheim",
+    "name": "2507LH003 | 2507LW151",
+    "displayName": "2507LH003 | 2507LW151",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.572122,
+        49.520142
+      ]
+    }
+  },
+  {
+    "locationId": "ebbcea82-222c-9159-3480-05f467fd1bc1",
+    "name": "2507LH007 | 2507LW139",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52223417491455,
+        49.4774921243462
+      ]
+    }
+  },
+  {
+    "locationId": "53d5b18b-4399-e93e-8779-c6e78e4627d3",
+    "name": "2507LH016 | 2507LW064",
+    "displayName": "2507LH016 | 2507LW064",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.499798472973847,
+        49.44486051943708
+      ]
+    }
+  },
+  {
+    "locationId": "00c81f72-3e4f-5e55-e45e-bad02830a8a7",
+    "name": "2507LH020 | 2507LW159",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4851270481752,
+        49.4518945296298
+      ]
+    }
+  },
+  {
+    "locationId": "bb131d5d-ff48-ccd1-c504-f9fb361c0aed",
+    "name": "2507LH021 | 2507LW142",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49355265387358,
+        49.450012659777
+      ]
+    }
+  },
+  {
+    "locationId": "a1544f3d-99e5-9626-eed6-40fe53207b06",
+    "name": "2507LH023 | 2507LW149",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.526208,
+        49.501361
+      ]
+    }
+  },
+  {
+    "locationId": "d1fb3551-0629-2ada-963b-ce9d14fb05be",
+    "name": "2507LH030 | 2507LW137",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.52610491978005,
+        49.4256994068287
+      ]
+    }
+  },
+  {
+    "locationId": "8bdf8033-4259-faad-4b5e-c1afb824a428",
+    "name": "2507LH049 | 2507LW174",
+    "displayName": "2507LH049 | 2507LW174",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471635,
+        49.486473
+      ]
+    }
+  },
+  {
+    "locationId": "f7d65526-8df9-aa04-6402-36a143df2088",
+    "name": "2507LH055 | 2507LW098",
+    "displayName": "Theaterplatz (Richtung Kaiser-Wilhelm-Straße) ,  Ludwigshafen am Rhein",
+    "address": "Theaterplatz (Richtung Kaiser-Wilhelm-Straße) ,  Ludwigshafen am Rhein",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.44613202,
+        49.47999761
+      ]
+    }
+  },
+  {
+    "locationId": "3fa100b2-f775-6fa0-35d1-0390db6f3baa",
+    "name": "2507LH056 | 2507LW119",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.551478,
+        49.471978
+      ]
+    }
+  },
+  {
+    "locationId": "c718349b-0073-70c8-98dd-860a415d99d0",
+    "name": "2507LH057 | 2507LW179",
+    "displayName": "2507LH057 | 2507LW179",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.491018,
+        49.459951
+      ]
+    }
+  },
+  {
+    "locationId": "ec6e1aad-688e-4b42-7b44-03d187ce40f2",
+    "name": "2507LH058 | 2507LW126",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.46436281434761,
+        49.473412643532
+      ]
+    }
+  },
+  {
+    "locationId": "72dff85c-b268-3bba-af34-641d95f23b8d",
+    "name": "2507LH061 | 2507LW146",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50900487092899,
+        49.480229462278
+      ]
+    }
+  },
+  {
+    "locationId": "bb6daefa-d53c-d85c-6ae5-de62e93b8e6b",
+    "name": "2507LH064 | 2507LW132",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.54053684828417,
+        49.414670282136
+      ]
+    }
+  },
+  {
+    "locationId": "0daed424-6429-ecec-e5a3-d177b1a11184",
+    "name": "2507LH077 | 2507LW154",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.533034,
+        49.487598
+      ]
+    }
+  },
+  {
+    "locationId": "51856e30-1312-d4a0-cc87-5bd2e53dde89",
+    "name": "2507LH080 | 2507LW177",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47980833455343,
+        49.5164796389783
+      ]
+    }
+  },
+  {
+    "locationId": "a57b90aa-e31b-d56f-efe1-87e57a98e334",
+    "name": "2507LH084 | 2507LW180",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47729365324997,
+        49.4619414148876
+      ]
+    }
+  },
+  {
+    "locationId": "3a142f4b-c2e6-740c-2fac-95a82a44a989",
+    "name": "2507LH091 | 2507LW147",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.45350094942014,
+        49.5355924062106
+      ]
+    }
+  },
+  {
+    "locationId": "8e129f0c-4c70-0fae-9d4e-17cbc07643f8",
+    "name": "2507LH096 | 2507LW182",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.56128571,
+        49.46882379
+      ]
+    }
+  },
+  {
+    "locationId": "FordTaunus",
+    "name": "2507LW106",
+    "displayName": "2507LW106",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.48450755669632,
+        49.5240603263105
+      ]
+    }
+  },
+  {
+    "locationId": "af3b3aa1-047f-1976-6b2d-90d6bca10585",
+    "name": "2507LW158 | 1912LH159",
+    "displayName": "Luisenring 49, 68159 Mannheim",
+    "address": "Luisenring 49, 68159 Mannheim",
+    "location": {
+      "coordinates": [
+        8.467611,
+        49.494424
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "c6c175fe-4652-fbda-41ff-adca7a3b9dba",
+    "name": "2507LW196 | 2503LH050",
+    "displayName": "undefined undefined, undefined undefined",
+    "address": "undefined undefined, undefined undefined",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.470391,
+        49.480278
+      ]
+    }
+  },
+  {
+    "locationId": "B3601",
+    "name": "2503LH049",
+    "displayName": "2503LH049",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.50576,
+        49.46383
+      ]
+    }
+  },
+  {
+    "locationId": "a492de68-9e0d-6c3c-2829-43d17b33c5ed",
+    "name": "2507LH169 | 2507LW010",
+    "displayName": "C7 ,  ",
+    "address": "C7 ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.459659,
+        49.488698
+      ]
+    }
+  },
+  {
+    "locationId": "ab48061d-ab73-e9d0-572a9f68a67d",
+    "name": "2306LW124",
+    "displayName": "Wilhelm-Peters-Straße 78, 68219 Mannheim",
+    "address": "Wilhelm-Peters-Straße 78, 68219 Mannheim",
+    "location": {
+      "coordinates": [
+        8.540257,
+        49.414005
+      ],
+      "type": "Point"
+    }
+  },
+  {
+    "locationId": "InnererHeckweg",
+    "name": "2109LH005",
+    "displayName": "2109LH005",
+    "address": " ,  ",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.563707,
+        49.461075
+      ]
+    }
+  }
+]

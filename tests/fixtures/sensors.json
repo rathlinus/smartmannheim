@@ -1,0 +1,105 @@
+{
+  "sensorCount": 8,
+  "paramSets": [
+    [
+      "airHumidity",
+      "atmosphericPressure",
+      "dewPoint",
+      "irradiation",
+      "maxIrradiation",
+      "maxTemperature",
+      "minTemperature",
+      "temperature"
+    ],
+    [
+      "averageWindDirection",
+      "averageWindSpeed",
+      "minWindSpeed",
+      "windGust1s",
+      "windGust3s",
+      "windGustDirection"
+    ],
+    [
+      "airHumidity",
+      "atmosphericPressure",
+      "dewPoint",
+      "irradiation",
+      "maxIrradiation",
+      "maxTemperature",
+      "minIrradiation",
+      "minTemperature",
+      "precipitationTick",
+      "temperature"
+    ]
+  ],
+  "sensors": [
+    {
+      "id": "0004A30B00F738F5",
+      "name": "T-002",
+      "position": [
+        8.521318,
+        49.493182
+      ],
+      "paramSet": 0
+    },
+    {
+      "id": "0004A30B00F72EED",
+      "name": "0101-001-21",
+      "position": [
+        8.475061,
+        49.496309
+      ],
+      "paramSet": 0
+    },
+    {
+      "id": "0004A30B00F7A7B7",
+      "name": "T-050 - SCM auf der Buga",
+      "position": [
+        8.524207292500968,
+        49.50154792653951
+      ],
+      "paramSet": 0
+    },
+    {
+      "id": "0004A30B00F79967",
+      "name": "0101-001-31",
+      "position": [
+        8.475061,
+        49.496309
+      ],
+      "paramSet": 1
+    },
+    {
+      "id": "0004A30B01084101",
+      "name": "2303LH085",
+      "paramSet": 0
+    },
+    {
+      "id": "0dfada97-7531-4936-b218-fa92b42dca44",
+      "name": "2507LH039",
+      "position": [
+        8.476497,
+        49.487861
+      ],
+      "paramSet": 2
+    },
+    {
+      "id": "69fa0b96-32d2-4d38-9110-d90e1c9df125",
+      "name": "2507LW195",
+      "position": [
+        8.521318,
+        49.493182
+      ],
+      "paramSet": 1
+    },
+    {
+      "id": "8cc2ae85-5d78-4c09-a232-6d84bc54402c",
+      "name": "2306LW027",
+      "position": [
+        8.493746,
+        49.495104
+      ],
+      "paramSet": 1
+    }
+  ]
+}
