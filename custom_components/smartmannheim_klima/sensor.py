@@ -398,7 +398,12 @@ class KlimaSensor(CoordinatorEntity[ClimateCoordinator], SensorEntity):
 
     @property
     def available(self) -> bool:
-        return super().available and self._reading() is not None
+        reading = self._reading()
+        if not super().available or reading is None:
+            return False
+        # Values kept across failed fetches expire instead of freezing.
+        measured = dt_util.parse_datetime(reading.get("timestamp") or "")
+        return measured is None or dt_util.utcnow() - measured <= self.coordinator.max_age
 
     @property
     def native_value(self) -> float | None:

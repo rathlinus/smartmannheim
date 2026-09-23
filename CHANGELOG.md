@@ -25,6 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   old stations are mapped to their official sensors and entities keep
   their entity IDs and history. A notification lists the new interval and
   any stations that couldn't be matched.
+- A failed or empty fetch for one climate sensor keeps its last values
+  (instead of blanking it for a whole interval) and logs the reason once
+  as a warning. Values older than `max(60, 3 × interval)` minutes turn
+  unavailable.
 
 ### Added
 - New climate entities: air pressure, wind direction (enabled), dew

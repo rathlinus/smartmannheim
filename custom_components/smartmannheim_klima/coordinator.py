@@ -51,9 +51,16 @@ class ClimateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         )
         self.client = client
         self.sensors = sensors
+        self._failing: set[str] = set()
+
+    @property
+    def max_age(self) -> timedelta:
+        """How long a kept value may be shown before it counts as stale."""
+        return timedelta(minutes=max(60, 3 * self.interval_minutes))
 
     async def _async_update_data(self) -> dict[str, Any]:
         sem = asyncio.Semaphore(_MAX_CONCURRENCY)
+        previous: dict[str, Any] = self.data or {}
 
         async def fetch(sensor: dict[str, Any]) -> tuple[str, Any]:
             sensor_id = sensor["sensorId"]
@@ -61,24 +68,52 @@ class ClimateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
                 try:
                     rows = await self.client.get_measurements(sensor_id)
                 except SensorNotFoundError:
-                    _LOGGER.warning(
-                        "Sensor %s (%s) no longer exists in the official API",
-                        sensor.get("name"), sensor_id,
-                    )
+                    self._log_failure(sensor, "no longer exists in the official API (HTTP 404)")
                     return sensor_id, None
                 except SmartMannheimError as err:
-                    _LOGGER.debug("Fetch failed %s: %s", sensor.get("name"), err)
-                    return sensor_id, err
-            return sensor_id, latest_values(rows)
+                    return sensor_id, self._keep(sensor, previous, str(err))
+            values = latest_values(rows)
+            if not values:
+                return sensor_id, self._keep(
+                    sensor, previous, "no measurements in the last 60 minutes"
+                )
+            self._log_recovery(sensor)
+            return sensor_id, values
 
-        results = await asyncio.gather(*(fetch(s) for s in self.sensors))
-        errors = [r for _, r in results if isinstance(r, SmartMannheimError)]
-        if self.sensors and len(errors) == len(self.sensors):
-            raise UpdateFailed(str(errors[0]))
-        return {
-            sensor_id: (None if isinstance(r, SmartMannheimError) else r)
-            for sensor_id, r in results
-        }
+        results = dict(await asyncio.gather(*(fetch(s) for s in self.sensors)))
+        if self.sensors and not any(results.values()) and self._failing:
+            # Nothing fetched and nothing to keep (e.g. the first refresh).
+            raise UpdateFailed("No climate sensor could be fetched")
+        return results
+
+    def _keep(
+        self, sensor: dict[str, Any], previous: dict[str, Any], reason: str
+    ) -> dict[str, Any] | None:
+        """Reuse the last good values of a sensor after a failed fetch.
+
+        One failed request would otherwise blank the sensor for a whole
+        (rate-limited) interval. Entities stop showing kept values once
+        they exceed `max_age` (see KlimaSensor.available).
+        """
+        kept = previous.get(sensor["sensorId"])
+        self._log_failure(
+            sensor, f"{reason}; " + ("keeping last values" if kept else "no earlier values")
+        )
+        return kept
+
+    def _log_failure(self, sensor: dict[str, Any], reason: str) -> None:
+        # One warning per outage, not one per update.
+        if sensor["sensorId"] not in self._failing:
+            self._failing.add(sensor["sensorId"])
+            _LOGGER.warning(
+                "Climate sensor %s (%s): %s", sensor.get("name"), sensor["sensorId"], reason
+            )
+
+    def _log_recovery(self, sensor: dict[str, Any]) -> None:
+        if sensor["sensorId"] in self._failing:
+            self._failing.discard(sensor["sensorId"])
+            _LOGGER.info("Climate sensor %s (%s) is delivering data again",
+                         sensor.get("name"), sensor["sensorId"])
 
 
 class ExtrasCoordinator(DataUpdateCoordinator[dict[str, Any]]):

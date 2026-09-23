@@ -68,7 +68,9 @@ def _entry(stations, **flags) -> MockConfigEntry:
     )
 
 
-async def test_pair_shares_one_device(hass: HomeAssistant) -> None:
+async def test_pair_shares_one_device(hass: HomeAssistant, freezer) -> None:
+    # Fixture readings are from 08:00 UTC; older values would count as stale.
+    freezer.move_to("2026-09-23T08:05:00+00:00")
     thermo, wind = sensor("0101-001-21"), sensor("0101-001-31")
     entry = _entry([thermo, wind])
     entry.add_to_hass(hass)
