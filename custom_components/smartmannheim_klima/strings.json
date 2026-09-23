@@ -180,6 +180,9 @@
       },
       "dwd_precipitation": {
         "name": "Precipitation"
+      },
+      "dwd_precipitation_today": {
+        "name": "Precipitation today"
       }
     }
   },

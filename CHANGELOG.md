@@ -34,13 +34,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New climate entities: air pressure, wind direction (enabled), dew
   point, min/max temperature, irradiance, gusts and gust direction
   (disabled by default).
+- DWD station: "Niederschlag heute", the precipitation total since local
+  midnight (summed by the backend, resets every night).
 - `sensor_snapshot.json` and `scripts/build_sensor_snapshot.py`.
 - Test suite (pytest-homeassistant-custom-component) and a GitHub
   Actions workflow running pytest, ruff, hassfest and HACS validation.
 
 ### Fixed
 - DWD-Station wind speed was always unavailable: the series is now
-  requested as `computeddata` instead of `timeseries`.
+  requested as `computeddata` instead of `timeseries`. Its unit is km/h,
+  not m/s.
 - Deselecting every station in the options flow no longer brings the
   original stations back.
 - Choosing "Fertig" without any selected station no longer drops the

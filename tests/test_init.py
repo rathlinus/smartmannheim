@@ -150,3 +150,42 @@ async def test_extras_only(hass: HomeAssistant) -> None:
     await _setup(hass, entry)
     assert hass.states.async_entity_ids("device_tracker") == []
     assert any(e.startswith("sensor.pollenflug") for e in hass.states.async_entity_ids("sensor"))
+
+
+async def test_dwd_precipitation_today(hass: HomeAssistant) -> None:
+    entry = _entry([], pollen=False, aqi=False)
+    entry.add_to_hass(hass)
+    extras = {
+        "pollen": {},
+        "aqi": {},
+        "dwd": {
+            "precipitation_today": {
+                "indicator": 2.44,
+                "timestamp": "2026-09-23T10:05:00.000Z",
+                "warning": None,
+            },
+            # Real value; the computed series is km/h (3.1 m/s).
+            "wind_speed": {
+                "indicator": 11.16,
+                "timestamp": "2026-09-23T10:00:00.000Z",
+                "warning": None,
+            },
+        },
+    }
+    with patch(EXTRAS_UPDATE, return_value=extras):
+        assert await hass.config_entries.async_setup(entry.entry_id)
+        await hass.async_block_till_done()
+
+    entity_id = er.async_get(hass).async_get_entity_id(
+        "sensor", DOMAIN, f"{DOMAIN}_dwd_precipitation_today"
+    )
+    state = hass.states.get(entity_id)
+    assert float(state.state) == 2.44
+    assert state.attributes["state_class"] == "total_increasing"
+    assert state.attributes["unit_of_measurement"] == "mm"
+
+    wind = hass.states.get(
+        er.async_get(hass).async_get_entity_id("sensor", DOMAIN, f"{DOMAIN}_dwd_wind_speed")
+    )
+    assert float(wind.state) == 11.16
+    assert wind.attributes["unit_of_measurement"] == "km/h"

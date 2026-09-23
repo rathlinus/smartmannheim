@@ -5,6 +5,7 @@ import asyncio
 import logging
 from datetime import datetime, timedelta, timezone
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import aiohttp
 from yarl import URL
@@ -25,6 +26,9 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
+_BERLIN = ZoneInfo("Europe/Berlin")
+_ISO = "%Y-%m-%dT%H:%M:%S.000Z"
+
 
 class SmartMannheimError(Exception):
     """Base error."""
@@ -40,6 +44,13 @@ def _window_24h() -> tuple[str, str]:
     frm = (now - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     to = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
     return frm, to
+
+
+def _window_today() -> tuple[str, str]:
+    """Return a (from, to) ISO pair from local midnight in Mannheim until now."""
+    now = datetime.now(timezone.utc)
+    midnight = now.astimezone(_BERLIN).replace(hour=0, minute=0, second=0, microsecond=0)
+    return midnight.astimezone(timezone.utc).strftime(_ISO), now.strftime(_ISO)
 
 
 class SmartMannheimClient:
@@ -140,8 +151,12 @@ class SmartMannheimClient:
     async def get_dwd_indicator(
         self, series: dict[str, Any]
     ) -> dict[str, Any] | None:
-        """Latest value for one DWD-station metric (Klimadaten dashboard)."""
-        frm, to = _window_24h()
+        """Latest value for one DWD-station metric (Klimadaten dashboard).
+
+        Series with ``aggregation``/``window`` are aggregated by the backend,
+        e.g. the precipitation sum since local midnight.
+        """
+        frm, to = _window_today() if series.get("window") == "today" else _window_24h()
         url = URL(f"{DWD_API_BASE}/timeseriesanalyticsindicator").with_query(
             {"accountId": DWD_ACCOUNT_ID, "id": DWD_TOKEN}
         )
@@ -149,7 +164,7 @@ class SmartMannheimClient:
             "timeseries": [
                 {
                     "timeSeriesId": series["timeseries_id"],
-                    "aggregationFunction": "",
+                    "aggregationFunction": series.get("aggregation", ""),
                     "gapFill": "None",
                     "displayName": series["display_name"],
                     "displayDigits": 1,
@@ -165,7 +180,16 @@ class SmartMannheimClient:
         data = await self._post(url, body)
         if not isinstance(data, list) or not data:
             return None
-        return data[0]
+        reading = data[0]
+        if (
+            series.get("aggregation") == "sum"
+            and reading.get("indicator") is None
+            and (reading.get("warning") or {}).get("code") == "NO_DATA_FOUND"
+        ):
+            # Nothing recorded since midnight yet (DWD data lags ~45 min):
+            # the sum so far is 0, not unknown.
+            reading = {**reading, "indicator": 0, "warning": None}
+        return reading
 
     async def _get(self, url: URL) -> Any:
         return await self._request("GET", url)

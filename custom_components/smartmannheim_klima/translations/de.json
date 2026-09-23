@@ -180,6 +180,9 @@
       },
       "dwd_precipitation": {
         "name": "Niederschlag"
+      },
+      "dwd_precipitation_today": {
+        "name": "Niederschlag heute"
       }
     }
   },

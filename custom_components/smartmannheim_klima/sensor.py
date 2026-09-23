@@ -44,8 +44,8 @@ UG_PER_M3 = "µg/m³"
 # --- Official climate sensors -------------------------------------------
 # Keyed by the official API parameter name. The API declares no units;
 # they were checked against live data on 2026-09-23. Wind speed matches
-# the old dashboard values 1:1 (m/s: ~1 m/s at city sensors while the
-# DWD station read 3.2 m/s; km/h would mean near-total calm).
+# the old dashboard values 1:1 and is m/s: city sensors (~3 m high) read
+# 1.5-2.1 m/s (gusts ~4-5) while the DWD station mast read 3.1 m/s.
 # `minIrradiation` (bogus values around -1900) and `precipitationTick`
 # (undocumented, always 0) are deliberately not exposed.
 def _temperature(key: str, translation_key: str, enabled: bool = True) -> SensorEntityDescription:
@@ -278,6 +278,8 @@ DWD_SENSOR_TYPES: tuple[DwdSensorDescription, ...] = (
         native_unit_of_measurement=PERCENTAGE,
         suggested_display_precision=0,
     ),
+    # The computed DWD series is km/h: every value is a multiple of 0.36
+    # (m/s with one decimal × 3.6), e.g. 11.16 = 3.1 m/s.
     DwdSensorDescription(
         key="wind_speed",
         series_key="wind_speed",
@@ -285,7 +287,7 @@ DWD_SENSOR_TYPES: tuple[DwdSensorDescription, ...] = (
         name="Windgeschwindigkeit",
         device_class=SensorDeviceClass.WIND_SPEED,
         state_class=SensorStateClass.MEASUREMENT,
-        native_unit_of_measurement=UnitOfSpeed.METERS_PER_SECOND,
+        native_unit_of_measurement=UnitOfSpeed.KILOMETERS_PER_HOUR,
         suggested_display_precision=1,
     ),
     DwdSensorDescription(
@@ -295,6 +297,18 @@ DWD_SENSOR_TYPES: tuple[DwdSensorDescription, ...] = (
         name="Niederschlag",
         device_class=SensorDeviceClass.PRECIPITATION,
         state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfLength.MILLIMETERS,
+        suggested_display_precision=1,
+    ),
+    # Daily total since local midnight; resets to 0 each night, which
+    # TOTAL_INCREASING turns into correct daily/monthly statistics.
+    DwdSensorDescription(
+        key="precipitation_today",
+        series_key="precipitation_today",
+        translation_key="dwd_precipitation_today",
+        name="Niederschlag heute",
+        device_class=SensorDeviceClass.PRECIPITATION,
+        state_class=SensorStateClass.TOTAL_INCREASING,
         native_unit_of_measurement=UnitOfLength.MILLIMETERS,
         suggested_display_precision=1,
     ),

@@ -80,12 +80,14 @@ DWD_ACCOUNT_ID: Final = "6233165a7faac33eade2c539"
 DWD_TOKEN: Final = "fcea867d-8c40-4507-bb88-43ced0dbcbf5"
 DWD_DEVICE_ID: Final = "dwd_station_mannheim"
 
-# Four metrics from the official DWD station 0301-001-11. Wind speed is
-# a derived series: requested as "timeseries" the backend answers
+# Metrics from the official DWD station 0301-001-11. Wind speed is a
+# derived series (km/h): requested as "timeseries" the backend answers
 # NO_DATA_FOUND, so it carries definition_type "computeddata".
 DWD_SERIES: Final = (
     {"key": "temperature",   "timeseries_id": "80decc91-8945-4fea-8e47-2c40afa8a1b4", "display_name": "0301-001-11, mittl. Temperatur"},
     {"key": "humidity",      "timeseries_id": "354e7ba2-4adc-4d2e-ad61-c76e935809e1", "display_name": "0301-001-11, mittl. rel. Feuchtigkeit"},
     {"key": "wind_speed",    "timeseries_id": "5c93debd-0f12-43a7-9f9c-aa6622fb4129", "display_name": "mittl. Windgeschwindigkeit DWD", "definition_type": "computeddata"},
     {"key": "precipitation", "timeseries_id": "5c9f6eff-d6cd-4132-a9fd-0bc96c16ac28", "display_name": "0301-001-11, mittl. Niederschlag"},
+    # Same series, summed by the backend from local midnight until now.
+    {"key": "precipitation_today", "timeseries_id": "5c9f6eff-d6cd-4132-a9fd-0bc96c16ac28", "display_name": "0301-001-11, mittl. Niederschlag", "aggregation": "sum", "window": "today"},
 )

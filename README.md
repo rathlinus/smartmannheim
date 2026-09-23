@@ -89,7 +89,7 @@ Entities are created from the parameters the API lists for the sensor type. Sens
 
 Disabled entities can be enabled in the device page; they cost no extra requests (one request returns all values of a sensor). The API's `minIrradiation` (implausible values) and `precipitationTick` (undocumented) are not exposed.
 
-Wind speeds are reported in m/s (checked against the dashboard values and the DWD station). Home Assistant shows them in your unit system's default (km/h for metric) unless you change the entity's display unit.
+Wind speeds are reported in m/s (they match the old dashboard values 1:1, and the city sensors' readings fit the DWD station's mast measurement). Home Assistant shows them in your unit system's default (km/h for metric) unless you change the entity's display unit.
 
 Each sensor carries these attributes (catalog fields only when the sensor code is in the catalog):
 
@@ -135,8 +135,11 @@ The device card itself uses the catalog data too — model becomes e.g. `Klimame
 |---|---|---|
 | Temperatur | °C | `temperature` |
 | Luftfeuchtigkeit | % | `humidity` |
-| Windgeschwindigkeit | m/s | `wind_speed` |
-| Niederschlag | mm | `precipitation` |
+| Windgeschwindigkeit | km/h | `wind_speed` |
+| Niederschlag | mm | `precipitation` (latest 10-minute value) |
+| Niederschlag heute | mm | `precipitation`, total since midnight, resets every night |
+
+*Niederschlag heute* is summed by the backend from 00:00 (Mannheim time) until now, so Home Assistant's statistics also show daily and monthly totals. DWD data arrives about 45 minutes late, so rain shortly before midnight may only show up in the next day's total; right after midnight the value is 0 until the first data arrives.
 
 ---
 
@@ -163,7 +166,7 @@ The device card itself uses the catalog data too — model becomes e.g. `Klimame
 
 The config and options flows show the interval for your current selection, each climate sensor exposes it as the `update_interval_min` attribute, and with more than 5 sensors a notice under **Settings → Repairs** explains the longer interval. The sensor list itself (limited to 4 calls per hour) is only fetched while you configure the integration and is cached for 15 minutes. Each Home Assistant restart or integration reload triggers one immediate update, so frequent restarts use up the hourly budget faster.
 
-**Pollen, air quality and the DWD station** come from the dashboard backends and update every **10 minutes** (`DEFAULT_SCAN_INTERVAL` in `const.py`), independent of the climate sensors. The backends only refresh every 10 minutes themselves. Turning Pollen off cuts 8 requests per cycle, AQI cuts 4, DWD cuts 4. Fan-out is capped at 4 concurrent requests.
+**Pollen, air quality and the DWD station** come from the dashboard backends and update every **10 minutes** (`DEFAULT_SCAN_INTERVAL` in `const.py`), independent of the climate sensors. The backends only refresh every 10 minutes themselves. Turning Pollen off cuts 8 requests per cycle, AQI cuts 4, DWD cuts 5. Fan-out is capped at 4 concurrent requests.
 
 ---
 
